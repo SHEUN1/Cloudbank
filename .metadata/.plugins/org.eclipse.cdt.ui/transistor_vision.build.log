@@ -1,0 +1,30 @@
+22:14:48 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘cv::Point SeperateObjects::get_corner_points(cv::Rect)’:
+../src/SeperateObjects.cpp:34:9: error: could not convert ‘(cv::Point*)(& cornerpoints)’ from ‘cv::Point* {aka cv::Point_<int>*}’ to ‘cv::Point’
+  return cornerpoints;
+         ^
+../src/SeperateObjects.cpp: In member function ‘cv::Mat1b SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b)’:
+../src/SeperateObjects.cpp:47:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for( int i = 0; i < contours.size(); i++ )
+                                      ^
+../src/SeperateObjects.cpp:52:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for( int i = 0; i < contours.size(); i++ )
+                                        ^
+../src/SeperateObjects.cpp:63:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < contours.size(); i++)
+                                   ^
+../src/SeperateObjects.cpp:79:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i<contours.size(); i++)
+                                  ^
+../src/SeperateObjects.cpp: In member function ‘cv::Point SeperateObjects::get_corner_points(cv::Rect)’:
+../src/SeperateObjects.cpp:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/SeperateObjects.o] Error 1
+
+22:14:50 Build Finished (took 1s.126ms)
+

@@ -1,0 +1,18 @@
+/*
+ * yingyang.cpp
+ *
+ *  Created on: 13 Jun 2017
+ *      Author: sheun
+ */
+
+#include "yingyang.h"
+
+ying_yang::ying_yang() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ying_yang::~ying_yang() {
+	// TODO Auto-generated destructor stub
+}
+

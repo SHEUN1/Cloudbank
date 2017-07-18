@@ -1,0 +1,22 @@
+/*
+ * yingyang.h
+ *
+ *  Created on: 13 Jun 2017
+ *      Author: sheun
+ */
+
+#include <iostream>
+
+using namespace std;
+
+#ifndef YINGYANG_H_
+#define YINGYANG_H_
+
+class ying_yang {
+public:
+	ying_yang();
+	virtual ~ying_yang();
+	//cv::Mat yin ();
+};
+
+#endif /* YINGYANG_H_ */
