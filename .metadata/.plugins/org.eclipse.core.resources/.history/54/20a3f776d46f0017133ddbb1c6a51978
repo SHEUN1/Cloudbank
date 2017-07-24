@@ -1,0 +1,112 @@
+/*
+ * SeperateObjects.cpp
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ */
+
+#include "SeperateObjects.h"
+//#include <vector>
+//#include <stdlib.h>
+
+//using namespace std;
+//RNG rng(12345);
+SeperateObjects::SeperateObjects() {
+
+	std::cout<<"identyfying objects"<<endl;
+
+}
+
+SeperateObjects::~SeperateObjects() {
+
+}
+//Private function. pass a bounded box as a parameter and get the 4 corressponding corner points.
+Point* SeperateObjects::get_corner_points (Rect boundBox)
+{
+	//coordinates of bounded box
+	int x = boundBox.x;
+	int y = boundBox.y;
+	//with and height of bounded box
+	int width = boundBox.width;
+	int height = boundBox.height;
+	//corner points of bounded box
+	Point top_left(x,y);
+	Point top_right(x+width,y);
+	Point bottom_left(x,y+height);
+	Point bottom_right(x+width,y+height);
+
+
+	Point cornerpoints [] = {top_left,top_right, bottom_left,bottom_right};
+	return cornerpoints;
+
+}
+
+Mat1b SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image)
+{
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+	//find contours
+
+	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
+
+	 /// Get the moments(weighted average of image pixels intensities )
+	  vector<Moments> mu(contours.size());
+	  for( uint32_t i = 0; i < contours.size(); i++ )
+	     { mu[i] = moments( contours[i], false ); }
+
+	  ///  Get the mass centres:
+	    vector<Point2f> mc( contours.size() );
+	    for( uint32_t i = 0; i < contours.size(); i++ )
+	       { mc[i] = Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 ); }
+
+	//Approximate contours to polygons + get bounding rects
+	vector<vector<Point> > contours_poly(contours.size());
+	vector<Rect> boundRect(contours.size());
+	//get image coordinate;
+	vector<int>x_coordinate( contours.size() );
+	vector<int>y_coordinate( contours.size() );
+
+	//vector of corner points
+	vector<vector<Point> > cropOfEachImage(contours.size());
+
+	for(uint32_t i = 0; i < contours.size(); i++)
+	{
+		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
+		boundRect[i] = boundingRect(Mat(contours_poly[i]));
+		//boundRect.push_back(boundingRect(Mat(contours_poly[i])));
+		x_coordinate[i] = boundRect[i].x;
+		y_coordinate[i] = boundRect[i].y;
+		//cout<<x_coordinate[i]<<endl;
+		//cropOfEachImage[i] = get_corner_points(boundRect[i]);
+
+	}
+
+
+
+	//Draw polygon contour + bounding rects
+
+
+	//Mat drawing = Mat::zeros(Binary.size(), CV_8UC2/*8-bit unsigned integer matrix/image with 3 channels*/);
+	for (uint32_t i = 0; i<contours.size(); i++)
+	{
+		printf(" * Contour[%d] - Area (M_00) = %.2f - Area OpenCV: %.2f - Length: %.2f \n", i, mu[i].m00, contourArea(contours[i]), arcLength( contours[i], true ) );
+		//Scalar color = Scalar(rng.uniform(0,255), rng.uniform(0,255), rng.uniform(0,255));
+		Scalar color( rand()&255, rand()&255, rand()&255 );
+		//Scalar color( 0, 0, 255);
+		//drawContours(Binary, contours_poly, i, color, 1,8, vector<Vec4i>(), 0, Point());
+		rectangle (origanal_image, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+	}
+
+	vector<Mat1b> subregions;
+
+	for (uint32_t i = 0; i<contours.size(); i++)
+	{
+		Mat1b cropImage = origanal_image(20,20,60,60);
+		std::cout<<"here1"<<endl;
+		imshow("cropImage",cropImage);
+		imwrite("/home/sheun/Pictures/trasistor_save_images/image.jpg", cropImage);
+		std::cout<<"here2"<<endl;
+	}
+	return origanal_image;
+}
+
