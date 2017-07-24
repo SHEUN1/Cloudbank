@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/SeperateObjects.cpp \
+../src/featureextraction.cpp \
 ../src/transistor_vision.cpp \
 ../src/yingyang.cpp 
 
 OBJS += \
 ./src/SeperateObjects.o \
+./src/featureextraction.o \
 ./src/transistor_vision.o \
 ./src/yingyang.o 
 
 CPP_DEPS += \
 ./src/SeperateObjects.d \
+./src/featureextraction.d \
 ./src/transistor_vision.d \
 ./src/yingyang.d 
 

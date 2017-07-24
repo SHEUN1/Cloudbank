@@ -22,8 +22,10 @@ SeperateObjects::~SeperateObjects() {
 }
 
 
-Mat1b SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image)
+vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image)
 {
+	//bounded box will be draw on this copy of the origanal imag instead
+	Mat1b Original_image_clone = origanal_image.clone();
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 
@@ -59,15 +61,16 @@ Mat1b SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image)
 		x_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
 		y_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
 		Scalar color( rand()&255, rand()&255, rand()&255 );
-		rectangle (origanal_image, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+		rectangle (Original_image_clone, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
 		// Crop the original image to the defined ROI
 	    roi[i] = origanal_image(boundRect[i]);
+	    //save regions of interest into a folder
 	    sprintf(file,"../../trasistor_vision_saved_images/Image%d.jpg",i);
 	   	imwrite(file,roi[i]);
-	   	cout<<"loop: "<<i<<endl;
 
 	}
-
-	return origanal_image;
+	namedWindow( "Objects for the dark world", CV_WINDOW_NORMAL );
+	imshow ("Objects for the dark world",Original_image_clone);
+	return roi;
 }
 

@@ -31,7 +31,7 @@ public:
 	SeperateObjects();
 	virtual ~SeperateObjects();
 	//return an grayscaleimage with bound boxes around each object in the image
-	Mat1b BoundBox(Mat1b Binary, Mat1b origanal_image);
+	vector <Mat1b>  BoundBox(Mat1b Binary, Mat1b origanal_image);
 
 };
 

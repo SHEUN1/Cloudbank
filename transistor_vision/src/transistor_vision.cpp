@@ -17,6 +17,7 @@
 
 #include "yingyang.h"
 #include "SeperateObjects.h"
+#include "featureextraction.h"
 
 using namespace std;
 using namespace cv;
@@ -42,26 +43,17 @@ int main()
 	//imshow("dark world view", dark_world_view);
 	//imshow("light world view", light_world_view);
 
+	//get objects in each world view
 	SeperateObjects worldObjects;
-	Mat1b bound_box_world_dark = worldObjects.BoundBox(dark_world_view, gray); // the 2nd parameter is because we want the boxes to be on the origanal image
-	Mat1b bound_box_world_light = worldObjects.BoundBox(light_world_view, gray);
-	namedWindow( "Objects for the dark world", CV_WINDOW_NORMAL );
-	namedWindow( "Objects for the light world", CV_WINDOW_NORMAL );
-	imshow ("Objects for the dark world", bound_box_world_dark);
-	imshow ("Objects for the light world", bound_box_world_light);
+	vector <Mat1b> dark_world_objects = worldObjects.BoundBox(dark_world_view, gray); // the 2nd parameter is because we want the boxes to be on the origanal image
+	//vector <Mat1b> bound_box_world_light = worldObjects.BoundBox(light_world_view, gray);
+	//namedWindow( "Objects for the dark world", CV_WINDOW_NORMAL );
+	//namedWindow( "Objects for the light world", CV_WINDOW_NORMAL );
+	feature_extraction features_of_objects;
+	vector<vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects);
+
 
 	cvWaitKey();
 	return 0;
 
-	/*cv::Mat img = cv::imread("/home/sheun/Pictures/transistor_images/transistor2.jpg");
-
-	    // Crop the original image to the defined ROI
-	Mat cropedImage = img(Rect(500,500,30,30));
-	imwrite( "../../trasistor_vision_saved_images/Gray_Image.jpg", cropedImage );
-
-	    // Display cropped ROI
-	    cv::imshow("Cropped ROI", cropedImage);
-	    cv::waitKey(0);
-
-	    return 0;*/
 }
