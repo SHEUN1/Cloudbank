@@ -1,30 +1,20 @@
-22:14:48 **** Incremental Build of configuration Debug for project transistor_vision ****
+15:05:43 **** Incremental Build of configuration Debug for project transistor_vision ****
 make all 
 Building file: ../src/SeperateObjects.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-../src/SeperateObjects.cpp: In member function ‘cv::Point SeperateObjects::get_corner_points(cv::Rect)’:
-../src/SeperateObjects.cpp:34:9: error: could not convert ‘(cv::Point*)(& cornerpoints)’ from ‘cv::Point* {aka cv::Point_<int>*}’ to ‘cv::Point’
-  return cornerpoints;
-         ^
-../src/SeperateObjects.cpp: In member function ‘cv::Mat1b SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b)’:
-../src/SeperateObjects.cpp:47:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    for( int i = 0; i < contours.size(); i++ )
-                                      ^
-../src/SeperateObjects.cpp:52:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-      for( int i = 0; i < contours.size(); i++ )
-                                        ^
-../src/SeperateObjects.cpp:63:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i = 0; i < contours.size(); i++)
-                                   ^
-../src/SeperateObjects.cpp:79:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i<contours.size(); i++)
-                                  ^
-../src/SeperateObjects.cpp: In member function ‘cv::Point SeperateObjects::get_corner_points(cv::Rect)’:
-../src/SeperateObjects.cpp:35:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/SeperateObjects.o] Error 1
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
 
-22:14:50 Build Finished (took 1s.126ms)
+15:05:45 Build Finished (took 2s.722ms)
 

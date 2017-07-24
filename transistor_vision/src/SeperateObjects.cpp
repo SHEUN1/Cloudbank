@@ -13,81 +13,61 @@
 //RNG rng(12345);
 SeperateObjects::SeperateObjects() {
 
+	std::cout<<"identyfying objects"<<endl;
 
 }
 
 SeperateObjects::~SeperateObjects() {
 
 }
-Point SeperateObjects::get_corner_points (Rect boundBox)
-{
-	int x = boundBox.x;
-	int y = boundBox.y;
-	int width = boundBox.width;
-	int height = boundBox.height;
-	Point top_left(x,y);
-	Point top_right(x+width,y);
-	Point bottom_left(x,y+height);
-	Point bottom_right(x+width,y+height);
 
-	Point cornerpoints [] = {top_left,top_right, bottom_left,bottom_right};
-	//return cornerpoints;
-}
 
 Mat1b SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image)
 {
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;
-	//find contours
 
+	//find contours
 	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
 
-	 /// Get the moments
-	  vector<Moments> mu(contours.size() );
-	  for( int i = 0; i < contours.size(); i++ )
+	 /// Get the moments(weighted average of image pixels intensities )
+	  vector<Moments> mu(contours.size());
+	  for( uint32_t i = 0; i < contours.size(); i++ )
 	     { mu[i] = moments( contours[i], false ); }
 
-	  ///  Get the mass centers:
+	  ///  Get the mass centres:
 	    vector<Point2f> mc( contours.size() );
-	    for( int i = 0; i < contours.size(); i++ )
+	    for( uint32_t i = 0; i < contours.size(); i++ )
 	       { mc[i] = Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 ); }
 
 	//Approximate contours to polygons + get bounding rects
 	vector<vector<Point> > contours_poly(contours.size());
 	vector<Rect> boundRect(contours.size());
+	//region of interest
+	vector<Mat1b> roi(contours.size());
 	//get image coordinate;
 	vector<int>x_coordinate( contours.size() );
 	vector<int>y_coordinate( contours.size() );
 
+	//character length for roi filename to be saved in separate folder
+	char file [50];
 
-	for(int i = 0; i < contours.size(); i++)
+	for(uint32_t i = 0; i < contours.size(); i++)
 	{
 		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
 		boundRect[i] = boundingRect(Mat(contours_poly[i]));
-		//boundRect.push_back(boundingRect(Mat(contours_poly[i])));
-		x_coordinate[i] = boundRect[i].x;
-		y_coordinate[i] = boundRect[i].y;
-		//cout<<x_coordinate[i]<<endl;
-
-	}
-
-
-	//Draw polygon contour + bounding rects
-
-
-	Mat drawing = Mat::zeros(Binary.size(), CV_8UC3);
-	for (int i = 0; i<contours.size(); i++)
-	{
-		printf(" * Contour[%d] - Area (M_00) = %.2f - Area OpenCV: %.2f - Length: %.2f \n", i, mu[i].m00, contourArea(contours[i]), arcLength( contours[i], true ) );
-		//Scalar color = Scalar(rng.uniform(0,255), rng.uniform(0,255), rng.uniform(0,255));
+		x_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
+		y_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
 		Scalar color( rand()&255, rand()&255, rand()&255 );
-		//Scalar color( 0, 0, 255);
-		//drawContours(Binary, contours_poly, i, color, 1,8, vector<Vec4i>(), 0, Point());
-		rectangle (Binary, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+		rectangle (origanal_image, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+		// Crop the original image to the defined ROI
+	    roi[i] = origanal_image(boundRect[i]);
+	    sprintf(file,"../../trasistor_vision_saved_images/Image%d.jpg",i);
+	   	imwrite(file,roi[i]);
+	   	cout<<"loop: "<<i<<endl;
+
 	}
 
-	vector<Mat1b> subregions;
-
-	return Binary;
+	return origanal_image;
 }
 

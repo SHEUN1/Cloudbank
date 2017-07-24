@@ -18,18 +18,19 @@
 #include <stdlib.h>
 
 
+
 using namespace std;
 using namespace cv;
 
 
 
 class SeperateObjects {
-private:
-	Point get_corner_points (Rect boundBox);
+
 public:
 
 	SeperateObjects();
 	virtual ~SeperateObjects();
+	//return an grayscaleimage with bound boxes around each object in the image
 	Mat1b BoundBox(Mat1b Binary, Mat1b origanal_image);
 
 };
