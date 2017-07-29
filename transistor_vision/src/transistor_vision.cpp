@@ -27,27 +27,27 @@ int main()
 {
 
 	//get image
-	Mat3b img = imread("/home/sheun/Pictures/transistor_images/transistor3.jpg");
+	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor1.jpg");
 
 	//grayscale, and use imadjust for to get a high constrast version (the base for "lightworld")
-	Mat1b gray;
+	Mat gray;
 	//convert to grayscale
 	cvtColor(img, gray, COLOR_RGB2GRAY);
 	//smooth image
 	blur(gray, gray, Size(3,3));
-	Mat1b Original_image_clone = gray.clone();
+	Mat Original_image_clone = gray.clone();
     //convert to binary
 	ying_yang world_view;
-	Mat1b dark_world_view = world_view.binary(gray,img);
-	Mat1b light_world_view = world_view.binary_Inverse(gray,img);
+	Mat dark_world_view = world_view.binary(gray,img);
+	Mat light_world_view = world_view.binary_Inverse(gray,img);
 
 	imshow("dark world view", dark_world_view);
 	imshow("light world view", light_world_view);
 
 	//get objects in each world view
 	SeperateObjects worldObjects;
-	vector <Mat1b> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
-	vector <Mat1b> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1);
+	vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
+	vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1);
 
 	feature_extraction features_of_objects;
 	vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);

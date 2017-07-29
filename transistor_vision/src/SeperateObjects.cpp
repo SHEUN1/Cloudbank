@@ -23,7 +23,7 @@ SeperateObjects::~SeperateObjects() {
 
 
 
-vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat1b Original_image_clone, int world_number)
+vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Original_image_clone, int world_number)
 {
 	//bounded box will be draw on this copy of the origanal imag instead
 	vector<vector<Point> > contours;
@@ -46,14 +46,15 @@ vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat
 	vector<vector<Point> > contours_poly(contours.size());
 	vector<Rect> boundRect(contours.size());
 	//region of interest
-	vector<Mat1b> roi(contours.size());
+	vector<Mat> roi(contours.size());
 	//get image coordinate;
 	vector<int>x_coordinate( contours.size() );
 	vector<int>y_coordinate( contours.size() );
 
 	//character length for roi filename to be saved in separate folder
 	char file [100];
-
+	//system("exec rm -r ../../trasistor_vision_darkworld_images/*");
+	//system("exec rm -r ../../trasistor_vision_lightworld_images/*");
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
 
@@ -72,10 +73,12 @@ vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat
 
 	    if (world_number == 0)
 	    {
+
 	    	sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
 	    }
 	    else if(world_number == 1)
 	    {
+
 	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
 	    }
 	    imwrite(file,roi[i]);

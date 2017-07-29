@@ -16,7 +16,7 @@ ying_yang::~ying_yang() {
 
 }
 
- Mat1b  ying_yang::Watershed(Mat1b Binary, Mat3b origanal_image)
+ Mat  ying_yang::Watershed(Mat Binary, Mat origanal_image)
 {
 	// Perform the distance transform algorithm
 	    Mat dist;
@@ -51,7 +51,7 @@ ying_yang::~ying_yang() {
 
 	    // Perform the watershed algorithm
 	    watershed(origanal_image, markers);
-	    Mat1b mark = Mat::zeros(markers.size(), CV_8UC1);
+	    Mat mark = Mat::zeros(markers.size(), CV_8UC1);
 	    markers.convertTo(mark, CV_8UC1);
 	    bitwise_not(mark, mark);
 	    cv::Mat region1 = markers==-1;
@@ -59,31 +59,31 @@ ying_yang::~ying_yang() {
 	    return region1;
 }
 
-Mat1b ying_yang::binary (Mat1b img,Mat3b origanal)
+Mat ying_yang::binary (Mat img,Mat origanal)
 {
 
-	 Mat1b binaryImage;
+	 Mat binaryImage;
 	 //create binary image
 	 threshold(img, binaryImage, 0.5, 255, THRESH_BINARY | CV_THRESH_OTSU);
 	 //clean up the binary image i.e. remove small blobs
 	 binaryImage = cleanupBinary(binaryImage);
-	 Mat3b Binary_post_watershed = Watershed(binaryImage,  origanal);
+	 Mat Binary_post_watershed = Watershed(binaryImage,  origanal);
 
 
 	 return Binary_post_watershed;
 }
-Mat1b ying_yang::binary_Inverse (Mat1b img,Mat3b origanal)
+Mat ying_yang::binary_Inverse (Mat img,Mat origanal)
 {
 	double alpha = 2.2;//contrast control
 	int beta = 50;//brightness control
-	Mat1b contrasted, binaryImage, binaryImage_inv;
+	Mat contrasted, binaryImage, binaryImage_inv;
 	img.convertTo(contrasted, -1, alpha, beta);
 
 	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
 	binaryImage = cleanupBinary(binaryImage);
 	//inverse the binary image
 	binaryImage_inv = cv::Scalar::all(255)-binaryImage ;
-	Mat3b Binary_post_watershed = Watershed(binaryImage_inv,  origanal);
+	Mat Binary_post_watershed = Watershed(binaryImage_inv,  origanal);
 
 
 	return Binary_post_watershed;
@@ -93,7 +93,7 @@ Mat1b ying_yang::binary_Inverse (Mat1b img,Mat3b origanal)
 
 
 //remove  small blobs in binary images
-Mat1b ying_yang::cleanupBinary(Mat1b Binary)
+Mat ying_yang::cleanupBinary(Mat Binary)
 {
 		Mat se1 = getStructuringElement(MORPH_RECT, Size(10, 10));
 	    Mat se2 = getStructuringElement(MORPH_RECT, Size(4, 4));
@@ -104,7 +104,7 @@ Mat1b ying_yang::cleanupBinary(Mat1b Binary)
 	    morphologyEx(mask, mask, MORPH_OPEN, se2);
 
 	    // Filter the output
-	    Mat1b out = Binary.clone();
+	    Mat out = Binary.clone();
 	    out.setTo(Scalar(0), mask == 0);
 
 	    return out;

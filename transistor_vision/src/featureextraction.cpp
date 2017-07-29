@@ -16,16 +16,18 @@ feature_extraction::~feature_extraction() {
 	// TODO Auto-generated destructor stub
 }
 
-vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> images,int world_number)
+vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,int world_number)
 {
 
-	vector<Mat1b> images_clone = images;
+	vector<Mat> images_clone = images;
 	int minHessian = 400;
 	Ptr<SIFT> detector = SIFT::create(minHessian);
 	vector<KeyPoint> keypoints_hold_1_image;
 	vector< vector<KeyPoint> > keypoints;
 	char file [100];
 	Mat img_keypoints_1;
+	//system("exec rm -r ../../trasistor_vision_lightFeatures_images/*");
+	//system("exec rm -r ../../trasistor_vision_darkFeatures_images/*");
 	for(uint32_t i = 0; i < images.size(); i++)
 	{
 
@@ -37,10 +39,12 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> image
 		//save regions of interest into a folder
 		if (world_number == 0)
 		{
+
 			sprintf(file,"../../trasistor_vision_darkFeatures_images/Image%d.jpg",i);
 		}
 		else if(world_number == 1)
 		{
+
 			sprintf(file,"../../trasistor_vision_lightFeatures_images/Image%d.jpg",i);
 		}
 
