@@ -22,7 +22,9 @@
 using namespace std;
 using namespace cv;
 
+#include "opencv2/xfeatures2d.hpp"
 
+using namespace cv::xfeatures2d;
 
 int main()
 {
@@ -40,17 +42,18 @@ int main()
 	ying_yang world_view;
 	Mat1b dark_world_view = world_view.binary(gray);
 	Mat1b light_world_view = world_view.binary_Inverse(gray);
-	//imshow("dark world view", dark_world_view);
-	//imshow("light world view", light_world_view);
+	imshow("dark world view", dark_world_view);
+	imshow("light world view", light_world_view);
 
 	//get objects in each world view
 	SeperateObjects worldObjects;
 	vector <Mat1b> dark_world_objects = worldObjects.BoundBox(dark_world_view, gray); // the 2nd parameter is because we want the boxes to be on the origanal image
-	//vector <Mat1b> bound_box_world_light = worldObjects.BoundBox(light_world_view, gray);
+	vector <Mat1b> light_world_objects = worldObjects.BoundBox(light_world_view, gray);
 	//namedWindow( "Objects for the dark world", CV_WINDOW_NORMAL );
 	//namedWindow( "Objects for the light world", CV_WINDOW_NORMAL );
 	feature_extraction features_of_objects;
-	vector<vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects);
+	vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects);
+	vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects);
 
 
 	cvWaitKey();

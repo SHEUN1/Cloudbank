@@ -13,7 +13,7 @@
 //RNG rng(12345);
 SeperateObjects::SeperateObjects() {
 
-	std::cout<<"identyfying objects"<<endl;
+	std::cout<<"identyfying objects in seperate objects class"<<endl;
 
 }
 

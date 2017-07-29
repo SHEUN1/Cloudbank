@@ -18,24 +18,32 @@ ying_yang::~ying_yang() {
 Mat1b ying_yang::binary (Mat1b img)
 {
 	 Mat1b binaryImage;
+
 	 threshold(img, binaryImage, 100, 255, THRESH_BINARY | CV_THRESH_OTSU);
 	 return cleanupBinary(binaryImage);
 }
 Mat1b ying_yang::binary_Inverse (Mat1b img)
 {
-	Mat1b binaryImage, binaryImage_inv;
-	Mat1b contrasted;
-	binaryImage = imadjust(img, contrasted,1,Vec2i(0, 255),Vec2i(0, 255));
+	double alpha = 2.2;
+	int beta = 50;
+	Mat1b contrasted, binaryImage, binaryImage_inv;
+	img.convertTo(contrasted, -1, alpha, beta);
 	//imshow("contrasted Image", contrasted);
-	//imshow("orignal grayscale", img);
-	threshold(img, binaryImage,100,255,THRESH_BINARY| CV_THRESH_OTSU);
-	binaryImage_inv = cv::Scalar::all(255)- cleanupBinary(binaryImage);
-	return binaryImage_inv;
+
+	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
+	binaryImage = cleanupBinary(binaryImage);
+	binaryImage_inv = cv::Scalar::all(255)-binaryImage ;
+	namedWindow( "imajust imageb", CV_WINDOW_NORMAL );
+	imshow ("light binary",binaryImage);
+	imshow ("light binary inverse",binaryImage_inv);
+	return cleanupBinary(binaryImage_inv);
 }
+
+
 Mat1b ying_yang::imadjust(const Mat1b& src, Mat1b& dst, int tol, Vec2i in, Vec2i out)
 {
     // src : input CV_8UC1 image
-    // dst : output CV_8UC1 imge
+    // dst : output CV_8UC1 image
     // tol : tolerance, from 0 to 100.
     // in  : src image bounds
     // out : dst image buonds
