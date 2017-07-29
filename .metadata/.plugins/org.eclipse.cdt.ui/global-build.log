@@ -1864,3 +1864,1430 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
 Finished building target: transistor_vision
  
+18:08:11 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:08:34 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:09:46 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:11:36 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:14:42 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:15:55 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:19:31 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:20:57 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:24:32 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:25:23 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:26:14 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:26:42 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:27:31 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+18:28:06 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:03:15 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:03:15 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:184:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:188:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBoxWatershed(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:139:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:06:19 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:06:19 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:184:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:188:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:11:51 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:53:17: error: redeclaration of ‘std::vector<cv::Mat_<unsigned char> > dark_world_objects’
+  vector <Mat1b> dark_world_objects  = worldObjects.BoundBoxWatershed(dark_world_view, gray,Original_image_clone, 0);
+                 ^
+../src/transistor_vision.cpp:52:17: error: ‘std::vector<cv::Mat_<unsigned char> > dark_world_objects’ previously declared here
+  vector <Mat1b> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
+                 ^
+make: *** [src/transistor_vision.o] Error 1
+19:12:01 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:12:01 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:53:17: error: redeclaration of ‘std::vector<cv::Mat_<unsigned char> > dark_world_objects’
+  vector <Mat1b> dark_world_objects  = worldObjects.BoundBoxWatershed(dark_world_view, gray,Original_image_clone, 0);
+                 ^
+../src/transistor_vision.cpp:52:17: error: ‘std::vector<cv::Mat_<unsigned char> > dark_world_objects’ previously declared here
+  vector <Mat1b> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
+                 ^
+make: *** [src/transistor_vision.o] Error 1
+19:12:26 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:12:55 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:57:96: error: ‘dark_world_objects’ was not declared in this scope
+  vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);
+                                                                                                ^
+make: *** [src/transistor_vision.o] Error 1
+19:13:16 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:32:40 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:32:40 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBoxWatershed(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:73:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+../src/SeperateObjects.cpp:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:136:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:140:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:35:05 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp:24:17: error: prototype for ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBoxWatershed(cv::Mat1b)’ does not match any in class ‘SeperateObjects’
+ vector <Mat1b>  SeperateObjects::BoundBoxWatershed(Mat1b Binary)
+                 ^
+In file included from ../src/SeperateObjects.cpp:8:0:
+../src/SeperateObjects.h:35:18: error: candidate is: std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBoxWatershed(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)
+  vector <Mat1b>  BoundBoxWatershed(Mat1b Binary, Mat1b origanal_image, Mat1b Original_image_clone, int world_number);
+                  ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:136:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:140:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+make: *** [src/SeperateObjects.o] Error 1
+19:35:35 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBoxWatershed(cv::Mat1b)’:
+../src/SeperateObjects.cpp:58:16: error: ‘origanal_image’ was not declared in this scope
+      watershed(origanal_image, markers);
+                ^
+../src/SeperateObjects.cpp:73:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+../src/SeperateObjects.cpp:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:136:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:140:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+make: *** [src/SeperateObjects.o] Error 1
+19:35:59 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:136:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:140:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:36:55 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:37:05 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:44:17 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:44:17 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp:24:17: error: prototype for ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::Watershed(cv::Mat1b, cv::Mat)’ does not match any in class ‘SeperateObjects’
+ vector <Mat1b>  SeperateObjects::Watershed(Mat1b Binary, Mat)
+                 ^
+In file included from ../src/SeperateObjects.cpp:8:0:
+../src/SeperateObjects.h:30:18: error: candidate is: std::vector<cv::Mat_<unsigned char> > SeperateObjects::Watershed(cv::Mat1b)
+  vector <Mat1b>  Watershed(Mat1b Binary);
+                  ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:137:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:141:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+make: *** [src/SeperateObjects.o] Error 1
+19:45:13 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:45:13 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/SeperateObjects.cpp:73:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+../src/SeperateObjects.cpp:91:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:137:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:141:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:91:10: warning: unused variable ‘file’ [-Wunused-variable]
+     char file [50];
+          ^
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:54:06 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:54:06 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:70:75: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+                                                                           ^
+../src/SeperateObjects.cpp:74:76: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+                                                                            ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+../src/yingyang.cpp:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:54:13 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:54:24 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:54:30 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:55:00 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:55:48 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:56:33 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:56:51 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:56:55 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:56:57 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:57:02 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:58:46 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+19:59:13 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+19:59:13 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:59:20 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:02:20 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:03:09 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:03:23 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:03:38 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:03:59 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:04:15 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:04:31 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:06:04 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:27:02 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+20:27:02 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:27:16 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:29:43 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat_<unsigned char> > SeperateObjects::BoundBox(cv::Mat1b, cv::Mat1b, cv::Mat1b, int)’:
+../src/SeperateObjects.cpp:86:1: error: expected ‘}’ at end of input
+ }
+ ^
+../src/SeperateObjects.cpp:86:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/SeperateObjects.o] Error 1
+20:30:06 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:32:38 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:33:33 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:36:52 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:110:28: error: ‘dark_world_view’ was not declared in this scope
+  imshow("dark world view", dark_world_view);
+                            ^
+make: *** [src/transistor_vision.o] Error 1
+20:37:09 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:119:96: error: ‘dark_world_objects’ was not declared in this scope
+  vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);
+                                                                                                ^
+make: *** [src/transistor_vision.o] Error 1
+20:37:23 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:124:8: error: ‘features_of_dark_world_objects’ was not declared in this scope
+  cout<<features_of_dark_world_objects.size()<<endl;
+        ^
+make: *** [src/transistor_vision.o] Error 1
+20:37:33 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:38:53 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:41:53 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:44:36 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:47:40 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+20:56:54 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:68:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:05:48 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:69:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:05:58 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:69:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:12:18 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:13:19 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:116:61: error: ‘light_world_view’ was not declared in this scope
+  vector <Mat1b> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1);
+                                                             ^
+../src/transistor_vision.cpp:124:8: error: ‘features_of_dark_world_objects’ was not declared in this scope
+  cout<<features_of_dark_world_objects.size()<<endl;
+        ^
+make: *** [src/transistor_vision.o] Error 1
+21:13:38 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+../src/transistor_vision.cpp: In function ‘int main()’:
+../src/transistor_vision.cpp:120:97: error: ‘light_world_objects’ was not declared in this scope
+  vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1);
+                                                                                                 ^
+../src/transistor_vision.cpp:124:8: error: ‘features_of_dark_world_objects’ was not declared in this scope
+  cout<<features_of_dark_world_objects.size()<<endl;
+        ^
+make: *** [src/transistor_vision.o] Error 1
+21:13:54 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:69:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::binary_Inverse(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:115:4: error: expected primary-expression before ‘/’ token
+    /
+    ^
+../src/yingyang.cpp:116:2: error: expected primary-expression before ‘return’
+  return Binary_post_watershed;
+  ^
+../src/yingyang.cpp:116:2: error: expected ‘;’ before ‘return’
+../src/yingyang.cpp:117:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/yingyang.o] Error 1
+21:14:10 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:69:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:15:54 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:30:10 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:72:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:30:43 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:72:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:32:05 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:72:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:32:25 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+../src/yingyang.cpp: In member function ‘cv::Mat1b ying_yang::Watershed(cv::Mat1b, cv::Mat3b)’:
+../src/yingyang.cpp:72:11: warning: unused variable ‘file’ [-Wunused-variable]
+      char file [50];
+           ^
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:33:28 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:49:27 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:50:38 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:51:55 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:52:31 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:54:23 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:56:16 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:56:49 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat_<unsigned char> >, int)’:
+../src/featureextraction.cpp:23:6: warning: unused variable ‘minHessian’ [-Wunused-variable]
+  int minHessian = 600;
+      ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+21:58:00 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+21:58:01 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:00:16 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/local/include/opencv2/core/cvstd.hpp:1064:0,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::xfeatures2d::SIFT; T = cv::xfeatures2d::SURF]’:
+../src/featureextraction.cpp:24:46:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::xfeatures2d::SIFT* const’ to ‘cv::xfeatures2d::SURF*’ in initialization
+ Ptr<T>::Ptr(const Ptr<Y>& o) : owner(o.owner), stored(o.stored)
+                                                               ^
+make: *** [src/featureextraction.o] Error 1
+22:00:34 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:02:20 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:04:26 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:06:28 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:07:37 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+22:10:41 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:11:24 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:11:45 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+22:11:48 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+22:13:58 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:14:13 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:14:33 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:14:54 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:15:43 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+22:16:00 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 

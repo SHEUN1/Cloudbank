@@ -1,4 +1,4 @@
-16:20:54 **** Incremental Build of configuration Debug for project transistor_vision ****
+22:16:00 **** Incremental Build of configuration Debug for project transistor_vision ****
 make all 
 Building file: ../src/transistor_vision.cpp
 Invoking: GCC C++ Compiler
@@ -11,5 +11,5 @@ g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featu
 Finished building target: transistor_vision
  
 
-16:20:56 Build Finished (took 1s.473ms)
+22:16:02 Build Finished (took 1s.778ms)
 

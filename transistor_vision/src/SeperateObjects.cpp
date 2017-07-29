@@ -22,6 +22,7 @@ SeperateObjects::~SeperateObjects() {
 }
 
 
+
 vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat1b Original_image_clone, int world_number)
 {
 	//bounded box will be draw on this copy of the origanal imag instead
@@ -51,19 +52,24 @@ vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat
 	vector<int>y_coordinate( contours.size() );
 
 	//character length for roi filename to be saved in separate folder
-	char file [50];
+	char file [100];
 
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
+
 		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
+
 		boundRect[i] = boundingRect(Mat(contours_poly[i]));
 		x_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
 		y_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
+
 		Scalar color( rand()&255, rand()&255, rand()&255 );
 		rectangle (Original_image_clone, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+
 		// Crop the original image to the defined ROI
 	    roi[i] = origanal_image(boundRect[i]);
 	    //save regions of interest into a folder
+
 	    if (world_number == 0)
 	    {
 	    	sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
@@ -73,6 +79,7 @@ vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat
 	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
 	    }
 	    imwrite(file,roi[i]);
+
 
 	}
 

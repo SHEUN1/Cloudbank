@@ -21,21 +21,18 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> image
 
 	vector<Mat1b> images_clone = images;
 	int minHessian = 400;
-	Ptr<SURF> detector = SURF::create(minHessian);
+	Ptr<SIFT> detector = SIFT::create(minHessian);
 	vector<KeyPoint> keypoints_hold_1_image;
 	vector< vector<KeyPoint> > keypoints;
 	char file [100];
 	Mat img_keypoints_1;
 	for(uint32_t i = 0; i < images.size(); i++)
 	{
-		//std::cout<<"into loop"<<endl;
 
 		detector->detect(images_clone[i], keypoints_hold_1_image);
 		keypoints.push_back(keypoints_hold_1_image);
 
 		//Draw keypoints
-
-
 		drawKeypoints(images_clone[i], keypoints[i], img_keypoints_1, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
 		//save regions of interest into a folder
 		if (world_number == 0)
@@ -48,7 +45,6 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> image
 		}
 
 		imwrite(file,img_keypoints_1);
-
 
 	}
 

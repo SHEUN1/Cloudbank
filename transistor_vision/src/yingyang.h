@@ -29,11 +29,12 @@ private:
 
 
 	Mat1b cleanupBinary (Mat1b Binary);
+	Mat1b  Watershed(Mat1b Binary, Mat3b origanal_image);
 public:
 	ying_yang();
 	virtual ~ying_yang();
-	Mat1b binary (Mat1b img);
-	Mat1b binary_Inverse (Mat1b img);
+	Mat1b binary (Mat1b img, Mat3b origanal);
+	Mat1b binary_Inverse (Mat1b img, Mat3b origanal);
 
 
 };
