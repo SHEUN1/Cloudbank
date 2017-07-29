@@ -17,82 +17,29 @@ ying_yang::~ying_yang() {
 }
 Mat1b ying_yang::binary (Mat1b img)
 {
-	 Mat1b binaryImage;
 
-	 threshold(img, binaryImage, 100, 255, THRESH_BINARY | CV_THRESH_OTSU);
+	 Mat1b binaryImage;
+	 //create binary image
+	 threshold(img, binaryImage, 0.5, 255, THRESH_BINARY | CV_THRESH_OTSU);
+	 //clean up the binary image i.e. remove small blobs
 	 return cleanupBinary(binaryImage);
 }
 Mat1b ying_yang::binary_Inverse (Mat1b img)
 {
-	double alpha = 2.2;
-	int beta = 50;
+	double alpha = 2.2;//contrast control
+	int beta = 50;//brightness control
 	Mat1b contrasted, binaryImage, binaryImage_inv;
 	img.convertTo(contrasted, -1, alpha, beta);
-	//imshow("contrasted Image", contrasted);
 
 	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
 	binaryImage = cleanupBinary(binaryImage);
+	//inverse the binary image
 	binaryImage_inv = cv::Scalar::all(255)-binaryImage ;
-	namedWindow( "imajust imageb", CV_WINDOW_NORMAL );
-	imshow ("light binary",binaryImage);
-	imshow ("light binary inverse",binaryImage_inv);
-	return cleanupBinary(binaryImage_inv);
+	return binaryImage_inv;
 }
 
 
-Mat1b ying_yang::imadjust(const Mat1b& src, Mat1b& dst, int tol, Vec2i in, Vec2i out)
-{
-    // src : input CV_8UC1 image
-    // dst : output CV_8UC1 image
-    // tol : tolerance, from 0 to 100.
-    // in  : src image bounds
-    // out : dst image buonds
 
-    dst = src.clone();
-
-    tol = max(0, min(100, tol));
-
-    if (tol > 0)
-    {
-        // Compute in and out limits
-
-        // Histogram
-        vector<int> hist(256, 0);
-        for (int r = 0; r < src.rows; ++r) {
-            for (int c = 0; c < src.cols; ++c) {
-                hist[src(r,c)]++;
-            }
-        }
-
-        // Cumulative histogram
-        vector<int> cum = hist;
-        for (int i = 1; i < hist.size(); ++i) {
-            cum[i] = cum[i - 1] + hist[i];
-        }
-
-        // Compute bounds
-        int total = src.rows * src.cols;
-        int low_bound = total * tol / 100;
-        int upp_bound = total * (100-tol) / 100;
-        in[0] = distance(cum.begin(), lower_bound(cum.begin(), cum.end(), low_bound));
-        in[1] = distance(cum.begin(), lower_bound(cum.begin(), cum.end(), upp_bound));
-
-    }
-
-    // Stretching
-    float scale = float(out[1] - out[0]) / float(in[1] - in[0]);
-    for (int r = 0; r < dst.rows; ++r)
-    {
-        for (int c = 0; c < dst.cols; ++c)
-        {
-            int vs = max(src(r, c) - in[0], 0);
-            int vd = min(int(vs * scale + 0.5f) + out[0], out[1]);
-            dst(r, c) = saturate_cast<uchar>(vd);
-        }
-    }
-
-    return dst;
-}
 
 //remove  small blobs in binary images
 Mat1b ying_yang::cleanupBinary(Mat1b Binary)

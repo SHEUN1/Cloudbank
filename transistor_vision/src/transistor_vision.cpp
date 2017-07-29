@@ -22,22 +22,20 @@
 using namespace std;
 using namespace cv;
 
-#include "opencv2/xfeatures2d.hpp"
-
-using namespace cv::xfeatures2d;
 
 int main()
 {
 
 	//get image
 	Mat3b img = imread("/home/sheun/Pictures/transistor_images/transistor2.jpg");
-	//Mat3b img2 = imread("/home/sheun/Pictures/binaryCircle.jpg");
+
 	//grayscale, and use imadjust for to get a high constrast version (the base for "lightworld")
 	Mat1b gray;
 	//convert to grayscale
 	cvtColor(img, gray, COLOR_RGB2GRAY);
 	//smooth image
 	blur(gray, gray, Size(3,3));
+	Mat1b Original_image_clone = gray.clone();
     //convert to binary
 	ying_yang world_view;
 	Mat1b dark_world_view = world_view.binary(gray);
@@ -47,14 +45,18 @@ int main()
 
 	//get objects in each world view
 	SeperateObjects worldObjects;
-	vector <Mat1b> dark_world_objects = worldObjects.BoundBox(dark_world_view, gray); // the 2nd parameter is because we want the boxes to be on the origanal image
-	vector <Mat1b> light_world_objects = worldObjects.BoundBox(light_world_view, gray);
-	//namedWindow( "Objects for the dark world", CV_WINDOW_NORMAL );
-	//namedWindow( "Objects for the light world", CV_WINDOW_NORMAL );
-	feature_extraction features_of_objects;
-	vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects);
-	vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects);
+	vector <Mat1b> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
+	vector <Mat1b> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1);
 
+	feature_extraction features_of_objects;
+	vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);
+	vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1);
+
+
+	cout<<features_of_light_world_objects.size()<<endl;
+	cout<<features_of_dark_world_objects.size()<<endl;
+	namedWindow( "Objects in both worlds", CV_WINDOW_NORMAL );
+	imshow ("Objects in both worlds",Original_image_clone);
 
 	cvWaitKey();
 	return 0;

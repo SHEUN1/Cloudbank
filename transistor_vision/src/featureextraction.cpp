@@ -16,7 +16,7 @@ feature_extraction::~feature_extraction() {
 	// TODO Auto-generated destructor stub
 }
 
-vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> images)
+vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> images,int world_number)
 {
 
 	vector<Mat1b> images_clone = images;
@@ -38,7 +38,15 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat1b> image
 
 		drawKeypoints(images_clone[i], keypoints[i], img_keypoints_1, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
 		//save regions of interest into a folder
-		sprintf(file,"../../trasistor_vision_saved_images_features/Image%d.jpg",i);
+		if (world_number == 0)
+		{
+			sprintf(file,"../../trasistor_vision_darkFeatures_images/Image%d.jpg",i);
+		}
+		else if(world_number == 1)
+		{
+			sprintf(file,"../../trasistor_vision_lightFeatures_images/Image%d.jpg",i);
+		}
+
 		imwrite(file,img_keypoints_1);
 
 

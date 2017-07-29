@@ -26,8 +26,8 @@ using namespace cv;
 class ying_yang {
 
 private:
-	Mat1b imadjust(const Mat1b& src, Mat1b& dst, int tol, Vec2i in, Vec2i out);
-	Mat1b increaseContrast(Mat1b src);
+
+
 	Mat1b cleanupBinary (Mat1b Binary);
 public:
 	ying_yang();
