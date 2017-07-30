@@ -3,7 +3,7 @@
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Extract objects and their features from a playing game
 //============================================================================
 
 #include<iostream>
