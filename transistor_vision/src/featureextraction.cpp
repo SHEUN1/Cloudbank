@@ -25,9 +25,11 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 	vector<KeyPoint> keypoints_hold_1_image;
 	vector< vector<KeyPoint> > keypoints;
 	char file [100];
+	int lock_dark_file = 0;
+	int lock_light_file = 0;
 	Mat img_keypoints_1;
-	//system("exec rm -r ../../trasistor_vision_lightFeatures_images/*");
-	//system("exec rm -r ../../trasistor_vision_darkFeatures_images/*");
+	//
+	//
 	for(uint32_t i = 0; i < images.size(); i++)
 	{
 
@@ -39,12 +41,12 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 		//save regions of interest into a folder
 		if (world_number == 0)
 		{
-
+			if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkFeatures_images/*");lock_dark_file++; }
 			sprintf(file,"../../trasistor_vision_darkFeatures_images/Image%d.jpg",i);
 		}
 		else if(world_number == 1)
 		{
-
+			if (lock_light_file == 0) {system("exec rm -r ../../trasistor_vision_lightFeatures_images/*");lock_light_file++; }
 			sprintf(file,"../../trasistor_vision_lightFeatures_images/Image%d.jpg",i);
 		}
 

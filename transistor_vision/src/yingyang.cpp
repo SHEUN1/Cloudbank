@@ -9,7 +9,7 @@
 
 ying_yang::ying_yang() {
 
-
+cout<<"converting to binary"<<endl;
 }
 
 ying_yang::~ying_yang() {

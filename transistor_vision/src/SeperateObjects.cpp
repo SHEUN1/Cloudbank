@@ -53,8 +53,9 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 
 	//character length for roi filename to be saved in separate folder
 	char file [100];
-	//system("exec rm -r ../../trasistor_vision_darkworld_images/*");
-	//system("exec rm -r ../../trasistor_vision_lightworld_images/*");
+	int lock_dark_file = 0;
+	int lock_light_file = 0;
+
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
 
@@ -73,12 +74,12 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 
 	    if (world_number == 0)
 	    {
-
+	    	if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkworld_images/*");lock_dark_file++; }
 	    	sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
 	    }
 	    else if(world_number == 1)
 	    {
-
+	    	if (lock_light_file == 0) {system("exec rm -r ../../trasistor_vision_lightworld_images/*");lock_light_file++; }
 	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
 	    }
 	    imwrite(file,roi[i]);
