@@ -27,7 +27,7 @@ int main()
 {
 
 	//get image
-	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor3.jpg");
+	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor1.jpg");
 
 	//grayscale, and use imadjust for to get a high constrast version (the base for "lightworld")
 	Mat gray;

@@ -8,12 +8,12 @@
 #include "featureextraction.h"
 
 feature_extraction::feature_extraction() {
-	// TODO Auto-generated constructor stub
+	cout<<"extracting features"<<endl;
 
 }
 
 feature_extraction::~feature_extraction() {
-	// TODO Auto-generated destructor stub
+
 }
 
 vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,int world_number)

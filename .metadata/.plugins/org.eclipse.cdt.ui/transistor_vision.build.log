@@ -1,9 +1,9 @@
-09:48:22 **** Incremental Build of configuration Debug for project transistor_vision ****
+14:15:52 **** Incremental Build of configuration Debug for project transistor_vision ****
 make all 
-Building file: ../src/featureextraction.cpp
+Building file: ../src/transistor_vision.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
-Finished building: ../src/featureextraction.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
  
 Building target: transistor_vision
 Invoking: GCC C++ Linker
@@ -11,5 +11,5 @@ g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featu
 Finished building target: transistor_vision
  
 
-09:48:23 Build Finished (took 1s.35ms)
+14:15:54 Build Finished (took 1s.416ms)
 

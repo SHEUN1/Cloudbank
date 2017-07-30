@@ -18,45 +18,43 @@ ying_yang::~ying_yang() {
 
  Mat  ying_yang::Watershed(Mat Binary, Mat origanal_image)
 {
-	// Perform the distance transform algorithm
-	    Mat dist;
-	    distanceTransform(Binary, dist, CV_DIST_L2, 3);
-	    // Normalize the distance image for range = {0.0, 1.0}
-	    // so we can visualize and threshold it
-	    normalize(dist, dist, 0, 1., NORM_MINMAX);
+	// Use the distance transform algorithm
+	    Mat distance; //hold output matrix result of distance transform function
+	    //CV_CV_DIST_L2_L2 = Euclidian distance and using a 3x3 mask change last parameter "3" to 5  for a more accurate distance estimation
+	    //default output image type is CV_32F
+	    distanceTransform(Binary, distance, CV_DIST_L2, 3);
+	    // Normalize the distance image within range 0.0-1.0} to threshold it
+
+	    normalize(distance, distance, 0, 1., NORM_MINMAX);
 
 	    // Threshold to obtain the peaks
 	    // This will be the markers for the foreground objects
-	    threshold(dist, dist, 0.043, 1., CV_THRESH_BINARY);
-	    // Dilate a bit the dist image
-	    Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
-	    dilate(dist, dist, kernel1);
+	    threshold(distance, distance, 0.043, 1., CV_THRESH_BINARY);
+	    // Dilate a bit the distance image
+	    //use  convolution matrix masking
+	    Mat kernel = Mat::ones(3, 3, CV_8UC1);
+	    dilate(distance, distance, kernel);
 
 
-	    // Create the CV_8U version of the distance image
+	    // Create the CV_8U (unsigned 8bit/pixel) version of the distance image so to get pixel values between 0-255
 	    // It is needed for findContours()
-	    Mat dist_8u;
-	    dist.convertTo(dist_8u, CV_8U);
+	    Mat distance_8u;
+	    distance.convertTo(distance_8u, CV_8U);
 	    // Find total markers
 	    vector<vector<Point> > contours;
-	    findContours(dist_8u, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+	    findContours(distance_8u, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 	    // Create the marker image for the watershed algorithm
-	    Mat markers = Mat::zeros(dist.size(), CV_32SC1);
+	    Mat markers = Mat::zeros(distance.size(), CV_32SC1);
 	    // Draw the foreground markers
 	    for (size_t i = 0; i < contours.size(); i++)
 	        drawContours(markers, contours, static_cast<int>(i), Scalar::all(static_cast<int>(i)+1), -1);
-	    // Draw the background marker
-	    circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
-	    //imshow("Markers", markers*10000);
 
 	    // Perform the watershed algorithm
 	    watershed(origanal_image, markers);
-	    Mat mark = Mat::zeros(markers.size(), CV_8UC1);
-	    markers.convertTo(mark, CV_8UC1);
-	    bitwise_not(mark, mark);
-	    cv::Mat region1 = markers==-1;
+	   // the markers image will be -1 at the boundaries of the regions
+	    cv::Mat region = markers==-1;
 
-	    return region1;
+	    return region;
 }
 
 Mat ying_yang::binary (Mat img,Mat origanal)
@@ -82,7 +80,8 @@ Mat ying_yang::binary_Inverse (Mat img,Mat origanal)
 	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
 	binaryImage = cleanupBinary(binaryImage);
 	//inverse the binary image
-	binaryImage_inv = cv::Scalar::all(255)-binaryImage ;
+	bitwise_not(binaryImage, binaryImage_inv);
+
 	Mat Binary_post_watershed = Watershed(binaryImage_inv,  origanal);
 
 
