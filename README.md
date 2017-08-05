@@ -7,6 +7,9 @@ The “game_vision” folder contains the code nededded to analyse the game curr
 
 Current status of the project
   1. Not yet implemented
-    -Tensorflow has not yet been implemented
-    -interface between the vision and control folder (needed to send data across)
-    -Optical Character Recognition (OCR)
+  
+      -Tensorflow has not yet been implemented
+      
+      -interface between the vision and control folder (needed to send data across)
+      
+      -Optical Character Recognition (OCR)
