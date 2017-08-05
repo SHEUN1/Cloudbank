@@ -1,0 +1,6 @@
+22:44:00 **** Incremental Build of configuration Debug for project testOpencv ****
+make all 
+make: Nothing to be done for `all'.
+
+22:44:00 Build Finished (took 59ms)
+

@@ -1,0 +1,39 @@
+/*
+ * SeperateObjects.cpp
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ */
+
+#include "SeperateObjects.h"
+#include <vector>
+
+SeperateObjects::SeperateObjects() {
+	// TODO Auto-generated constructor stub
+
+}
+
+SeperateObjects::~SeperateObjects() {
+	// TODO Auto-generated destructor stub
+}
+
+Mat1b SeperateObjects::BoundBox(Mat1b Binary)
+{
+	vector<vector<Point>> contours;
+	vector<Vec4i> hierarchy;
+	//find contours
+	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
+
+	//Approximate contours to polygons + get bounding rects
+	vector<vector<Point>> contours_poly(contours.size());
+	vector<Rect> boundRect (contours.size());
+
+	for(int i = 0; i <contours.size(); i++)
+	{
+		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
+		boundRect[i] = boundingRect(Mat(contours_poly[i]));
+	}
+
+
+}
+

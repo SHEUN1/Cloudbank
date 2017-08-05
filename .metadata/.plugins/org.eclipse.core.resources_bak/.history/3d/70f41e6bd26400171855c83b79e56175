@@ -1,0 +1,20 @@
+/*
+ * SeperateObjects.h
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ */
+
+#ifndef SEPERATEOBJECTS_H_
+#define SEPERATEOBJECTS_H_
+#include "yingyang.h"
+
+class SeperateObjects {
+public:
+	SeperateObjects();
+	virtual ~SeperateObjects();
+	Mat1b BoundBox(Mat1b Binary);
+
+};
+
+#endif /* SEPERATEOBJECTS_H_ */

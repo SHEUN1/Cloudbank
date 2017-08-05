@@ -1,0 +1,18 @@
+/*
+ * SeperateObjects.cpp
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ */
+
+#include "SeperateObjects.h"
+
+SeperateObjects::SeperateObjects() {
+	// TODO Auto-generated constructor stub
+
+}
+
+SeperateObjects::~SeperateObjects() {
+	// TODO Auto-generated destructor stub
+}
+

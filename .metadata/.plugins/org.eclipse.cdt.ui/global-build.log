@@ -3822,3 +3822,154 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
 Finished building target: transistor_vision
  
+10:46:38 **** Build of configuration Debug for project transistor_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: transistor_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "transistor_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: transistor_vision
+ 
+10:46:51 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+10:46:52 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+10:46:52 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+10:48:31 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+10:52:45 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:01:37 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:02:53 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:04:09 **** Incremental Build of configuration Debug for project transistor_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:06:55 **** Clean-only build of configuration Debug for project game_vision ****
+make clean 
+rm -rf  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o  ./src/SeperateObjects.d ./src/featureextraction.d ./src/transistor_vision.d ./src/yingyang.d  transistor_vision
+ 
+11:06:55 **** Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/transistor_vision.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transistor_vision.d" -MT"src/transistor_vision.o" -o "src/transistor_vision.o" "../src/transistor_vision.cpp"
+Finished building: ../src/transistor_vision.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "game_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/transistor_vision.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: game_vision
+ 
+11:08:00 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "game_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: game_vision
+ 
+11:08:13 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "game_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: game_vision
+ 
+11:08:27 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:16:33 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "game_vision"  ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev
+Finished building target: game_vision
+ 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;game_vision/src/transistor_vision.cpp&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;transistor_vision.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/transistor_vision.cpp" name="main.cpp" stamp="1501927675240" updateReferences="true"/>
+</session>

@@ -1,0 +1,28 @@
+/*
+ * featureextraction.h
+ *
+ *  Created on: 24 Jul 2017
+ *      Author: sheun
+ */
+
+#ifndef FEATUREEXTRACTION_H_
+#define FEATUREEXTRACTION_H_
+
+#include <stdio.h>
+#include <iostream>
+#include "opencv2/core.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/xfeatures2d.hpp"
+#include "opencv2/highgui.hpp"
+
+using namespace cv;
+using namespace cv::xfeatures2d;
+
+class feature_extraction {
+public:
+	feature_extraction();
+	virtual ~feature_extraction();
+
+};
+
+#endif /* FEATUREEXTRACTION_H_ */

@@ -1,0 +1,35 @@
+/*
+ * featureextraction.cpp
+ *
+ *  Created on: 24 Jul 2017
+ *      Author: sheun
+ */
+
+#include "featureextraction.h"
+
+feature_extraction::feature_extraction() {
+	// TODO Auto-generated constructor stub
+
+}
+
+feature_extraction::~feature_extraction() {
+	// TODO Auto-generated destructor stub
+}
+
+vector<KeyPoint> feature_extraction::featurePoints(vector<Mat1b> images)
+{
+	vector<Mat1b> images_clone = images.clone();
+	int minHessian = 400;
+	Ptr<SURF> detector = SURF::create(minHessian);
+	vector<vector<KeyPoint>> keypoints1;
+	for(int i = 0; i < images.size(); i++)
+	{
+		detector -> detect(images[i], keypoints1[i]);
+		//Draw keypoints
+		Mat img_keypoints_1;
+		drawKeypoints(images[i])
+	}
+
+
+}
+

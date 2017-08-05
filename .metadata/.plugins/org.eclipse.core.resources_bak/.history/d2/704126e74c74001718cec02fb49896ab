@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <iostream>
+#include "opencv2/core.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/xfeatures2d.hpp"
+#include "opencv2/highgui.hpp"
+
+using namespace cv;
+using namespace cv::xfeatures2d;
+
+Mat1b increaseContrast(Mat1b image)
+{
+	double alpha;
+	int beta;
+	Mat1b  new_image;
+	 for( int y = 0; y < image.rows; y++ )
+	    { for( int x = 0; x < image.cols; x++ )
+	         { for( int c = 0; c < 3; c++ )
+	              {
+	      new_image.at<Vec3b>(y,x)[c] =
+	         saturate_cast<uchar>( alpha*( image.at<Vec3b>(y,x)[c] ) + beta );
+	             }
+	    }
+	    }
+
+	 return new_image;
+}
+int main( int argc, char** argv )
+{
+
+  Mat1b image = imread("/home/sheun/Pictures/transistor_images/transistor2.jpg", IMREAD_GRAYSCALE );
+	double alpha;
+	int beta;
+	Mat1b  new_image = Mat::zeros( image.size(), image.type() );
+	 for( int y = 0; y < image.rows; y++ )
+	    { for( int x = 0; x < image.cols; x++ )
+	         { for( int c = 0; c < 3; c++ )
+	              {
+	      new_image.at<Vec3b>(y,x)[c] =
+	         saturate_cast<uchar>( alpha*( image.at<Vec3b>(y,x)[c] ) + beta );
+	             }
+	    }
+	    }
+
+
+
+  waitKey(0);
+
+  return 0;
+}

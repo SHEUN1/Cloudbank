@@ -1,0 +1,148 @@
+/*
+ * SeperateObjects.cpp
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ */
+
+#include "SeperateObjects.h"
+//#include <vector>
+//#include <stdlib.h>
+
+//using namespace std;
+//RNG rng(12345);
+SeperateObjects::SeperateObjects() {
+
+	std::cout<<"identyfying objects in seperate objects class"<<endl;
+
+}
+
+SeperateObjects::~SeperateObjects() {
+
+}
+
+vector <Mat1b>  SeperateObjects::BoundBoxWatershed(Mat1b Binary, Mat1b origanal_image,Mat1b Original_image_clone, int world_number)
+{
+	// Perform the distance transform algorithm
+	    Mat dist;
+	    distanceTransform(Binary, dist, CV_DIST_L2, 3);
+	    // Normalize the distance image for range = {0.0, 1.0}
+	    // so we can visualize and threshold it
+	    normalize(dist, dist, 0, 1., NORM_MINMAX);
+	    imshow("Distance Transform Image", dist);
+	    // Threshold to obtain the peaks
+	    // This will be the markers for the foreground objects
+	    threshold(dist, dist, 0.043, 1., CV_THRESH_BINARY);
+	    // Dilate a bit the dist image
+	    Mat kernel1 = Mat::ones(3, 3, CV_8UC1);
+	    dilate(dist, dist, kernel1);
+	    imshow("Peaks", dist);
+
+	    // Create the CV_8U version of the distance image
+	    // It is needed for findContours()
+	    Mat dist_8u;
+	    dist.convertTo(dist_8u, CV_8U);
+	    // Find total markers
+	    vector<vector<Point> > contours;
+	    findContours(dist_8u, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+	    // Create the marker image for the watershed algorithm
+	    Mat markers = Mat::zeros(dist.size(), CV_32SC1);
+	    // Draw the foreground markers
+	    for (size_t i = 0; i < contours.size(); i++)
+	        drawContours(markers, contours, static_cast<int>(i), Scalar::all(static_cast<int>(i)+1), -1);
+	    // Draw the background marker
+	    circle(markers, Point(5,5), 3, CV_RGB(255,255,255), -1);
+	    imshow("Markers", markers*10000);
+
+	    // Perform the watershed algorithm
+	    watershed(origanal_image, markers);
+	    Mat mark = Mat::zeros(markers.size(), CV_8UC1);
+	    markers.convertTo(mark, CV_8UC1);
+	    bitwise_not(mark, mark);
+	//    imshow("Markers_v2", mark); // uncomment this if you want to see how the mark
+	                                  // image looks like at that point
+	    // Generate random colors
+	    vector<Vec3b> colors;
+	    for (size_t i = 0; i < contours.size(); i++)
+	    {
+	        int b = theRNG().uniform(0, 255);
+	        int g = theRNG().uniform(0, 255);
+	        int r = theRNG().uniform(0, 255);
+	        colors.push_back(Vec3b((uchar)b, (uchar)g, (uchar)r));
+	    }
+	    char file [50];
+	    // Create the result image
+	    Mat dst = Mat::zeros(markers.size(), CV_8UC3);
+	    // Fill labeled objects with random colors
+	    for (int i = 0; i < markers.rows; i++)
+	    {
+	        for (int j = 0; j < markers.cols; j++)
+	        {
+	            int index = markers.at<int>(i,j);
+	            if (index > 0 && index <= static_cast<int>(contours.size()))
+	                dst.at<Vec3b>(i,j) = colors[index-1];
+	            else
+	                dst.at<Vec3b>(i,j) = Vec3b(0,0,0);
+	        }
+	    }
+	    // Visualize the final image
+	    //imshow("Final Result", dst);
+	    return dst;
+}
+vector <Mat1b>  SeperateObjects::BoundBox(Mat1b Binary, Mat1b origanal_image,Mat1b Original_image_clone, int world_number)
+{
+	//bounded box will be draw on this copy of the origanal imag instead
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+
+	//find contours
+	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
+
+	 /// Get the moments(weighted average of image pixels intensities )
+	  vector<Moments> mu(contours.size());
+	  for( uint32_t i = 0; i < contours.size(); i++ )
+	     { mu[i] = moments( contours[i], false ); }
+
+	  ///  Get the mass centres:
+	    vector<Point2f> mc( contours.size() );
+	    for( uint32_t i = 0; i < contours.size(); i++ )
+	       { mc[i] = Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 ); }
+
+	//Approximate contours to polygons + get bounding rects
+	vector<vector<Point> > contours_poly(contours.size());
+	vector<Rect> boundRect(contours.size());
+	//region of interest
+	vector<Mat1b> roi(contours.size());
+	//get image coordinate;
+	vector<int>x_coordinate( contours.size() );
+	vector<int>y_coordinate( contours.size() );
+
+	//character length for roi filename to be saved in separate folder
+	char file [50];
+
+	for(uint32_t i = 0; i < contours.size(); i++)
+	{
+		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
+		boundRect[i] = boundingRect(Mat(contours_poly[i]));
+		x_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
+		y_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
+		Scalar color( rand()&255, rand()&255, rand()&255 );
+		rectangle (Original_image_clone, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+		// Crop the original image to the defined ROI
+	    roi[i] = origanal_image(boundRect[i]);
+	    //save regions of interest into a folder
+	    if (world_number == 0)
+	    {
+	    	sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
+	    }
+	    else if(world_number == 1)
+	    {
+	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
+	    }
+	    imwrite(file,roi[i]);
+
+	}
+
+	return roi;
+}
+

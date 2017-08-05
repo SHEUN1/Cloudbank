@@ -1,0 +1,61 @@
+/*
+ * yingyang.cpp
+ *
+ *  Created on: 13 Jun 2017
+ *      Author: sheun
+ */
+
+#include "yingyang.h"
+
+ying_yang::ying_yang() {
+
+
+}
+
+ying_yang::~ying_yang() {
+
+}
+Mat1b ying_yang::binary (Mat1b img)
+{
+	 Mat1b binaryImage;
+
+	 threshold(img, binaryImage, 100, 255, THRESH_BINARY | CV_THRESH_OTSU);
+	 return cleanupBinary(binaryImage);
+}
+Mat1b ying_yang::binary_Inverse (Mat1b img)
+{
+	double alpha = 2.2;
+	int beta = 50;
+	Mat1b contrasted, binaryImage, binaryImage_inv;
+	img.convertTo(contrasted, -1, alpha, beta);
+	//imshow("contrasted Image", contrasted);
+
+	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
+	binaryImage = cleanupBinary(binaryImage);
+	binaryImage_inv = cv::Scalar::all(255)-binaryImage ;
+	namedWindow( "imajust imageb", CV_WINDOW_NORMAL );
+	imshow ("light binary",binaryImage);
+	imshow ("light binary inverse",binaryImage_inv);
+	return cleanupBinary(binaryImage_inv);
+}
+
+
+
+
+//remove  small blobs in binary images
+Mat1b ying_yang::cleanupBinary(Mat1b Binary)
+{
+		Mat se1 = getStructuringElement(MORPH_RECT, Size(10, 10));
+	    Mat se2 = getStructuringElement(MORPH_RECT, Size(4, 4));
+
+	    // Perform closing then opening
+	    Mat mask;
+	    morphologyEx(Binary, mask, MORPH_CLOSE, se1);
+	    morphologyEx(mask, mask, MORPH_OPEN, se2);
+
+	    // Filter the output
+	    Mat1b out = Binary.clone();
+	    out.setTo(Scalar(0), mask == 0);
+
+	    return out;
+}

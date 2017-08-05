@@ -1,0 +1,18 @@
+/*
+ * featureextraction.cpp
+ *
+ *  Created on: 24 Jul 2017
+ *      Author: sheun
+ */
+
+#include "featureextraction.h"
+
+feature_extraction::feature_extraction() {
+	// TODO Auto-generated constructor stub
+
+}
+
+feature_extraction::~feature_extraction() {
+	// TODO Auto-generated destructor stub
+}
+

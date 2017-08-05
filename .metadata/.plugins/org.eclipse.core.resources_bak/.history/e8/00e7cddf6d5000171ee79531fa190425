@@ -1,0 +1,29 @@
+/*
+ * yingyang.h
+ *
+ *  Created on: 13 Jun 2017
+ *      Author: sheun
+ */
+#include<iostream>
+#include<opencv2/core/core.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
+#include<opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+
+#ifndef YINGYANG_H_
+#define YINGYANG_H_
+
+class ying_yang {
+public:
+	ying_yang();
+	virtual ~ying_yang();
+	Mat yin (Mat img);
+	Mat yang (Mat img);
+
+
+};
+
+#endif /* YINGYANG_H_ */
