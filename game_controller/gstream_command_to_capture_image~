@@ -1,0 +1,1 @@
+gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=capture.jpg
