@@ -1,6 +1,6 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:testOpencv,org.eclipse.launchbar.core.descriptorType.default\:transistor_vision
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:testOpencv,org.eclipse.launchbar.core.descriptorType.default\:boost_test,org.eclipse.launchbar.core.descriptorType.default\:transistor_vision
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:testOpencv/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:testOpencv/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

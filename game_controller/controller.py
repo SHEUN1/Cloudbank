@@ -3,8 +3,10 @@ import os
 import time
 import random
 from random import randint
+import main
 
-executable = os.path.join("/home/sheun/gamestuff-master/game_project", 'my_script')
+main.vision()
+executable = os.path.join("/home/sheun/Gaming_Project/game_controller", 'send_control_cmds_to_game')
 up= ["Up", ""]
 down= ["Down", ""]
 right= ["Right", ""]
