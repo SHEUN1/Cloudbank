@@ -1,0 +1,53 @@
+#!/bin/sh
+#!/bin/bash
+# Naked variables
+
+wmctrl -a Transistor;
+xdotool keyup "Up";
+xdotool keyup "Down";
+xdotool keyup "Left";
+xdotool keyup "Right";
+xdotool keyup "1";
+xdotool keyup "2";
+xdotool keyup "3";
+xdotool keyup "4";
+xdotool keyup "space";
+xdotool keyup "R";
+ID=xdotool search --name Transistor
+ID2=$(xdotool search --name Transistor)
+isWindowName=$(xdotool getactivewindow getwindowname)
+#xdotool mousedown 1; sleep 0.001; xdotool mouseup 1;
+#xdotool windowactivate $ID2
+
+function Move 
+{
+	       
+	       
+	xdotool keydown --window $ID2 "$2";
+	xdotool keydown --window $ID2 "$3";
+	xdotool keydown --window $ID2 "$4";
+	xdotool keydown --window $ID2 "$5";
+	xdotool key --window $ID2 "$6";
+	xdotool key --window $ID2 "$7";
+	xdotool key --window $ID2 "${10}";
+	xdotool mousemove --window $ID2 "$8" "$9"  ${11} ${12};
+
+	      
+}
+
+function ClickMouseL
+{
+	xdotool mousedown --window $ID2 1; sleep 0.001; xdotool mouseup --window $ID2 1;
+}
+
+function ClickMouseR
+{
+	xdotool mousedown --window $ID2 3; sleep 0.001; xdotool mouseup --window $ID2 3;
+}
+
+ 
+while [isWindowName=Transistor] :
+do	       
+	  $1;
+	      	      
+done
