@@ -5,7 +5,9 @@ import random
 from random import randint
 import main
 
-main.vision()
+#main.vision()
+keypoints = main.vision()
+print keypoints [3]
 executable = os.path.join("/home/sheun/Gaming_Project/game_controller", 'send_control_cmds_to_game')
 up= ["Up", ""]
 down= ["Down", ""]

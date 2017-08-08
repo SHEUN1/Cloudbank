@@ -23,7 +23,22 @@
 using namespace std;
 using namespace cv;
 
-int vision_analysis()
+#include <boost/python.hpp>
+#include <boost/python/suite/indexing/vector_indexing_suite.hpp>
+using namespace boost::python;
+typedef vector<double> MyList;
+
+
+boost::python::list toPythonList(MyList send) {
+	typename MyList::iterator iter;
+	boost::python::list list;
+	for (iter = send.begin(); iter != send.end(); ++iter) {
+		list.append(*iter);
+	}
+	return list;
+}
+
+boost::python::list vision_analysis()
 {
 	//system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image");
 		//get image
@@ -56,25 +71,37 @@ int vision_analysis()
 
 		cout<<features_of_light_world_objects.size()<<endl;
 		cout<<features_of_dark_world_objects.size()<<endl;
-		namedWindow( "Objects in both worlds", CV_WINDOW_NORMAL );
-		imshow ("Objects in both worlds",Original_image_clone);
+		//namedWindow( "Objects in both worlds", CV_WINDOW_NORMAL );
+		//imshow ("Objects in both worlds",Original_image_clone);
 
 		//cvWaitKey();
+		vector<double> testToPython;
+		  for(double i = 0; i < 5; i++){
+			  testToPython.push_back(i);
+		   }
 
-
-		return 0;
+		//return 0;
+		return toPythonList (testToPython);
+		//return testToPython;//features_of_dark_world_objects;
 }
+
 int main()
 {
-	return vision_analysis();
+	vision_analysis();
+	return 0;
 
 }
 
 
-#include <boost/python.hpp>
-using namespace boost::python;
+
+
 BOOST_PYTHON_MODULE(main)
 {
 
-    def("vision", vision_analysis);
+	 def("vision", vision_analysis);
+	// class_<vision_analysis>("MyClass").def("vision", vision_analysis);
+   // class_< vector<double> >("vision").def(vector_indexing_suite<std::vector<double> >());
+	//class_< vector<double> >("vision").def(vector_indexing_suite< vector<double> >(vision_analysis) );
+	//class_< vector<double> >("vision").def("vision", vision_analysis);
+
 }

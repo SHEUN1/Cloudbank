@@ -9,12 +9,6 @@ CPP_SRCS += \
 ../src/main.cpp \
 ../src/yingyang.cpp 
 
-O_SRCS += \
-../src/SeperateObjects.o \
-../src/featureextraction.o \
-../src/main.o \
-../src/yingyang.o 
-
 OBJS += \
 ./src/SeperateObjects.o \
 ./src/featureextraction.o \
