@@ -1,0 +1,12 @@
+20:01:04 **** Incremental Build of configuration Debug for project hello ****
+make all 
+Building target: libhello.so
+Invoking: GCC C++ Linker
+g++ -fPIC -shared -o "libhello.so"  ./src/hello.o   
+/usr/bin/ld: ./src/hello.o: relocation R_X86_64_32 against `.rodata' can not be used when making a shared object; recompile with -fPIC
+./src/hello.o: error adding symbols: Bad value
+collect2: error: ld returned 1 exit status
+make: *** [libhello.so] Error 1
+
+20:01:04 Build Finished (took 71ms)
+

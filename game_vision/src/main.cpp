@@ -71,6 +71,7 @@ boost::python::list vision_analysis()
 
 		cout<<features_of_light_world_objects.size()<<endl;
 		cout<<features_of_dark_world_objects.size()<<endl;
+		//cout<<features_of_dark_world_objects.at(1)<<endl;
 		//namedWindow( "Objects in both worlds", CV_WINDOW_NORMAL );
 		//imshow ("Objects in both worlds",Original_image_clone);
 

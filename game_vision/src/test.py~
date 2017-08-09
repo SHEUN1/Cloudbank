@@ -1,0 +1,5 @@
+def foo():
+    #from main import game_vision
+    import main
+    image = main.game_vision()    
+foo()

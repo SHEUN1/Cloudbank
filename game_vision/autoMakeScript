@@ -1,0 +1,4 @@
+#!/bin/sh
+#!/bin/bash
+
+make -j4 

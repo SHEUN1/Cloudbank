@@ -38,6 +38,7 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 
 		//Draw keypoints
 		drawKeypoints(images_clone[i], keypoints[i], img_keypoints_1, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
+
 		//save regions of interest into a folder
 		if (world_number == 0)
 		{
@@ -54,7 +55,7 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 
 	}
 
-
+	//cout<<keypoints_hold_1_image[0]<<endl;
  return keypoints;
 }
 

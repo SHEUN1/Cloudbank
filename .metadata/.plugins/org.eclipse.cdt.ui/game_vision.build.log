@@ -1,5 +1,10 @@
-23:14:38 **** Incremental Build of configuration Debug for project game_vision ****
+21:19:36 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
 g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
@@ -11,5 +16,5 @@ g++ -L/usr/local/lib -o "game_vision"  ./src/SeperateObjects.o ./src/featureextr
 Finished building target: game_vision
  
 
-23:14:42 Build Finished (took 4s.838ms)
+21:19:42 Build Finished (took 5s.738ms)
 

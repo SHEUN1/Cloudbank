@@ -1,5 +1,1756 @@
-23:14:38 **** Incremental Build of configuration Debug for project game_vision ****
+23:33:30 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘boost::python::list vision_analysis()’:
+../src/main.cpp:74:7: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘std::vector<cv::KeyPoint>’)
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+       ^
+../src/main.cpp:74:7: note: candidates are:
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:108:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/4.8/ostream:108:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.8/ostream:117:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.8/ostream:117:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.8/ostream:127:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/4.8/ostream:127:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.8/ostream:166:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/4.8/ostream:166:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long int’
+/usr/include/c++/4.8/ostream:170:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/4.8/ostream:170:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long unsigned int’
+/usr/include/c++/4.8/ostream:174:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/4.8/ostream:174:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘bool’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘short int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:181:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/4.8/ostream:181:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:192:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/4.8/ostream:192:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘unsigned int’
+/usr/include/c++/4.8/ostream:201:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/4.8/ostream:201:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long long int’
+/usr/include/c++/4.8/ostream:205:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/4.8/ostream:205:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long long unsigned int’
+/usr/include/c++/4.8/ostream:220:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/4.8/ostream:220:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘double’
+/usr/include/c++/4.8/ostream:224:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/4.8/ostream:224:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘float’
+/usr/include/c++/4.8/ostream:232:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/4.8/ostream:232:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long double’
+/usr/include/c++/4.8/ostream:245:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/4.8/ostream:245:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘const void*’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/boost/python/instance_holder.hpp:11:0,
+                 from /usr/include/boost/python/object/pointer_holder.hpp:14,
+                 from /usr/include/boost/python/to_python_indirect.hpp:10,
+                 from /usr/include/boost/python/converter/arg_to_python.hpp:10,
+                 from /usr/include/boost/python/call.hpp:15,
+                 from /usr/include/boost/python/object_core.hpp:14,
+                 from /usr/include/boost/python/args.hpp:25,
+                 from /usr/include/boost/python.hpp:11,
+                 from ../src/main.cpp:26:
+/usr/include/boost/python/type_id.hpp:172:33: note: std::ostream& boost::python::operator<<(std::ostream&, const boost::python::type_info&)
+ BOOST_PYTHON_DECL std::ostream& operator<<(std::ostream&, type_info const&);
+                                 ^
+/usr/include/boost/python/type_id.hpp:172:33: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const boost::python::type_info&’
+In file included from /usr/local/include/opencv2/core.hpp:3218:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/utility.hpp:384:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::TickMeter&)
+ std::ostream& operator << (std::ostream& out, const TickMeter& tm)
+               ^
+/usr/local/include/opencv2/core/utility.hpp:384:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::TickMeter&’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note: std::ostream& cv::operator<<(std::ostream&, const cv::MatSize&)
+ static inline std::ostream& operator << (std::ostream& out, const MatSize& msize)
+                             ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::MatSize&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Rect_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Rect_<_Tp>& rect)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Rect_<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Size_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Size_<_Tp>& size)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Size_<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note: template<class _Tp, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Vec<_Tp, m>&)
+ std::ostream& operator << (std::ostream& out, const Vec<_Tp, n>& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Vec<_Tp, m>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point3_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point3_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Point3_<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Point_<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note: template<class _Tp, int m, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Matx<_Tp, m, n>&)
+ std::ostream& operator << (std::ostream& out, const Matx<_Tp, m, n>& matx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point3_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point3_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   mismatched types ‘cv::Point3_<_Tp>’ and ‘cv::KeyPoint’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::vector<cv::Point3_<_Tp> >’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   mismatched types ‘cv::Point_<_Tp>’ and ‘cv::KeyPoint’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::vector<cv::Point_<_Tp> >’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Complex<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Complex<_Tp>& c)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Complex<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::UMat&)
+ std::ostream& operator << (std::ostream& out, const UMat& m)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::UMat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::Mat&)
+ std::ostream& operator << (std::ostream& out, const Mat& mtx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::Mat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note: std::ostream& cv::operator<<(std::ostream&, cv::Ptr<cv::Formatted>)
+ std::ostream& operator << (std::ostream& out, Ptr<Formatted> fmtd)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘cv::Ptr<cv::Formatted>’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::String&)
+ std::ostream& operator << (std::ostream& os, const String& str)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::String&’
+In file included from /usr/local/include/opencv2/core/core.hpp:48:0,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core.hpp:2978:9: note: cv::String& cv::operator<<(cv::String&, const cv::Mat&)
+ String& operator << (String& out, const Mat& mtx)
+         ^
+/usr/local/include/opencv2/core.hpp:2978:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+/usr/local/include/opencv2/core.hpp:2969:9: note: cv::String& cv::operator<<(cv::String&, cv::Ptr<cv::Formatted>)
+ String& operator << (String& out, Ptr<Formatted> fmtd)
+         ^
+/usr/local/include/opencv2/core.hpp:2969:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, char*)
+ FileStorage& operator << (FileStorage& fs, char* value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const char*)
+ FileStorage& operator << (FileStorage& fs, const char* str)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note: template<class _Tp> cv::FileStorage& cv::operator<<(cv::FileStorage&, const _Tp&)
+ FileStorage& operator << (FileStorage& fs, const _Tp& value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘std::cout’ (type ‘std::ostream {aka std::basic_ostream<char>}’) to type ‘cv::FileStorage&’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const cv::String&)
+ CV_EXPORTS FileStorage& operator << (FileStorage& fs, const String& str);
+                         ^
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+In file included from /usr/local/include/opencv2/core/mat.hpp:3611:0,
+                 from /usr/local/include/opencv2/core.hpp:59,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note: template<class _Tp, class T2> cv::MatCommaInitializer_<_Tp> cv::operator<<(const cv::Mat_<_Tp>&, T2)
+ MatCommaInitializer_<_Tp> operator << (const Mat_<_Tp>& m, T2 val)
+                           ^
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Mat_<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note: template<class _Tp, class _T2, int cn> cv::VecCommaInitializer<_Tp, cn> cv::operator<<(const cv::Vec<_Tp, n>&, _T2)
+ VecCommaInitializer<_Tp, cn> operator << (const Vec<_Tp, cn>& vec, _T2 val)
+                              ^
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Vec<_Tp, n>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/local/include/opencv2/core/matx.hpp:879:33: note: template<class _Tp, class _T2, int m, int n> cv::MatxCommaInitializer<_Tp, m, n> cv::operator<<(const cv::Matx<_Tp, m, n>&, _T2)
+ MatxCommaInitializer<_Tp, m, n> operator << (const Matx<_Tp, m, n>& mtx, _T2 val)
+                                 ^
+/usr/local/include/opencv2/core/matx.hpp:879:33: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:235:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^
+/usr/include/c++/4.8/iomanip:235:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘std::_Setw’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:205:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^
+/usr/include/c++/4.8/iomanip:205:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘std::_Setprecision’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:175:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^
+/usr/include/c++/4.8/iomanip:175:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘std::_Setfill<_CharT>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:140:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^
+/usr/include/c++/4.8/iomanip:140:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘std::_Setbase’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:106:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^
+/usr/include/c++/4.8/iomanip:106:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘std::_Setiosflags’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/flann/lsh_table.h:40:0,
+                 from /usr/local/include/opencv2/flann/lsh_index.h:49,
+                 from /usr/local/include/opencv2/flann/all_indices.h:42,
+                 from /usr/local/include/opencv2/flann/flann_base.hpp:43,
+                 from /usr/local/include/opencv2/flann.hpp:48,
+                 from /usr/local/include/opencv2/opencv.hpp:62,
+                 from ../src/main.cpp:13:
+/usr/include/c++/4.8/iomanip:76:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^
+/usr/include/c++/4.8/iomanip:76:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘std::_Resetiosflags’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/local/include/opencv2/core/cvstd.inl.hpp:48:0,
+                 from /usr/local/include/opencv2/core.hpp:3217,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/main.cpp:10:
+/usr/include/c++/4.8/complex:524:5: note: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/4.8/complex:524:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::complex<_Tp>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.8/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const unsigned char*’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.8/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const signed char*’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const char*’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const char*’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.8/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   mismatched types ‘const _CharT*’ and ‘std::vector<cv::KeyPoint>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.8/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘unsigned char’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.8/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘signed char’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘char’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   cannot convert ‘features_of_dark_world_objects.std::vector<_Tp, _Alloc>::at<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(1ul)’ (type ‘std::vector<cv::KeyPoint>’) to type ‘char’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.8/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘std::vector<cv::KeyPoint>’)
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note:   template argument deduction/substitution failed:
+../src/main.cpp:74:44: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   cout<<features_of_dark_world_objects.at(1)<<endl;
+                                            ^
+make: *** [src/main.o] Error 1
+23:41:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int)’:
+../src/featureextraction.cpp:41:7: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘std::vector<cv::KeyPoint>’)
+   cout<<keypoints[i]<<endl;
+       ^
+../src/featureextraction.cpp:41:7: note: candidates are:
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:108:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/4.8/ostream:108:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.8/ostream:117:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.8/ostream:117:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.8/ostream:127:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/4.8/ostream:127:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.8/ostream:166:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/4.8/ostream:166:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long int’
+/usr/include/c++/4.8/ostream:170:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/4.8/ostream:170:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long unsigned int’
+/usr/include/c++/4.8/ostream:174:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/4.8/ostream:174:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘bool’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘short int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:181:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/4.8/ostream:181:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:192:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/4.8/ostream:192:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘unsigned int’
+/usr/include/c++/4.8/ostream:201:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/4.8/ostream:201:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long long int’
+/usr/include/c++/4.8/ostream:205:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/4.8/ostream:205:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long long unsigned int’
+/usr/include/c++/4.8/ostream:220:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/4.8/ostream:220:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘double’
+/usr/include/c++/4.8/ostream:224:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/4.8/ostream:224:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘float’
+/usr/include/c++/4.8/ostream:232:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/4.8/ostream:232:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘long double’
+/usr/include/c++/4.8/ostream:245:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/4.8/ostream:245:7: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘const void*’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘std::vector<cv::KeyPoint>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.8/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘std::vector<cv::KeyPoint>’)
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘char’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘char’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.8/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘signed char’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.8/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘unsigned char’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.8/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   mismatched types ‘const _CharT*’ and ‘std::vector<cv::KeyPoint>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const char*’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const char*’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.8/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const signed char*’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.8/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(((std::vector<std::vector<cv::KeyPoint> >::size_type)i))’ (type ‘std::vector<cv::KeyPoint>’) to type ‘const unsigned char*’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core/cvstd.inl.hpp:48:0,
+                 from /usr/local/include/opencv2/core.hpp:3217,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/complex:524:5: note: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/4.8/complex:524:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::complex<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3218:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/utility.hpp:384:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::TickMeter&)
+ std::ostream& operator << (std::ostream& out, const TickMeter& tm)
+               ^
+/usr/local/include/opencv2/core/utility.hpp:384:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::TickMeter&’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note: std::ostream& cv::operator<<(std::ostream&, const cv::MatSize&)
+ static inline std::ostream& operator << (std::ostream& out, const MatSize& msize)
+                             ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::MatSize&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Rect_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Rect_<_Tp>& rect)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Rect_<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Size_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Size_<_Tp>& size)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Size_<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note: template<class _Tp, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Vec<_Tp, m>&)
+ std::ostream& operator << (std::ostream& out, const Vec<_Tp, n>& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Vec<_Tp, m>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point3_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point3_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Point3_<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Point_<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note: template<class _Tp, int m, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Matx<_Tp, m, n>&)
+ std::ostream& operator << (std::ostream& out, const Matx<_Tp, m, n>& matx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point3_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point3_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   mismatched types ‘cv::Point3_<_Tp>’ and ‘cv::KeyPoint’
+   cout<<keypoints[i]<<endl;
+                    ^
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::vector<cv::Point3_<_Tp> >’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   mismatched types ‘cv::Point_<_Tp>’ and ‘cv::KeyPoint’
+   cout<<keypoints[i]<<endl;
+                    ^
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const std::vector<cv::Point_<_Tp> >’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Complex<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Complex<_Tp>& c)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::vector<cv::KeyPoint>’ is not derived from ‘const cv::Complex<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::UMat&)
+ std::ostream& operator << (std::ostream& out, const UMat& m)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::UMat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::Mat&)
+ std::ostream& operator << (std::ostream& out, const Mat& mtx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::Mat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note: std::ostream& cv::operator<<(std::ostream&, cv::Ptr<cv::Formatted>)
+ std::ostream& operator << (std::ostream& out, Ptr<Formatted> fmtd)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘cv::Ptr<cv::Formatted>’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::String&)
+ std::ostream& operator << (std::ostream& os, const String& str)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note:   no known conversion for argument 2 from ‘std::vector<cv::KeyPoint>’ to ‘const cv::String&’
+In file included from ../src/featureextraction.h:14:0,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core.hpp:2978:9: note: cv::String& cv::operator<<(cv::String&, const cv::Mat&)
+ String& operator << (String& out, const Mat& mtx)
+         ^
+/usr/local/include/opencv2/core.hpp:2978:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+/usr/local/include/opencv2/core.hpp:2969:9: note: cv::String& cv::operator<<(cv::String&, cv::Ptr<cv::Formatted>)
+ String& operator << (String& out, Ptr<Formatted> fmtd)
+         ^
+/usr/local/include/opencv2/core.hpp:2969:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, char*)
+ FileStorage& operator << (FileStorage& fs, char* value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const char*)
+ FileStorage& operator << (FileStorage& fs, const char* str)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note: template<class _Tp> cv::FileStorage& cv::operator<<(cv::FileStorage&, const _Tp&)
+ FileStorage& operator << (FileStorage& fs, const _Tp& value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   cannot convert ‘std::cout’ (type ‘std::ostream {aka std::basic_ostream<char>}’) to type ‘cv::FileStorage&’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const cv::String&)
+ CV_EXPORTS FileStorage& operator << (FileStorage& fs, const String& str);
+                         ^
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+In file included from /usr/local/include/opencv2/core/mat.hpp:3611:0,
+                 from /usr/local/include/opencv2/core.hpp:59,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note: template<class _Tp, class T2> cv::MatCommaInitializer_<_Tp> cv::operator<<(const cv::Mat_<_Tp>&, T2)
+ MatCommaInitializer_<_Tp> operator << (const Mat_<_Tp>& m, T2 val)
+                           ^
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Mat_<_Tp>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note: template<class _Tp, class _T2, int cn> cv::VecCommaInitializer<_Tp, cn> cv::operator<<(const cv::Vec<_Tp, n>&, _T2)
+ VecCommaInitializer<_Tp, cn> operator << (const Vec<_Tp, cn>& vec, _T2 val)
+                              ^
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Vec<_Tp, n>’
+   cout<<keypoints[i]<<endl;
+                    ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:879:33: note: template<class _Tp, class _T2, int m, int n> cv::MatxCommaInitializer<_Tp, m, n> cv::operator<<(const cv::Matx<_Tp, m, n>&, _T2)
+ MatxCommaInitializer<_Tp, m, n> operator << (const Matx<_Tp, m, n>& mtx, _T2 val)
+                                 ^
+/usr/local/include/opencv2/core/matx.hpp:879:33: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:41:20: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+   cout<<keypoints[i]<<endl;
+                    ^
+make: *** [src/featureextraction.o] Error 1
+23:45:39 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int)’:
+../src/featureextraction.cpp:58:6: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘cv::KeyPoint’)
+  cout<<keypoints[0][0]<<endl;
+      ^
+../src/featureextraction.cpp:58:6: note: candidates are:
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:108:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/4.8/ostream:108:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.8/ostream:117:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.8/ostream:117:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.8/ostream:127:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/4.8/ostream:127:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.8/ostream:166:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/4.8/ostream:166:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long int’
+/usr/include/c++/4.8/ostream:170:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/4.8/ostream:170:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long unsigned int’
+/usr/include/c++/4.8/ostream:174:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/4.8/ostream:174:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘bool’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘short int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:181:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/4.8/ostream:181:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:192:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/4.8/ostream:192:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘unsigned int’
+/usr/include/c++/4.8/ostream:201:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/4.8/ostream:201:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long long int’
+/usr/include/c++/4.8/ostream:205:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/4.8/ostream:205:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long long unsigned int’
+/usr/include/c++/4.8/ostream:220:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/4.8/ostream:220:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘double’
+/usr/include/c++/4.8/ostream:224:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/4.8/ostream:224:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘float’
+/usr/include/c++/4.8/ostream:232:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/4.8/ostream:232:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long double’
+/usr/include/c++/4.8/ostream:245:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/4.8/ostream:245:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘const void*’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.8/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘cv::KeyPoint’)
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘char’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘char’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.8/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘signed char’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.8/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘unsigned char’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.8/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   mismatched types ‘const _CharT*’ and ‘cv::KeyPoint’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const char*’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const char*’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.8/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const signed char*’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.8/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘(& keypoints.std::vector<_Tp, _Alloc>::operator[]<std::vector<cv::KeyPoint>, std::allocator<std::vector<cv::KeyPoint> > >(0ul))->std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const unsigned char*’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core/cvstd.inl.hpp:48:0,
+                 from /usr/local/include/opencv2/core.hpp:3217,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/complex:524:5: note: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/4.8/complex:524:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const std::complex<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3218:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/utility.hpp:384:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::TickMeter&)
+ std::ostream& operator << (std::ostream& out, const TickMeter& tm)
+               ^
+/usr/local/include/opencv2/core/utility.hpp:384:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::TickMeter&’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note: std::ostream& cv::operator<<(std::ostream&, const cv::MatSize&)
+ static inline std::ostream& operator << (std::ostream& out, const MatSize& msize)
+                             ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::MatSize&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Rect_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Rect_<_Tp>& rect)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Rect_<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Size_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Size_<_Tp>& size)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Size_<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note: template<class _Tp, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Vec<_Tp, m>&)
+ std::ostream& operator << (std::ostream& out, const Vec<_Tp, n>& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Vec<_Tp, m>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point3_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point3_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Point3_<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Point_<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note: template<class _Tp, int m, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Matx<_Tp, m, n>&)
+ std::ostream& operator << (std::ostream& out, const Matx<_Tp, m, n>& matx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point3_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point3_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const std::vector<cv::Point3_<_Tp> >’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const std::vector<cv::Point_<_Tp> >’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Complex<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Complex<_Tp>& c)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Complex<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::UMat&)
+ std::ostream& operator << (std::ostream& out, const UMat& m)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::UMat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::Mat&)
+ std::ostream& operator << (std::ostream& out, const Mat& mtx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::Mat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note: std::ostream& cv::operator<<(std::ostream&, cv::Ptr<cv::Formatted>)
+ std::ostream& operator << (std::ostream& out, Ptr<Formatted> fmtd)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘cv::Ptr<cv::Formatted>’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::String&)
+ std::ostream& operator << (std::ostream& os, const String& str)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::String&’
+In file included from ../src/featureextraction.h:14:0,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core.hpp:2978:9: note: cv::String& cv::operator<<(cv::String&, const cv::Mat&)
+ String& operator << (String& out, const Mat& mtx)
+         ^
+/usr/local/include/opencv2/core.hpp:2978:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+/usr/local/include/opencv2/core.hpp:2969:9: note: cv::String& cv::operator<<(cv::String&, cv::Ptr<cv::Formatted>)
+ String& operator << (String& out, Ptr<Formatted> fmtd)
+         ^
+/usr/local/include/opencv2/core.hpp:2969:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, char*)
+ FileStorage& operator << (FileStorage& fs, char* value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const char*)
+ FileStorage& operator << (FileStorage& fs, const char* str)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note: template<class _Tp> cv::FileStorage& cv::operator<<(cv::FileStorage&, const _Tp&)
+ FileStorage& operator << (FileStorage& fs, const _Tp& value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   cannot convert ‘std::cout’ (type ‘std::ostream {aka std::basic_ostream<char>}’) to type ‘cv::FileStorage&’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const cv::String&)
+ CV_EXPORTS FileStorage& operator << (FileStorage& fs, const String& str);
+                         ^
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+In file included from /usr/local/include/opencv2/core/mat.hpp:3611:0,
+                 from /usr/local/include/opencv2/core.hpp:59,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note: template<class _Tp, class T2> cv::MatCommaInitializer_<_Tp> cv::operator<<(const cv::Mat_<_Tp>&, T2)
+ MatCommaInitializer_<_Tp> operator << (const Mat_<_Tp>& m, T2 val)
+                           ^
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Mat_<_Tp>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note: template<class _Tp, class _T2, int cn> cv::VecCommaInitializer<_Tp, cn> cv::operator<<(const cv::Vec<_Tp, n>&, _T2)
+ VecCommaInitializer<_Tp, cn> operator << (const Vec<_Tp, cn>& vec, _T2 val)
+                              ^
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Vec<_Tp, n>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:879:33: note: template<class _Tp, class _T2, int m, int n> cv::MatxCommaInitializer<_Tp, m, n> cv::operator<<(const cv::Matx<_Tp, m, n>&, _T2)
+ MatxCommaInitializer<_Tp, m, n> operator << (const Matx<_Tp, m, n>& mtx, _T2 val)
+                                 ^
+/usr/local/include/opencv2/core/matx.hpp:879:33: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:22: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+  cout<<keypoints[0][0]<<endl;
+                      ^
+make: *** [src/featureextraction.o] Error 1
+23:46:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int)’:
+../src/featureextraction.cpp:58:33: error: no match for ‘operator[]’ (operand types are ‘cv::KeyPoint’ and ‘int’)
+  cout<<keypoints_hold_1_image[0][0]<<endl;
+                                 ^
+make: *** [src/featureextraction.o] Error 1
+23:46:19 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int)’:
+../src/featureextraction.cpp:58:6: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘cv::KeyPoint’)
+  cout<<keypoints_hold_1_image[0]<<endl;
+      ^
+../src/featureextraction.cpp:58:6: note: candidates are:
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:108:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/4.8/ostream:108:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.8/ostream:117:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.8/ostream:117:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.8/ostream:127:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/4.8/ostream:127:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.8/ostream:166:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/4.8/ostream:166:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long int’
+/usr/include/c++/4.8/ostream:170:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/4.8/ostream:170:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long unsigned int’
+/usr/include/c++/4.8/ostream:174:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/4.8/ostream:174:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘bool’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘short int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:181:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/4.8/ostream:181:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:192:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/4.8/ostream:192:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘unsigned int’
+/usr/include/c++/4.8/ostream:201:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/4.8/ostream:201:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long long int’
+/usr/include/c++/4.8/ostream:205:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/4.8/ostream:205:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long long unsigned int’
+/usr/include/c++/4.8/ostream:220:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/4.8/ostream:220:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘double’
+/usr/include/c++/4.8/ostream:224:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/4.8/ostream:224:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘float’
+/usr/include/c++/4.8/ostream:232:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/4.8/ostream:232:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘long double’
+/usr/include/c++/4.8/ostream:245:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/4.8/ostream:245:7: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘const void*’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘cv::KeyPoint’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.8/ostream:471:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘cv::KeyPoint’)
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:476:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘char’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:482:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘char’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.8/ostream:488:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘signed char’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.8/ostream:493:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘unsigned char’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.8/ostream:513:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   mismatched types ‘const _CharT*’ and ‘cv::KeyPoint’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const char*’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/ostream:530:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const char*’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.8/ostream:543:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const signed char*’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from ../src/featureextraction.h:12,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.8/ostream:548:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘keypoints_hold_1_image.std::vector<_Tp, _Alloc>::operator[]<cv::KeyPoint, std::allocator<cv::KeyPoint> >(0ul)’ (type ‘cv::KeyPoint’) to type ‘const unsigned char*’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core/cvstd.inl.hpp:48:0,
+                 from /usr/local/include/opencv2/core.hpp:3217,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/include/c++/4.8/complex:524:5: note: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/4.8/complex:524:5: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const std::complex<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3218:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/utility.hpp:384:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::TickMeter&)
+ std::ostream& operator << (std::ostream& out, const TickMeter& tm)
+               ^
+/usr/local/include/opencv2/core/utility.hpp:384:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::TickMeter&’
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note: std::ostream& cv::operator<<(std::ostream&, const cv::MatSize&)
+ static inline std::ostream& operator << (std::ostream& out, const MatSize& msize)
+                             ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:273:29: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::MatSize&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Rect_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Rect_<_Tp>& rect)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:268:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Rect_<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Size_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Size_<_Tp>& size)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:262:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Size_<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note: template<class _Tp, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Vec<_Tp, m>&)
+ std::ostream& operator << (std::ostream& out, const Vec<_Tp, n>& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:233:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Vec<_Tp, m>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point3_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point3_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:226:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Point3_<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point_<_Tp>& p)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:219:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Point_<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note: template<class _Tp, int m, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Matx<_Tp, m, n>&)
+ std::ostream& operator << (std::ostream& out, const Matx<_Tp, m, n>& matx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:213:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point3_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point3_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:206:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const std::vector<cv::Point3_<_Tp> >’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point_<_Tp> >& vec)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:199:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const std::vector<cv::Point_<_Tp> >’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Complex<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Complex<_Tp>& c)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:193:15: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘cv::KeyPoint’ is not derived from ‘const cv::Complex<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:3217:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::UMat&)
+ std::ostream& operator << (std::ostream& out, const UMat& m)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:187:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::UMat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::Mat&)
+ std::ostream& operator << (std::ostream& out, const Mat& mtx)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:181:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::Mat&’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note: std::ostream& cv::operator<<(std::ostream&, cv::Ptr<cv::Formatted>)
+ std::ostream& operator << (std::ostream& out, Ptr<Formatted> fmtd)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:172:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘cv::Ptr<cv::Formatted>’
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note: std::ostream& cv::operator<<(std::ostream&, const cv::String&)
+ std::ostream& operator << (std::ostream& os, const String& str)
+               ^
+/usr/local/include/opencv2/core/cvstd.inl.hpp:166:15: note:   no known conversion for argument 2 from ‘cv::KeyPoint’ to ‘const cv::String&’
+In file included from ../src/featureextraction.h:14:0,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core.hpp:2978:9: note: cv::String& cv::operator<<(cv::String&, const cv::Mat&)
+ String& operator << (String& out, const Mat& mtx)
+         ^
+/usr/local/include/opencv2/core.hpp:2978:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+/usr/local/include/opencv2/core.hpp:2969:9: note: cv::String& cv::operator<<(cv::String&, cv::Ptr<cv::Formatted>)
+ String& operator << (String& out, Ptr<Formatted> fmtd)
+         ^
+/usr/local/include/opencv2/core.hpp:2969:9: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::String&’
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, char*)
+ FileStorage& operator << (FileStorage& fs, char* value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1203:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const char*)
+ FileStorage& operator << (FileStorage& fs, const char* str)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1195:14: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note: template<class _Tp> cv::FileStorage& cv::operator<<(cv::FileStorage&, const _Tp&)
+ FileStorage& operator << (FileStorage& fs, const _Tp& value)
+              ^
+/usr/local/include/opencv2/core/persistence.hpp:1180:14: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   cannot convert ‘std::cout’ (type ‘std::ostream {aka std::basic_ostream<char>}’) to type ‘cv::FileStorage&’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:60:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note: cv::FileStorage& cv::operator<<(cv::FileStorage&, const cv::String&)
+ CV_EXPORTS FileStorage& operator << (FileStorage& fs, const String& str);
+                         ^
+/usr/local/include/opencv2/core/persistence.hpp:779:25: note:   no known conversion for argument 1 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘cv::FileStorage&’
+In file included from /usr/local/include/opencv2/core/mat.hpp:3611:0,
+                 from /usr/local/include/opencv2/core.hpp:59,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note: template<class _Tp, class T2> cv::MatCommaInitializer_<_Tp> cv::operator<<(const cv::Mat_<_Tp>&, T2)
+ MatCommaInitializer_<_Tp> operator << (const Mat_<_Tp>& m, T2 val)
+                           ^
+/usr/local/include/opencv2/core/mat.inl.hpp:3219:27: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Mat_<_Tp>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note: template<class _Tp, class _T2, int cn> cv::VecCommaInitializer<_Tp, cn> cv::operator<<(const cv::Vec<_Tp, n>&, _T2)
+ VecCommaInitializer<_Tp, cn> operator << (const Vec<_Tp, cn>& vec, _T2 val)
+                              ^
+/usr/local/include/opencv2/core/matx.hpp:1088:30: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Vec<_Tp, n>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+In file included from /usr/local/include/opencv2/core.hpp:57:0,
+                 from ../src/featureextraction.h:14,
+                 from ../src/featureextraction.cpp:8:
+/usr/local/include/opencv2/core/matx.hpp:879:33: note: template<class _Tp, class _T2, int m, int n> cv::MatxCommaInitializer<_Tp, m, n> cv::operator<<(const cv::Matx<_Tp, m, n>&, _T2)
+ MatxCommaInitializer<_Tp, m, n> operator << (const Matx<_Tp, m, n>& mtx, _T2 val)
+                                 ^
+/usr/local/include/opencv2/core/matx.hpp:879:33: note:   template argument deduction/substitution failed:
+../src/featureextraction.cpp:58:32: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const cv::Matx<_Tp, m, n>’
+  cout<<keypoints_hold_1_image[0]<<endl;
+                                ^
+make: *** [src/featureextraction.o] Error 1
+21:19:36 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
 g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"

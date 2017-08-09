@@ -1,0 +1,12 @@
+19:20:41 **** Incremental Build of configuration Debug for project hi ****
+make all 
+Building target: hi
+Invoking: GCC C++ Linker
+g++ -shared -o "hi"  ./src/hi.o   
+/usr/bin/ld: ./src/hi.o: relocation R_X86_64_32 against `.rodata' can not be used when making a shared object; recompile with -fPIC
+./src/hi.o: error adding symbols: Bad value
+collect2: error: ld returned 1 exit status
+make: *** [hi] Error 1
+
+19:20:41 Build Finished (took 74ms)
+
