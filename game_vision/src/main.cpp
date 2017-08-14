@@ -5,7 +5,7 @@
 // Copyright   : Your copyright notice
 // Description : Extract objects and their features from a playing game
 //============================================================================
-
+#include<stdio.h>
 #include<iostream>
 #include<opencv2/core/core.hpp>
 #include<opencv2/highgui/highgui.hpp>
@@ -14,10 +14,13 @@
 #include<iostream>
 #include<vector>
 #include <algorithm>
+#include <map>
+#include <iterator>
 
 #include "yingyang.h"
 #include "SeperateObjects.h"
 #include "featureextraction.h"
+#include "SendDataToPython.h"
 
 
 using namespace std;
@@ -25,69 +28,131 @@ using namespace cv;
 
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
+#include <boost/python/suite/indexing/map_indexing_suite.hpp>
+
 using namespace boost::python;
 typedef vector<double> MyList;
 
 
-boost::python::list toPythonList(MyList send) {
-	typename MyList::iterator iter;
-	boost::python::list list;
-	for (iter = send.begin(); iter != send.end(); ++iter) {
-		list.append(*iter);
+boost::python::list vectorToPythonList(vector<double> vectorToSend) {
+	typename vector<double>::iterator iter;
+	boost::python::list pythonList;
+	for (iter = vectorToSend.begin(); iter != vectorToSend.end(); ++iter) {
+		pythonList.append(*iter);
 	}
-	return list;
+	return pythonList;
 }
 
-boost::python::list vision_analysis()
+boost::python::dict vectorToPythonList2(vector< vector<KeyPoint> > vectorToSend)
 {
-	//system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image");
-		//get image
-		Mat img = imread("/home/sheun/Pictures/transistor_images/transistor1.jpg");
+	//iterator for each objects
+	typename vector< vector<KeyPoint> >::iterator iterEachObject;
+	//iterator for each keypoint for each object
+	typename vector<KeyPoint>::iterator iterKeyPoints;
 
-		//grayscale, and use imadjust for to get a high constrast version (the base for "lightworld")
+	//feature array
+	boost::python::list keyPointList;
+
+	//map/dictionary will hold the keypoints acciociated with each object
+	boost::python::dict keypointMap;
+	int i = 0;
+
+
+	for (iterEachObject = vectorToSend.begin(); iterEachObject != vectorToSend.end(); ++iterEachObject)
+	{
+
+		// hold a collection of all keypoints belonging to the object
+			boost::python::list CollectionOfKeypointArray;
+
+		//int j = 0;
+		//create a list of individual keypoints
+		for(iterKeyPoints = iterEachObject->begin(); iterKeyPoints != iterEachObject->end(); ++iterKeyPoints)
+		{
+			boost::python::list individualKeypointArray;
+
+			individualKeypointArray.append(iterKeyPoints->pt.x);
+			individualKeypointArray.append(iterKeyPoints->pt.y);
+			individualKeypointArray.append(iterKeyPoints->size);
+			individualKeypointArray.append(iterKeyPoints->angle);
+			individualKeypointArray.append(iterKeyPoints->response);
+			individualKeypointArray.append(iterKeyPoints->octave);
+			keyPointList.append(individualKeypointArray);
+
+
+		}
+
+		CollectionOfKeypointArray.append(keyPointList);
+		keypointMap[i] = CollectionOfKeypointArray;
+		++i;
+
+
+
+	}
+
+	//return pythonListInside;
+	return keypointMap;
+}
+
+boost::python::dict vision_analysis()
+{
+		//this map will hold all the information on the image such as its position in the frame and feature points
+		typedef int object; //object number
+		typedef std::pair<int, int > coordinates; //this will hold x,y coordinates of object in the frame
+		typedef vector<KeyPoint> featurePoints; // feature points of object
+
+
+		std::map <object, std::pair<coordinates, featurePoints > > dark_object_info;
+		std::map <object, std::pair<coordinates, featurePoints > > light_object_info;
+		//hold coordinates to be later inserted for dark contrast objects
+		vector<int>dark_x_coordinate;
+		vector<int>dark_y_coordinate;
+		//hold coordinates to be later inserted for light contrast objects
+		vector<int>light_x_coordinate;
+		vector<int>light_y_coordinate;
+
+		// turn on script that save get current frame from video game
+	    //system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
+
+	    //read current video_game frame
+	    Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
+
+	    //grayscale, and use imadjust for to get a high contrast version (the basIS for "lightworld")
 		Mat gray;
 		//convert to grayscale
 		cvtColor(img, gray, COLOR_RGB2GRAY);
+
 		//smooth image
 		blur(gray, gray, Size(3,3));
+
 		Mat Original_image_clone = gray.clone();
-	    //convert to binary
+
+		//convert to binary
 		ying_yang world_view;
 		Mat dark_world_view = world_view.binary(gray,img);
 		Mat light_world_view = world_view.binary_Inverse(gray,img);
 
-		imshow("dark world view", dark_world_view);
-		imshow("light world view", light_world_view);
-
-		//get objects in each world view
+		//get objects in each world view and put each of them into a vector
 		SeperateObjects worldObjects;
-		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0); // the 2nd parameter is because we want the boxes to be on the original image
-		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1);
+		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false); // the 3rd parameter holds the version of the frame image that the boxes will be drawn onto the boxes to be on the original image
+		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, false);
 
 		feature_extraction features_of_objects;
-		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);
-		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1);
+		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, false);
+		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, false);
 
+		SendDataToPython python_features_of_objects;
+		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.featurePointToDict(features_of_dark_world_objects);
 
-		cout<<features_of_light_world_objects.size()<<endl;
-		cout<<features_of_dark_world_objects.size()<<endl;
-		//cout<<features_of_dark_world_objects.at(1)<<endl;
-		//namedWindow( "Objects in both worlds", CV_WINDOW_NORMAL );
-		//imshow ("Objects in both worlds",Original_image_clone);
+		cout<<dark_world_objects.size()<<endl;
+		cout<<features_of_dark_world_objects.at(16).size()<<endl;
 
-		//cvWaitKey();
-		vector<double> testToPython;
-		  for(double i = 0; i < 5; i++){
-			  testToPython.push_back(i);
-		   }
+		return send_to_python_the_dark_world;
 
-		//return 0;
-		return toPythonList (testToPython);
-		//return testToPython;//features_of_dark_world_objects;
 }
 
 int main()
 {
+
 	vision_analysis();
 	return 0;
 

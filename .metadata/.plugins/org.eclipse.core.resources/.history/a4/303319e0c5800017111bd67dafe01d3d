@@ -1,0 +1,17 @@
+/*
+ * SendDataToPython.h
+ *
+ *  Created on: 14 Aug 2017
+ *      Author: sheun
+ */
+
+#ifndef SENDDATATOPYTHON_H_
+#define SENDDATATOPYTHON_H_
+
+class SendDataToPython {
+public:
+	SendDataToPython();
+	virtual ~SendDataToPython();
+};
+
+#endif /* SENDDATATOPYTHON_H_ */

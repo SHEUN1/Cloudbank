@@ -1,0 +1,121 @@
+//============================================================================
+// Name        : transistor_vision.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Extract objects and their features from a playing game
+//============================================================================
+#include<stdio.h>
+#include<iostream>
+#include<opencv2/core/core.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
+#include<opencv2/opencv.hpp>
+#include<iostream>
+#include<vector>
+#include <algorithm>
+#include <map>
+
+#include "yingyang.h"
+#include "SeperateObjects.h"
+#include "featureextraction.h"
+
+
+using namespace std;
+using namespace cv;
+
+#include <boost/python.hpp>
+#include <boost/python/suite/indexing/vector_indexing_suite.hpp>
+using namespace boost::python;
+typedef vector<double> MyList;
+
+
+boost::python::list vectorToPythonList(vector<double> vectorToSend) {
+	typename vector<double>::iterator iter;
+	boost::python::list pythonList;
+	for (iter = vectorToSend.begin(); iter != vectorToSend.end(); ++iter) {
+		pythonList.append(*iter);
+	}
+	return pythonList;
+}
+
+/*boost::python::list vectorToPythonList2(vector< vector<KeyPoint> > vectorToSend) {
+	typename vector<double>::iterator iter;
+	boost::python::list pythonList;
+	for (iter = vectorToSend.begin(); iter != vectorToSend.end(); ++iter) {
+		pythonList.append(*iter);
+	}
+	return pythonList;
+}*/
+
+boost::python::list vision_analysis()
+{
+		//this map will hold all the information on the image such as its position in the frame and feature points
+		typedef int object; //object number
+		typedef std::pair<int, int > coordinates; //this will hold x,y coordinates of object in the frame
+		typedef vector<KeyPoint> featurePoints; // feature points of object
+
+		std::map <object, std::pair<coordinates, featurePoints > > object_info;
+
+		// turn on script that save get current frame from video game
+	    system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
+
+	    //read current video_game frame
+	    Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
+
+	    //grayscale, and use imadjust for to get a high contrast version (the basIS for "lightworld")
+		Mat gray;
+		//convert to grayscale
+		cvtColor(img, gray, COLOR_RGB2GRAY);
+
+		//smooth image
+		blur(gray, gray, Size(3,3));
+
+		Mat Original_image_clone = gray.clone();
+
+		//convert to binary
+		ying_yang world_view;
+		Mat dark_world_view = world_view.binary(gray,img);
+		Mat light_world_view = world_view.binary_Inverse(gray,img);
+
+		//get objects in each world view and put each of them into a vector
+		SeperateObjects worldObjects;
+		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, object_info); // the 3rd parameter holds the version of the frame image that the boxes will be drawn onto the boxes to be on the original image
+		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, object_info);
+
+		feature_extraction features_of_objects;
+		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0);
+		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1);
+
+		//cvWaitKey();
+		vector<double> testToPython;
+		  for(double i = 0; i < 5; i++){
+			  testToPython.push_back(i);
+		   }
+
+		//return 0;
+		return vectorToPythonList(testToPython);
+		//return testToPython;//features_of_dark_world_objects;
+}
+
+int main()
+{
+
+	vision_analysis();
+	return 0;
+
+}
+
+
+
+
+BOOST_PYTHON_MODULE(main)
+{
+
+	 def("vision", vision_analysis);
+	// class_<vision_analysis>("MyClass").def("vision", vision_analysis);
+   // class_< vector<double> >("vision").def(vector_indexing_suite<std::vector<double> >());
+	//class_< vector<double> >("vision").def(vector_indexing_suite< vector<double> >(vision_analysis) );
+	//class_< vector<double> >("vision").def("vision", vision_analysis);
+
+}

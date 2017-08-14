@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="bitwise" key="selection"/>
+		<item value="keypointMap" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="keypointMap"/>
+			<item value="iter"/>
+			<item value="cvWaitKey"/>
+			<item value="keypoints_hold_1_image"/>
 			<item value="bitwise"/>
 			<item value="=="/>
 			<item value="cv_"/>
 			<item value="watershed"/>
-			<item value="origanal_image"/>
-			<item value="draw"/>
-			<item value="cout"/>
-			<item value="dark"/>
 		</list>
 		<list key="replacehistory">
+			<item value="iterEachObject"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

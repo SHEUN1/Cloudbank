@@ -4,18 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/SendDataToPython.cpp \
 ../src/SeperateObjects.cpp \
 ../src/featureextraction.cpp \
 ../src/main.cpp \
 ../src/yingyang.cpp 
 
 OBJS += \
+./src/SendDataToPython.o \
 ./src/SeperateObjects.o \
 ./src/featureextraction.o \
 ./src/main.o \
 ./src/yingyang.o 
 
 CPP_DEPS += \
+./src/SendDataToPython.d \
 ./src/SeperateObjects.d \
 ./src/featureextraction.d \
 ./src/main.d \

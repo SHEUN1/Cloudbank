@@ -23,9 +23,9 @@ SeperateObjects::~SeperateObjects() {
 
 
 
-vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Original_image_clone, int world_number)
+vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result)
 {
-	//bounded box will be draw on this copy of the origanal imag instead
+	//bounded box will be draw on this copy of the original image instead
 	vector<vector<Point> > contours;
 	vector<Vec4i> hierarchy;
 
@@ -48,12 +48,13 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 	//region of interest
 	vector<Mat> roi(contours.size());
 	//get image coordinate;
-	vector<int>x_coordinate( contours.size() );
-	vector<int>y_coordinate( contours.size() );
+	vector<int> x2_coordinate ( contours.size() );
+	vector<int> y2_coordinate ( contours.size() );
+
 
 	//character length for roi filename to be saved in separate folder
 	char file [100];
-	int lock_dark_file = 0;
+	int lock_dark_file = 0 ;
 	int lock_light_file = 0;
 
 	for(uint32_t i = 0; i < contours.size(); i++)
@@ -62,8 +63,9 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
 
 		boundRect[i] = boundingRect(Mat(contours_poly[i]));
-		x_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
-		y_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
+
+		x2_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
+		y2_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
 
 		Scalar color( rand()&255, rand()&255, rand()&255 );
 		rectangle (Original_image_clone, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
@@ -71,7 +73,8 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 		// Crop the original image to the defined ROI
 	    roi[i] = origanal_image(boundRect[i]);
 	    //save regions of interest into a folder
-
+	    if ( save_image_result == true)
+	    {
 	    if (world_number == 0)
 	    {
 	    	if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkworld_images/*");lock_dark_file++; }
@@ -83,9 +86,14 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
 	    }
 	    imwrite(file,roi[i]);
+		}
 
 
 	}
+	x_coordinate = x2_coordinate;
+	y_coordinate = y2_coordinate;
+
+
 
 	return roi;
 }

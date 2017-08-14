@@ -16,7 +16,7 @@
 #include<vector>
 #include <algorithm>
 #include <stdlib.h>
-
+#include <map>
 
 
 using namespace std;
@@ -34,7 +34,7 @@ public:
 	SeperateObjects();
 	virtual ~SeperateObjects();
 	//return an grayscaleimage with bound boxes around each object in the image
-	vector <Mat>  BoundBox(Mat Binary, Mat origanal_image, Mat Original_image_clone, int world_number);
+	vector <Mat>  BoundBox(Mat Binary, Mat origanal_image, Mat Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result);
 
 
 };

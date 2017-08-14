@@ -16,7 +16,7 @@ feature_extraction::~feature_extraction() {
 
 }
 
-vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,int world_number)
+vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,int world_number, bool save_image_result)
 {
 
 	vector<Mat> images_clone = images;
@@ -24,7 +24,7 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 	Ptr<SIFT> detector = SIFT::create(minHessian);
 	vector<KeyPoint> keypoints_hold_1_image;
 	vector< vector<KeyPoint> > keypoints;
-	char file [100];
+	 char file [100];
 	int lock_dark_file = 0;
 	int lock_light_file = 0;
 	Mat img_keypoints_1;
@@ -40,22 +40,24 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 		drawKeypoints(images_clone[i], keypoints[i], img_keypoints_1, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
 
 		//save regions of interest into a folder
-		if (world_number == 0)
+		if ( save_image_result == true)
 		{
-			if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkFeatures_images/*");lock_dark_file++; }
-			sprintf(file,"../../trasistor_vision_darkFeatures_images/Image%d.jpg",i);
-		}
-		else if(world_number == 1)
-		{
-			if (lock_light_file == 0) {system("exec rm -r ../../trasistor_vision_lightFeatures_images/*");lock_light_file++; }
-			sprintf(file,"../../trasistor_vision_lightFeatures_images/Image%d.jpg",i);
-		}
+			if (world_number == 0)
+			{
+				if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkFeatures_images/*");lock_dark_file++; }
+				sprintf(file,"../../trasistor_vision_darkFeatures_images/Image%d.jpg",i);
+			}
+			else if(world_number == 1)
+			{
+				if (lock_light_file == 0) {system("exec rm -r ../../trasistor_vision_lightFeatures_images/*");lock_light_file++; }
+				sprintf(file,"../../trasistor_vision_lightFeatures_images/Image%d.jpg",i);
+			}
 
-		imwrite(file,img_keypoints_1);
-
+			imwrite(file,img_keypoints_1);
+		}
 	}
 
-	//cout<<keypoints_hold_1_image[0]<<endl;
+
  return keypoints;
 }
 

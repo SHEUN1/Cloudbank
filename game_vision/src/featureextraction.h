@@ -25,7 +25,7 @@ public:
 	feature_extraction();
 	virtual ~feature_extraction();
 	//get feature points of each objects in the vector
-	vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number);
+	vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result);
 
 
 };

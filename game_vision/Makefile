@@ -16,3 +16,6 @@ main.so: *.o
 *.o: ./src/*.cpp
 	g++ -I$(PYTHON_INCLUDE) -I$(BOOST_INC) -fPIC -c ./src/*.cpp
 
+clean:
+	rm -f *.o ../game_controller/main.so
+
