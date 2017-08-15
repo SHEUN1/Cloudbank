@@ -33,7 +33,7 @@ public:
 	SendDataToPython();
 	virtual ~SendDataToPython();
 
-	boost::python::dict featurePointToDict(vector< vector<KeyPoint> > vectorToSend);
+	boost::python::dict objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate);
 };
 
 #endif /* SENDDATATOPYTHON_H_ */

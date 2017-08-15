@@ -4,20 +4,17 @@ import time
 import random
 from random import randint
 
-
 # execute the make folder so that a shared vision analysis library  and wat for the library to be built first
 #cleanSharedLibrary = subprocess.Popen(['make' 'clean'], cwd="../game_vision")
 #cleanSharedLibrary.wait()
-BuildSharedLibrary = subprocess.Popen(['make', '-j4'], cwd="../game_vision")
+BuildSharedLibrary = subprocess.Popen(['make', '-j6'], cwd="../game_vision")
 BuildSharedLibrary.wait()
 import main
 #main.vision() #the funtion with in the OpenCV C++ part of the code where the image processing takes place
-keypoints = main.vision()
-print keypoints [0]
-#print keypoints [16]
-#print len(keypoints)
-#for i in range(0, len(keypoints)):
-#    print keypoints[0] == keypoints[i]
+objectInformation = main.vision()
+
+for i in range(0, len(objectInformation)):
+    print objectInformation[i]
 
 #path to bash file which send the keyboard and mouse clicks to the videoagame
 executableControlFile = os.path.join("./", 'send_control_cmds_to_game')

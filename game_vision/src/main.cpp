@@ -31,67 +31,6 @@ using namespace cv;
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
 using namespace boost::python;
-typedef vector<double> MyList;
-
-
-boost::python::list vectorToPythonList(vector<double> vectorToSend) {
-	typename vector<double>::iterator iter;
-	boost::python::list pythonList;
-	for (iter = vectorToSend.begin(); iter != vectorToSend.end(); ++iter) {
-		pythonList.append(*iter);
-	}
-	return pythonList;
-}
-
-boost::python::dict vectorToPythonList2(vector< vector<KeyPoint> > vectorToSend)
-{
-	//iterator for each objects
-	typename vector< vector<KeyPoint> >::iterator iterEachObject;
-	//iterator for each keypoint for each object
-	typename vector<KeyPoint>::iterator iterKeyPoints;
-
-	//feature array
-	boost::python::list keyPointList;
-
-	//map/dictionary will hold the keypoints acciociated with each object
-	boost::python::dict keypointMap;
-	int i = 0;
-
-
-	for (iterEachObject = vectorToSend.begin(); iterEachObject != vectorToSend.end(); ++iterEachObject)
-	{
-
-		// hold a collection of all keypoints belonging to the object
-			boost::python::list CollectionOfKeypointArray;
-
-		//int j = 0;
-		//create a list of individual keypoints
-		for(iterKeyPoints = iterEachObject->begin(); iterKeyPoints != iterEachObject->end(); ++iterKeyPoints)
-		{
-			boost::python::list individualKeypointArray;
-
-			individualKeypointArray.append(iterKeyPoints->pt.x);
-			individualKeypointArray.append(iterKeyPoints->pt.y);
-			individualKeypointArray.append(iterKeyPoints->size);
-			individualKeypointArray.append(iterKeyPoints->angle);
-			individualKeypointArray.append(iterKeyPoints->response);
-			individualKeypointArray.append(iterKeyPoints->octave);
-			keyPointList.append(individualKeypointArray);
-
-
-		}
-
-		CollectionOfKeypointArray.append(keyPointList);
-		keypointMap[i] = CollectionOfKeypointArray;
-		++i;
-
-
-
-	}
-
-	//return pythonListInside;
-	return keypointMap;
-}
 
 boost::python::dict vision_analysis()
 {
@@ -131,7 +70,7 @@ boost::python::dict vision_analysis()
 		Mat dark_world_view = world_view.binary(gray,img);
 		Mat light_world_view = world_view.binary_Inverse(gray,img);
 
-		//get objects in each world view and put each of them into a vector
+		//get objects in each world view (light and dark contrast images) and put each of them into a vector
 		SeperateObjects worldObjects;
 		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false); // the 3rd parameter holds the version of the frame image that the boxes will be drawn onto the boxes to be on the original image
 		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, false);
@@ -140,11 +79,13 @@ boost::python::dict vision_analysis()
 		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, false);
 		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, false);
 
-		SendDataToPython python_features_of_objects;
-		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.featurePointToDict(features_of_dark_world_objects);
+		//Append vectors so that all objects can be put into the python dictionary
+		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
 
-		cout<<dark_world_objects.size()<<endl;
-		cout<<features_of_dark_world_objects.at(16).size()<<endl;
+
+		//send data of objects in image to python
+		SendDataToPython python_features_of_objects;
+		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate);
 
 		return send_to_python_the_dark_world;
 
@@ -158,16 +99,10 @@ int main()
 
 }
 
-
-
-
 BOOST_PYTHON_MODULE(main)
 {
 
+	//definition that out python program will call start and retrieve informatin from our c++ code.
 	 def("vision", vision_analysis);
-	// class_<vision_analysis>("MyClass").def("vision", vision_analysis);
-   // class_< vector<double> >("vision").def(vector_indexing_suite<std::vector<double> >());
-	//class_< vector<double> >("vision").def(vector_indexing_suite< vector<double> >(vision_analysis) );
-	//class_< vector<double> >("vision").def("vision", vision_analysis);
 
 }
