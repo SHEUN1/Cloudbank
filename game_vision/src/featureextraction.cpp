@@ -24,7 +24,7 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 	Ptr<SIFT> detector = SIFT::create(minHessian);
 	vector<KeyPoint> keypoints_hold_1_image;
 	vector< vector<KeyPoint> > keypoints;
-	 char file [100];
+	char file [100];
 	int lock_dark_file = 0;
 	int lock_light_file = 0;
 	Mat img_keypoints_1;

@@ -11,11 +11,14 @@
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/opencv.hpp>
+#include "opencv2/text/ocr.hpp"
 #include<iostream>
 #include<vector>
 #include <algorithm>
 #include <map>
 #include <iterator>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
 
 #include "yingyang.h"
 #include "SeperateObjects.h"
@@ -82,6 +85,8 @@ boost::python::dict vision_analysis()
 		//Append vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
 
+		dark_x_coordinate.insert(dark_x_coordinate.end(), light_x_coordinate.begin(), light_x_coordinate.end());
+		dark_y_coordinate.insert(dark_y_coordinate.end(), light_y_coordinate.begin(), light_y_coordinate.end());
 
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
@@ -91,10 +96,45 @@ boost::python::dict vision_analysis()
 
 }
 
+int letter()
+{
+	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor4.jpg");
+	blur(img, img, Size(3,3));
+	Mat gray, binary_img;
+	cvtColor(img, gray, COLOR_RGB2GRAY);
+	threshold(gray, binary_img,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
+	//imshow("binary_img", binary_img);
+	for (int a = 0; a<4; ++a)
+	{
+		for (int b=0;b<7;++b)
+		{
+			cout<<"oem: "<<a<<" psmode: "<<b<<endl;
+			Ptr<cv::text::OCRTesseract> ocr =
+				cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, a /*oem*/, b /*psmode*/);
+
+			string output;
+			vector<Rect>   boxes;
+			vector<string> words;
+			vector<float>  confidences;
+
+			ocr->run(img, output, &boxes, &words, &confidences, 1);
+			for (int i = 0; i<words.size(); i++)
+			{
+				cout<<words[i]<<endl;
+			}
+
+		}
+	}
+	cvWaitKey();
+	return 0;
+
+}
+
 int main()
 {
 
-	vision_analysis();
+	//vision_analysis();
+	letter();
 	return 0;
 
 }
