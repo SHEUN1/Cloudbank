@@ -62,7 +62,7 @@ Mat ying_yang::binary (Mat img,Mat origanal)
 
 	 Mat binaryImage;
 	 //create binary image
-	 threshold(img, binaryImage, 0.5, 255, THRESH_BINARY | CV_THRESH_OTSU);
+	 threshold(img, binaryImage, 0.5, 255, CV_THRESH_BINARY | CV_THRESH_OTSU);
 	 //clean up the binary image i.e. remove small blobs
 	 binaryImage = cleanupBinary(binaryImage);
 	 Mat Binary_post_watershed = Watershed(binaryImage,  origanal);

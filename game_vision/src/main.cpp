@@ -56,8 +56,8 @@ boost::python::dict vision_analysis()
 	    //system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
 
 	    //read current video_game frame
-	    Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
-
+	   // Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
+		Mat img = imread("/home/sheun/Pictures/transistor_images/transistor5.jpg");
 	    //grayscale, and use imadjust for to get a high contrast version (the basIS for "lightworld")
 		Mat gray;
 		//convert to grayscale
@@ -72,11 +72,13 @@ boost::python::dict vision_analysis()
 		ying_yang world_view;
 		Mat dark_world_view = world_view.binary(gray,img);
 		Mat light_world_view = world_view.binary_Inverse(gray,img);
-
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
 		SeperateObjects worldObjects;
 		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false); // the 3rd parameter holds the version of the frame image that the boxes will be drawn onto the boxes to be on the original image
 		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, false);
+
+
+
 
 		feature_extraction features_of_objects;
 		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, false);
@@ -90,10 +92,11 @@ boost::python::dict vision_analysis()
 
 		//get words in frame
 		OCR test;
-		pair< vector<string>, pair< vector<int>,vector<int> > > testing = test.getWords(img);
+		pair< vector<string>, vector < pair< int , int  > > > testing = test.getWords(img);
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
 		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, testing);
+
 
 		return send_to_python_the_dark_world;
 
@@ -102,6 +105,8 @@ boost::python::dict vision_analysis()
 int letter()
 {
 	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor5.jpg");
+	OCR test;
+	pair< vector<string>, vector < pair < int , int  > > > testing = test.getWords(img);
 	//OCR test;
 	//vector < pair< vector<string>, pair< vector<int>,vector<int> > > > testing = test.getWords(img);
 	//cout<<testing.at(0)<<endl;

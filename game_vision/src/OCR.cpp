@@ -16,7 +16,7 @@ OCR::~OCR() {
 
 }
 //get words in frame and their locations points in the image
- pair< vector<string>, pair< vector<int>,vector<int> > > OCR::getWords(Mat img)
+ pair< vector<string>, vector < pair < int , int  > > > OCR::getWords(Mat img)
 {
 
 	Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, 2 /*oem*/, 3 /*psmode*/);
@@ -24,27 +24,32 @@ OCR::~OCR() {
 	vector<Rect>   boxes;
 	vector<string> words;
 	vector<float>  confidences;
-	vector<int> x_coordinate ( words.size() );
-	vector<int> y_coordinate ( words.size() );
+	int x_coordinate;
+	int y_coordinate;
 
 	ocr->run(img, output, &boxes, &words, &confidences, 0);
+	cout<<words.size()<<endl;
 
-
-	pair< vector<int>,vector<int> > coordinates;
+	pair< int , int  > coordinates;
+	vector < pair< int , int  > > coordinatesPairs;
 	for(uint32_t i = 0; i < words.size(); i++)
 	{
-		x_coordinate[i] = ((boxes[i].x + boxes[i].width) / 2);
-		y_coordinate[i] = ((boxes[i].y + boxes[i].height) / 2);
 
-		coordinates.first[i] = x_coordinate[i];
-		coordinates.second[i] = y_coordinate[i];
+		x_coordinate = ((boxes[i].x + boxes[i].width) / 2);
+		y_coordinate = ((boxes[i].y + boxes[i].height) / 2);
+
+		coordinates.first = x_coordinate;
+		coordinates.second = y_coordinate;
+		coordinatesPairs.push_back(coordinates);
+
 	}
-	pair< vector<string>, pair< vector<int>,vector<int> > > wordsInfo;
+
+	pair< vector<string>, vector < pair<int , int> > > wordsInfo;
 
 	wordsInfo.first = words;
-	wordsInfo.second = coordinates;
-	vector < pair< vector<string>, pair< vector<int>,vector<int> > > > WordsandCoordinates;
-	WordsandCoordinates[0]  = wordsInfo;
+	wordsInfo.second = coordinatesPairs;
+	//vector < pair< vector<string>, pair< vector<int>,vector<int> > > > WordsandCoordinates;
+	//WordsandCoordinates[0]  = wordsInfo;
 
 	return wordsInfo;
 

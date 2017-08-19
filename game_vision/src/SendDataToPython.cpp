@@ -17,7 +17,7 @@ SendDataToPython::~SendDataToPython() {
 }
 
 
-boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, pair< vector<int>,vector<int> > > testing)
+boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, vector < pair< int , int  > > > testing)
 {
 	//iterator for each objects
 	typename vector< vector<KeyPoint> >::iterator iterEachObject;
@@ -65,23 +65,30 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 	//letter list that will be added to the end of the key point map.
 	boost::python::list letters;
 
+	boost::python::list collectionOfletters;
+
+
 	for(uint32_t i = 0; i<testing.first.size();i++)
 	{
-		letters.append(testing.first[i]);
+
+		collectionOfletters.append(testing.first[i]);
 	}
-	pair< vector<int>,vector<int> > wordXYPairs=testing.second;
+	letters.append(collectionOfletters);
+	vector < pair< int , int  > > wordXYPairs = testing.second;
 	boost::python::list XYPairs;
-	for (uint32_t i = 0; i<wordXYPairs.first.size();i++)
+	cout<<"74"<<endl;
+	for (uint32_t i = 0; i<wordXYPairs.size();i++)
 	{
 
 		boost::python::list coordinate;
-
-		coordinate.append(wordXYPairs.first[i]);
-		coordinate.append(wordXYPairs.second[i]);
+		cout<<"79"<<endl;
+		coordinate.append(wordXYPairs[i].first);
+		coordinate.append(wordXYPairs[i].second);
 
 		XYPairs.append(coordinate);
 	}
+	cout<<"84"<<endl;
 	letters.append(XYPairs);
-	//keypointMap[i] = letters;
+	keypointMap[i] = letters;
 	return keypointMap;
 }

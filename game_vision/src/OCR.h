@@ -33,7 +33,7 @@ public:
 	virtual ~OCR();
 
 	void find_suitable_ocr_values(Mat img);
-	pair< vector<string>, pair< vector<int>,vector<int> > >  getWords(Mat img);
+	pair< vector<string>, vector < pair< int , int  > > >  getWords(Mat img);
 };
 
 #endif /* OCR_H_ */

@@ -806,3 +806,1093 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
 Finished building target: game_vision
  
+01:18:54 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:20:21 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:20:38 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:21:28 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:21:59 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:22:32 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+01:22:46 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+01:23:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+01:23:24 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+01:25:20 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+01:26:14 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+01:26:57 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:26:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:34:26 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:37:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:37:37 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+08:39:42 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::pair<std::vector<int>, std::vector<int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:37:7: warning: unused variable ‘a’ [-Wunused-variable]
+   int a = (boxes[i].x + boxes[i].width) / 2;
+       ^
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:40:51 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::pair<std::vector<int>, std::vector<int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:37:7: warning: unused variable ‘a’ [-Wunused-variable]
+   int a = (boxes[i].x + boxes[i].width) / 2;
+       ^
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:41:39 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:42:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:48:06 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:49:24 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:50:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::pair<std::vector<int>, std::vector<int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:37:7: warning: unused variable ‘a’ [-Wunused-variable]
+   int a = (boxes[i].x + boxes[i].width) / 2;
+       ^
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+08:51:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:00:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:02:06 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:07:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:11:41 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::pair<std::vector<int>, std::vector<int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:37:16: error: no match for ‘operator=’ (operand types are ‘std::vector<int>’ and ‘int’)
+   x_coordinate = ((boxes[i].x + boxes[i].width) / 2);
+                ^
+../src/OCR.cpp:37:16: note: candidate is:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from /usr/local/include/opencv2/core/types.hpp:53,
+                 from /usr/local/include/opencv2/core.hpp:58,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/OCR.h:9,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<int>&’
+../src/OCR.cpp:38:16: error: no match for ‘operator=’ (operand types are ‘std::vector<int>’ and ‘int’)
+   y_coordinate = ((boxes[i].y + boxes[i].height) / 2);
+                ^
+../src/OCR.cpp:38:16: note: candidate is:
+In file included from /usr/include/c++/4.8/vector:69:0,
+                 from /usr/local/include/opencv2/core/types.hpp:53,
+                 from /usr/local/include/opencv2/core.hpp:58,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/OCR.h:9,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/4.8/bits/vector.tcc:160:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<int>&’
+../src/OCR.cpp:40:24: error: cannot convert ‘std::vector<int>’ to ‘int’ in assignment
+   coordinates.first[i] = x_coordinate;
+                        ^
+../src/OCR.cpp:41:25: error: cannot convert ‘std::vector<int>’ to ‘int’ in assignment
+   coordinates.second[i] = y_coordinate;
+                         ^
+make: *** [src/OCR.o] Error 1
+09:12:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:14:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:15:04 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:19:45 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:21:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:21:39 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:22:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:22:31 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:23:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:23:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:24:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+09:51:26 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+09:58:50 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::vector<std::pair<int, int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:50:19: error: no match for ‘operator=’ (operand types are ‘std::pair<std::vector<int>, std::vector<int> >’ and ‘std::vector<std::pair<int, int> >’)
+  wordsInfo.second = coordinatesPairs;
+                   ^
+../src/OCR.cpp:50:19: note: candidate is:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/OCR.h:8,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >& std::pair<std::vector<int>, std::vector<int> >::operator=(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+../src/OCR.cpp:52:2: error: ‘WordsandCoordinates’ was not declared in this scope
+  WordsandCoordinates[0]  = wordsInfo;
+  ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/OCR.h:8,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::pair<std::vector<int>, std::vector<int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::vector<std::pair<int, int> >]’:
+../src/OCR.cpp:54:9:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::vector<std::pair<int, int> >::vector(const std::pair<std::vector<int>, std::vector<int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /usr/local/include/opencv2/core/types.hpp:53,
+                 from /usr/local/include/opencv2/core.hpp:58,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/OCR.h:9,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:398:9: note: template<class _InputIterator> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/4.8/bits/stl_vector.h:398:9: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/OCR.h:8,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   candidate expects 3 arguments, 1 provided
+  : first(__p.first), second(__p.second) { }
+                                       ^
+In file included from /usr/include/c++/4.8/vector:64:0,
+                 from /usr/local/include/opencv2/core/types.hpp:53,
+                 from /usr/local/include/opencv2/core.hpp:58,
+                 from /usr/local/include/opencv2/core/core.hpp:48,
+                 from ../src/OCR.h:9,
+                 from ../src/OCR.cpp:8:
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::pair<int, int>; _Alloc = std::allocator<std::pair<int, int> >]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:310:7: note:   no known conversion for argument 1 from ‘const std::pair<std::vector<int>, std::vector<int> >’ to ‘const std::vector<std::pair<int, int> >&’
+/usr/include/c++/4.8/bits/stl_vector.h:295:7: note: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = std::pair<int, int>; _Alloc = std::allocator<std::pair<int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = std::pair<int, int>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::pair<int, int> >]
+       vector(size_type __n, const value_type& __value = value_type(),
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:295:7: note:   no known conversion for argument 1 from ‘const std::pair<std::vector<int>, std::vector<int> >’ to ‘std::vector<std::pair<int, int> >::size_type {aka long unsigned int}’
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = std::pair<int, int>; _Alloc = std::allocator<std::pair<int, int> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::pair<int, int> >]
+       vector(const allocator_type& __a)
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:256:7: note:   no known conversion for argument 1 from ‘const std::pair<std::vector<int>, std::vector<int> >’ to ‘const allocator_type& {aka const std::allocator<std::pair<int, int> >&}’
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note: std::vector<_Tp, _Alloc>::vector() [with _Tp = std::pair<int, int>; _Alloc = std::allocator<std::pair<int, int> >]
+       vector()
+       ^
+/usr/include/c++/4.8/bits/stl_vector.h:248:7: note:   candidate expects 0 arguments, 1 provided
+make: *** [src/OCR.o] Error 1
+09:59:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+../src/OCR.cpp: In member function ‘std::pair<std::vector<std::basic_string<char> >, std::vector<std::pair<int, int> > > OCR::getWords(cv::Mat)’:
+../src/OCR.cpp:52:2: error: ‘WordsandCoordinates’ was not declared in this scope
+  WordsandCoordinates[0]  = wordsInfo;
+  ^
+make: *** [src/OCR.o] Error 1
+10:03:09 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:04:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:14:12 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:14:45 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:15:06 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:17:56 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:22:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:96:86:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:22:41 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:99:183:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:24:25 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from ../src/main.cpp:9:
+/usr/include/c++/4.8/bits/stl_pair.h: In instantiation of ‘std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = std::vector<std::basic_string<char> >; _U2 = std::vector<std::pair<int, int> >; _T1 = std::vector<std::basic_string<char> >; _T2 = std::pair<std::vector<int>, std::vector<int> >]’:
+../src/main.cpp:99:183:   required from here
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: error: no matching function for call to ‘std::pair<std::vector<int>, std::vector<int> >::pair(const std::vector<std::pair<int, int> >&)’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note: candidates are:
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note: template<class _U1, class _U2> std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&)
+  pair(const pair<_U1, _U2>& __p)
+  ^
+/usr/include/c++/4.8/bits/stl_pair.h:118:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_pair.h:119:39: note:   ‘const std::vector<std::pair<int, int> >’ is not derived from ‘const std::pair<_T1, _T2>’
+  : first(__p.first), second(__p.second) { }
+                                       ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note: std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair(const _T1& __a, const _T2& __b)
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:112:26: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note: std::pair<_T1, _T2>::pair() [with _T1 = std::vector<int>; _T2 = std::vector<int>]
+       _GLIBCXX_CONSTEXPR pair()
+                          ^
+/usr/include/c++/4.8/bits/stl_pair.h:108:26: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note: std::pair<std::vector<int>, std::vector<int> >::pair(const std::pair<std::vector<int>, std::vector<int> >&)
+     struct pair
+            ^
+/usr/include/c++/4.8/bits/stl_pair.h:96:12: note:   no known conversion for argument 1 from ‘const std::vector<std::pair<int, int> >’ to ‘const std::pair<std::vector<int>, std::vector<int> >&’
+make: *** [src/main.o] Error 1
+10:25:54 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+../src/SendDataToPython.cpp: In member function ‘boost::python::dict SendDataToPython::objectInformationToDict(std::vector<std::vector<cv::KeyPoint> >, std::vector<int>, std::vector<int>, std::pair<std::vector<std::basic_string<char> >, std::vector<std::pair<int, int> > >)’:
+../src/SendDataToPython.cpp:72:54: error: conversion from ‘std::vector<std::pair<int, int> >’ to non-scalar type ‘std::pair<std::vector<int>, std::vector<int> >’ requested
+  pair< vector<int>,vector<int> > wordXYPairs=testing.second;
+                                                      ^
+make: *** [src/SendDataToPython.o] Error 1
+10:55:54 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+../src/SendDataToPython.cpp: In member function ‘boost::python::dict SendDataToPython::objectInformationToDict(std::vector<std::vector<cv::KeyPoint> >, std::vector<int>, std::vector<int>, std::pair<std::vector<std::basic_string<char> >, std::vector<std::pair<int, int> > >)’:
+../src/SendDataToPython.cpp:84:33: error: ‘class std::vector<std::pair<int, int> >’ has no member named ‘first’
+   coordinate.append(wordXYPairs.first[i]);
+                                 ^
+../src/SendDataToPython.cpp:85:33: error: ‘class std::vector<std::pair<int, int> >’ has no member named ‘second’
+   coordinate.append(wordXYPairs.second[i]);
+                                 ^
+make: *** [src/SendDataToPython.o] Error 1
+10:59:03 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:01:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:03:05 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+11:30:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:35:25 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:35:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:36:18 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:37:15 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/yingyang.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/yingyang.d" -MT"src/yingyang.o" -o "src/yingyang.o" "../src/yingyang.cpp"
+Finished building: ../src/yingyang.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:37:46 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:38:25 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+11:39:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/featureextraction.o ./src/main.o ./src/yingyang.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
