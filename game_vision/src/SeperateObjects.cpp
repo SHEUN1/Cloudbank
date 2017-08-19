@@ -37,6 +37,7 @@ SeperateObjects::~SeperateObjects() {
 	 *  @param      vector which will hold x coordinates of each object/region
 	 *  @param      vector which will hold y coordinates of each object/region
 	 *  @param 		true = save separated objects/regions in directory of your choice
+	 *
 	 *  @return     vector of object/regions
 	 ****************************************************************************************/
 

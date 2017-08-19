@@ -33,7 +33,7 @@ public:
 	SendDataToPython();
 	virtual ~SendDataToPython();
 
-	/**
+/**
 	 *****************************************************************************************
 	 *  @brief      create python dictionary to send over to python code file
 	 *
