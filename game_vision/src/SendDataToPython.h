@@ -33,6 +33,22 @@ public:
 	SendDataToPython();
 	virtual ~SendDataToPython();
 
+	/**
+	 *****************************************************************************************
+	 *  @brief      create python dictionary to send over to python code file
+	 *
+	 *	@usage 		dictionary will contain
+	 *				Objects: position in image and keypoints
+	 *				OCR charters: characters and their position in the image
+	 *
+	 *
+	 *  @param      vector of feature per objects
+	 *  @param 		vector of x coordinates per object
+	 *  @param 		vector of y coordinates per object
+	 *  @param      (pair< vector<string>, vector < pair< int , int  > > >): pair of characters in images and their associated x and y positions.
+	 *  @return     python dictionary
+	 ****************************************************************************************/
+
 	boost::python::dict objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, vector < pair< int , int  > > > testing);
 };
 

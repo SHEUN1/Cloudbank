@@ -10,12 +10,12 @@ BOOST_LIB = /usr/lib
 # compile mesh classes
 TARGET = main
 
-main.so: *.o
-	g++ -shared -Wl,--export-dynamic *.o -L$(BOOST_LIB) -lboost_python -L/usr/lib/python$(PYTHON_VERSION)/config -lpython$(PYTHON_VERSION) -o ../game_controller/main.so `pkg-config --libs opencv` `pkg-config --cflags opencv`
+opencv.so: *.o
+	g++ -shared -Wl,--export-dynamic *.o -L$(BOOST_LIB) -lboost_python -L/usr/lib/python$(PYTHON_VERSION)/config -lpython$(PYTHON_VERSION) -o ../game_controller/opencv.so `pkg-config --libs opencv` `pkg-config --cflags opencv`
 
 *.o: ./src/*.cpp
 	g++ -I$(PYTHON_INCLUDE) -I$(BOOST_INC) -fPIC -c ./src/*.cpp
 
 clean:
-	rm -f *.o ../game_controller/main.so
+	rm -f *.o ../game_controller/opencv.so
 

@@ -24,7 +24,20 @@ class feature_extraction {
 public:
 	feature_extraction();
 	virtual ~feature_extraction();
-	//get feature points of each objects in the vector
+
+	/**
+		 *****************************************************************************************
+		 *  @brief      get feature points of each objects in the vector
+		 *
+		 *
+		 *
+		 *
+		 *  @param      vector of objects
+		 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary images
+		 *  @param 		true = save separated objects/regions in directory of your choice
+		 *  @return     vector of keypoints per object
+		 ****************************************************************************************/
+
 	vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result);
 
 

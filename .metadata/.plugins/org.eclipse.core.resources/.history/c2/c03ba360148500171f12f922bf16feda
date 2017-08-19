@@ -1,0 +1,60 @@
+/*
+
+* yingyang.h
+ *
+ *  Created on: 13 Jun 2017
+ *      Author: sheun
+ */
+#ifndef YINGYANG_H_
+#define YINGYANG_H_
+
+#include<iostream>
+#include<opencv2/core/core.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
+#include<opencv2/opencv.hpp>
+#include<iostream>
+#include<vector>
+#include <algorithm>
+
+
+using namespace std;
+using namespace cv;
+
+
+
+class ying_yang {
+
+private:
+
+
+	Mat cleanupBinary (Mat Binary);
+	Mat  Watershed(Mat Binary, Mat origanal_image);
+public:
+	ying_yang();
+	virtual ~ying_yang();
+
+	/** @brief Prints character ch at the current location
+	 *         of the cursor.
+	 *
+	 *  If the character is a newline ('\n'), the cursor should
+	 *  be moved to the next line (scrolling if necessary).  If
+	 *  the character is a carriage return ('\r'), the cursor
+	 *  should be immediately reset to the beginning of the current
+	 *  line, causing any future output to overwrite any existing
+	 *  output on the line.  If backsapce ('\b') is encountered,
+	 *  the previous character should be erased (write a space
+	 *  over it and move the cursor back one column).  It is up
+	 *  to you how you want to handle a backspace occurring at the
+	 *  beginning of a line.
+	 *
+	 *  @param ch the character to print
+	 *  @return The input character
+	 */
+	Mat binary (Mat img, Mat origanal);
+	Mat binary_Inverse (Mat img, Mat origanal);
+
+
+};
+
+#endif

@@ -21,9 +21,26 @@ SeperateObjects::~SeperateObjects() {
 
 }
 
+/**
+	 *****************************************************************************************
+	 *  @brief      identify objects and get their X and Y coordinates in the image frame
+	 *
+	 *  @usage      draw boxes around each object/region,
+	 *  			create a vector of seperated objects/regions7
+	 *  			get coordinates of each object/region
+	 *
+	 *
+	 *  @param      Binary image
+	 *  @param      grayscale image
+	 *  @param      Original (non- processed) image frame
+	 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
+	 *  @param      vector which will hold x coordinates of each object/region
+	 *  @param      vector which will hold y coordinates of each object/region
+	 *  @param 		true = save separated objects/regions in directory of your choice
+	 *  @return     vector of object/regions
+	 ****************************************************************************************/
 
-
-vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result)
+vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result)
 {
 	//bounded box will be draw on this copy of the original image instead
 	vector<vector<Point> > contours;
@@ -75,17 +92,18 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat Origi
 	    //save regions of interest into a folder
 	    if ( save_image_result == true)
 	    {
-	    if (world_number == 0)
-	    {
-	    	if (lock_dark_file == 0) {system("exec rm -r ../../trasistor_vision_darkworld_images/*");lock_dark_file++; }
-	    	sprintf(file,"../../trasistor_vision_darkworld_images/Image%d.jpg",i);
-	    }
-	    else if(world_number == 1)
-	    {
-	    	if (lock_light_file == 0) {system("exec rm -r ../../trasistor_vision_lightworld_images/*");lock_light_file++; }
-	    	sprintf(file,"../../trasistor_vision_lightworld_images/Image%d.jpg",i);
-	    }
-	    imwrite(file,roi[i]);
+			if (world_number == 0)
+			{
+				if (lock_dark_file == 0) {system("exec rm -r /home/sheun/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
+				sprintf(file,"/home/sheun/cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
+			}
+			else if(world_number == 1)
+			{
+				if (lock_light_file == 0) {system("exec rm -r /home/sheun/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
+				sprintf(file,"/home/sheun/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
+			}
+
+			imwrite(file,roi[i]);
 		}
 
 

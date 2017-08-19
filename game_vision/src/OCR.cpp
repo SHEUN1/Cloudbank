@@ -15,7 +15,15 @@ OCR::OCR() {
 OCR::~OCR() {
 
 }
-//get words in frame and their locations points in the image
+
+/**
+ *****************************************************************************************
+ *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+						 most suitable values
+ *
+ *  @param      Original (non-processed) image frame
+ *  @return     pair of characters in images and their associated x and y positions.
+ ****************************************************************************************/
  pair< vector<string>, vector < pair < int , int  > > > OCR::getWords(Mat img)
 {
 
@@ -28,10 +36,12 @@ OCR::~OCR() {
 	int y_coordinate;
 
 	ocr->run(img, output, &boxes, &words, &confidences, 0);
-	cout<<words.size()<<endl;
 
+	// collection of x,y positions of all characters in the image
 	pair< int , int  > coordinates;
+	// individual x,y pairs positions of characters in the image
 	vector < pair< int , int  > > coordinatesPairs;
+
 	for(uint32_t i = 0; i < words.size(); i++)
 	{
 
@@ -44,6 +54,7 @@ OCR::~OCR() {
 
 	}
 
+	//Characters in the image and there locations
 	pair< vector<string>, vector < pair<int , int> > > wordsInfo;
 
 	wordsInfo.first = words;
@@ -54,8 +65,15 @@ OCR::~OCR() {
 	return wordsInfo;
 
 }
-//Iterate and display results through all possible oem and psmode values so that you determine the
-//most suitable values
+
+ /**
+  *****************************************************************************************
+  *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+ 						 most suitable values by printing the results out.
+  *
+  *  @param      Original (non-processed) image frame
+  *  @return
+  ****************************************************************************************/
 void OCR::find_suitable_ocr_values(Mat img)
 {
 	for (int a = 0; a<4; ++a)

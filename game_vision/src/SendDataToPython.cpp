@@ -16,9 +16,25 @@ SendDataToPython::~SendDataToPython() {
 
 }
 
+/**
+ *****************************************************************************************
+ *  @brief      create python dictionary to send over to python code file
+ *
+ *	@usage 		dictionary will contain
+ *				Objects: position in image and keypoints
+ *				OCR charters: characters and their position in the image
+ *
+ *
+ *  @param      vector of feature per objects
+ *  @param 		vector of x coordinates per object
+ *  @param 		vector of y coordinates per object
+ *  @param      (pair< vector<string>, vector < pair< int , int  > > >): pair of characters in images and their associated x and y positions.
+ *  @return     python dictionary
+ ****************************************************************************************/
 
 boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, vector < pair< int , int  > > > testing)
 {
+
 	//iterator for each objects
 	typename vector< vector<KeyPoint> >::iterator iterEachObject;
 	//iterator for each keypoint for each object
@@ -30,6 +46,7 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 
 	for (iterEachObject = vectorToSend.begin(); iterEachObject != vectorToSend.end(); ++iterEachObject)
 	{
+
 		//feature arrays
 
 		boost::python::list objectInformation;// overall list that will hold objects coordinate position in the image and its feature point
@@ -45,6 +62,7 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 		//get information of every identified keypoint of the objects and put that into a list
 		for(iterKeyPoints = iterEachObject->begin(); iterKeyPoints != iterEachObject->end(); ++iterKeyPoints)
 		{
+
 			boost::python::list individualKeypointArray;
 
 			individualKeypointArray.append(iterKeyPoints->pt.x);
@@ -58,6 +76,7 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 
 		objectInformation.append(keyPointList);
 		keypointMap[i] = objectInformation;
+
 		++i;
 
 	}
@@ -67,28 +86,32 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 
 	boost::python::list collectionOfletters;
 
-
 	for(uint32_t i = 0; i<testing.first.size();i++)
 	{
 
 		collectionOfletters.append(testing.first[i]);
 	}
-	letters.append(collectionOfletters);
+	//letters.append(collectionOfletters);
 	vector < pair< int , int  > > wordXYPairs = testing.second;
 	boost::python::list XYPairs;
-	cout<<"74"<<endl;
+
 	for (uint32_t i = 0; i<wordXYPairs.size();i++)
 	{
 
 		boost::python::list coordinate;
-		cout<<"79"<<endl;
 		coordinate.append(wordXYPairs[i].first);
 		coordinate.append(wordXYPairs[i].second);
 
 		XYPairs.append(coordinate);
 	}
-	cout<<"84"<<endl;
+
+	//append to the end of the map the identified characters in the image frame and there locations in the image
+
 	letters.append(XYPairs);
+
+	letters.append(collectionOfletters);
+
 	keypointMap[i] = letters;
+
 	return keypointMap;
 }

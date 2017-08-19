@@ -35,8 +35,51 @@ using namespace cv;
 
 using namespace boost::python;
 
+int frameNumber = 0;
+int activateImageCapture = 0;
+/**
+ *****************************************************************************************
+ *  @brief		save processd image frames of current captured video game frame.
+ *
+ *
+ *  @param      True = save bounded box to specified directory
+ *  @param      True = save dark world binary image frame to specified directory
+ *  @param      True = save light world binary image frame to specified directory
+ *  @param      <int>current frame number
+ *  @param      <int>max number of frames to record
+ *  @param      <Mat>image with bounded box draw on it
+ *  @param      <Mat>binary image frame for the dark world
+ *  @param      <Mat>binary image frame for the light world
+ *
+ *  @return
+ ****************************************************************************************/
+void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_world_Binary, int& current_frame_number,int number_of_frames_to_record,Mat Original_image_clone,Mat dark_world_view,Mat light_world_view)
+{
+		char file [100];
+		if (boundbox == true)
+		{
+			sprintf(file,"/home/sheun/cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
+			imwrite(file,Original_image_clone);
+		}
+
+		if (dark_world_Binary == true)
+		{
+			sprintf(file,"/home/sheun/cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
+			imwrite(file,dark_world_view);
+		}
+
+		if(light_world_Binary==true)
+		{
+			sprintf(file,"/home/sheun/cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
+			imwrite(file,light_world_view);
+		}
+		++frameNumber;
+		if (frameNumber==500){frameNumber=0;}
+}
+
 boost::python::dict vision_analysis()
 {
+
 		//this map will hold all the information on the image such as its position in the frame and feature points
 		typedef int object; //object number
 		typedef std::pair<int, int > coordinates; //this will hold x,y coordinates of object in the frame
@@ -53,78 +96,73 @@ boost::python::dict vision_analysis()
 		vector<int>light_y_coordinate;
 
 		// turn on script that save get current frame from video game
-	    //system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
+		if (activateImageCapture == 0)
+		{
+			system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
+			++activateImageCapture;
+
+		}
 
 	    //read current video_game frame
-	   // Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
-		Mat img = imread("/home/sheun/Pictures/transistor_images/transistor5.jpg");
-	    //grayscale, and use imadjust for to get a high contrast version (the basIS for "lightworld")
+	    Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
+
+	    //convert to grayscale
 		Mat gray;
-		//convert to grayscale
 		cvtColor(img, gray, COLOR_RGB2GRAY);
 
 		//smooth image
 		blur(gray, gray, Size(3,3));
 
-		Mat Original_image_clone = gray.clone();
+		//this is he image on which the bounded boxes will be drawn on
+		Mat Original_image_clone = img.clone();
 
 		//convert to binary
 		ying_yang world_view;
 		Mat dark_world_view = world_view.binary(gray,img);
 		Mat light_world_view = world_view.binary_Inverse(gray,img);
+
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
 		SeperateObjects worldObjects;
-		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false); // the 3rd parameter holds the version of the frame image that the boxes will be drawn onto the boxes to be on the original image
+		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false);
 		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, false);
 
-
-
-
+		//get feature points of each object
 		feature_extraction features_of_objects;
 		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, false);
 		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, false);
 
-		//Append vectors so that all objects can be put into the python dictionary
+		//Append/combine feature vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
 
 		dark_x_coordinate.insert(dark_x_coordinate.end(), light_x_coordinate.begin(), light_x_coordinate.end());
 		dark_y_coordinate.insert(dark_y_coordinate.end(), light_y_coordinate.begin(), light_y_coordinate.end());
 
+
 		//get words in frame
-		OCR test;
-		pair< vector<string>, vector < pair< int , int  > > > testing = test.getWords(img);
+		OCR word_capture;
+		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
+
+		recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
+
+
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
-		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, testing);
+		boost::python::dict send_to_python_Object_info= python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, chracterInfo);
 
-
-		return send_to_python_the_dark_world;
-
-}
-
-int letter()
-{
-	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor5.jpg");
-	OCR test;
-	pair< vector<string>, vector < pair < int , int  > > > testing = test.getWords(img);
-	//OCR test;
-	//vector < pair< vector<string>, pair< vector<int>,vector<int> > > > testing = test.getWords(img);
-	//cout<<testing.at(0)<<endl;
-	cvWaitKey();
-	return 0;
+		return send_to_python_Object_info;
 
 }
+
 
 int main()
 {
 
 	vision_analysis();
-	//letter();
 	return 0;
 
 }
 
-BOOST_PYTHON_MODULE(main)
+BOOST_PYTHON_MODULE(opencv)
 {
 
 	//definition that out python program will call start and retrieve informatin from our c++ code.

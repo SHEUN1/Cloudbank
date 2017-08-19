@@ -32,7 +32,23 @@ public:
 	OCR();
 	virtual ~OCR();
 
+/**
+ *****************************************************************************************
+ *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+						 most suitable values by printing the results out.
+
+ *  @param      Original (non-processed) image frame
+ *  @return
+ ****************************************************************************************/
 	void find_suitable_ocr_values(Mat img);
+/**
+ *****************************************************************************************
+ *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+						 most suitable values
+ *
+ *  @param      Original (non-processed) image frame
+ *  @return     pair of characters in images and their associated x and y positions.
+ ****************************************************************************************/
 	pair< vector<string>, vector < pair< int , int  > > >  getWords(Mat img);
 };
 

@@ -5,16 +5,11 @@ import random
 from random import randint
 
 # execute the make folder so that a shared vision analysis library  and wat for the library to be built first
-#cleanSharedLibrary = subprocess.Popen(['make' 'clean'], cwd="../game_vision")
-#cleanSharedLibrary.wait()
 BuildSharedLibrary = subprocess.Popen(['make', '-j6'], cwd="../game_vision")
 BuildSharedLibrary.wait()
-import main
+import opencv
 #main.vision() #the funtion with in the OpenCV C++ part of the code where the image processing takes place
-objectInformation = main.vision()
 
-for i in range(0, len(objectInformation)):
-    print objectInformation[i]
 
 #path to bash file which send the keyboard and mouse clicks to the videoagame
 executableControlFile = os.path.join("./", 'send_control_cmds_to_game')
@@ -34,8 +29,12 @@ mouse_clickR = ["ClickMouseR2", ""]
 GameEnvironment ='Transistor'
 # Currently part of a test but send out random keyboard and mouse click and posistions clicks
 while True:
+
     GetGameEnvironmentWindow = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     while GetGameEnvironmentWindow == GameEnvironment:
+        objectInformation = opencv.vision()
+        #for i in range(0, len(objectInformation)):
+        #    print objectInformation[i]
         sendControl = subprocess.Popen(
              [executableControlFile, "Move", random.choice(up), random.choice(down), random.choice(left), random.choice(right),
               random.choice(Select_attack), random.choice(Press_space), str(randint(0, 1400)), str(randint(0, 1400)),
