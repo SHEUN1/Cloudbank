@@ -17,7 +17,7 @@ SendDataToPython::~SendDataToPython() {
 }
 
 
-boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate)
+boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, pair< vector<int>,vector<int> > > testing)
 {
 	//iterator for each objects
 	typename vector< vector<KeyPoint> >::iterator iterEachObject;
@@ -62,5 +62,26 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 
 	}
 
+	//letter list that will be added to the end of the key point map.
+	boost::python::list letters;
+
+	for(uint32_t i = 0; i<testing.first.size();i++)
+	{
+		letters.append(testing.first[i]);
+	}
+	pair< vector<int>,vector<int> > wordXYPairs=testing.second;
+	boost::python::list XYPairs;
+	for (uint32_t i = 0; i<wordXYPairs.first.size();i++)
+	{
+
+		boost::python::list coordinate;
+
+		coordinate.append(wordXYPairs.first[i]);
+		coordinate.append(wordXYPairs.second[i]);
+
+		XYPairs.append(coordinate);
+	}
+	letters.append(XYPairs);
+	//keypointMap[i] = letters;
 	return keypointMap;
 }

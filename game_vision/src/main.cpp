@@ -24,7 +24,7 @@
 #include "SeperateObjects.h"
 #include "featureextraction.h"
 #include "SendDataToPython.h"
-
+#include "OCR.h"
 
 using namespace std;
 using namespace cv;
@@ -88,9 +88,12 @@ boost::python::dict vision_analysis()
 		dark_x_coordinate.insert(dark_x_coordinate.end(), light_x_coordinate.begin(), light_x_coordinate.end());
 		dark_y_coordinate.insert(dark_y_coordinate.end(), light_y_coordinate.begin(), light_y_coordinate.end());
 
+		//get words in frame
+		OCR test;
+		pair< vector<string>, pair< vector<int>,vector<int> > > testing = test.getWords(img);
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
-		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate);
+		boost::python::dict send_to_python_the_dark_world = python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, testing);
 
 		return send_to_python_the_dark_world;
 
@@ -98,33 +101,10 @@ boost::python::dict vision_analysis()
 
 int letter()
 {
-	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor4.jpg");
-	blur(img, img, Size(3,3));
-	Mat gray, binary_img;
-	cvtColor(img, gray, COLOR_RGB2GRAY);
-	threshold(gray, binary_img,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
-	//imshow("binary_img", binary_img);
-	for (int a = 0; a<4; ++a)
-	{
-		for (int b=0;b<7;++b)
-		{
-			cout<<"oem: "<<a<<" psmode: "<<b<<endl;
-			Ptr<cv::text::OCRTesseract> ocr =
-				cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, a /*oem*/, b /*psmode*/);
-
-			string output;
-			vector<Rect>   boxes;
-			vector<string> words;
-			vector<float>  confidences;
-
-			ocr->run(img, output, &boxes, &words, &confidences, 1);
-			for (int i = 0; i<words.size(); i++)
-			{
-				cout<<words[i]<<endl;
-			}
-
-		}
-	}
+	Mat img = imread("/home/sheun/Pictures/transistor_images/transistor5.jpg");
+	//OCR test;
+	//vector < pair< vector<string>, pair< vector<int>,vector<int> > > > testing = test.getWords(img);
+	//cout<<testing.at(0)<<endl;
 	cvWaitKey();
 	return 0;
 
@@ -133,8 +113,8 @@ int letter()
 int main()
 {
 
-	//vision_analysis();
-	letter();
+	vision_analysis();
+	//letter();
 	return 0;
 
 }

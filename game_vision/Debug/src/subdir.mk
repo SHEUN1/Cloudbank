@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/OCR.cpp \
 ../src/SendDataToPython.cpp \
 ../src/SeperateObjects.cpp \
 ../src/featureextraction.cpp \
@@ -11,6 +12,7 @@ CPP_SRCS += \
 ../src/yingyang.cpp 
 
 OBJS += \
+./src/OCR.o \
 ./src/SendDataToPython.o \
 ./src/SeperateObjects.o \
 ./src/featureextraction.o \
@@ -18,6 +20,7 @@ OBJS += \
 ./src/yingyang.o 
 
 CPP_DEPS += \
+./src/OCR.d \
 ./src/SendDataToPython.d \
 ./src/SeperateObjects.d \
 ./src/featureextraction.d \
