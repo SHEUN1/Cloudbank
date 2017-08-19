@@ -13,3 +13,5 @@ Current status of the project
       -interface between the vision and control folder (needed to send data across)
       
       -Optical Character Recognition (OCR)
+      
+ ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/BoundedBox.gif)
