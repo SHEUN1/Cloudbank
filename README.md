@@ -14,4 +14,4 @@ Current status of the project
       
       -Optical Character Recognition (OCR)
       
- ![Output sample](https://drive.google.com/open?id=0B8hW2NbnVBzpQm1Cel9tSlZJT0E)
+ ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/BoundedBox.gif)
