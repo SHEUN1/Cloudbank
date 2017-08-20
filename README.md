@@ -1,10 +1,10 @@
 # Cloudbank
 Cloud bank is built to be a Computer Vision and AI training platform alternative to its inspiration OpenAI universe where AI agents can be trained to complete task within a video game environment. The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python) . Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send the keyboard and mouse clicks to the Steam Window currently playing the game. 
 
-### Why opencv cplusplus and not python?
+### Why opencv C++ and not python?
 The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance. Also, it is planned in the future to implement some GPU parallel processing into the Computer Vision part of the this project which so far can only be done in the C++ version.
 
-### How is the video game frame captured
+### How is the video game frame captured?
 A library named gstreamer was used with the below arguments in a bash script:
 
 gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg 
@@ -20,7 +20,7 @@ Data is sent from C++ to Python using a library called Python boost. What is sen
 
 [[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]]
 
-#### Meaning
+#### Meaning of data
 ([151, 73] - represents object coordinates. [56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...] - represents a list of keypoint feature vectors of object 
 
 .
@@ -28,7 +28,7 @@ Data is sent from C++ to Python using a library called Python boost. What is sen
 .
 
 [[[50, 230], [151, 224], [285, 224], [122, 243], ...], ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...']]
-#### Meaning
+#### Meaning of data
 ([[50, 230], [151, 224], [285, 224], [122, 243], ...] - represents list of x and y coordinates of identified words/chracters. ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...'] - list of identified chracters/words/numbers on the current frame)
 
 ### How do you send keyboard commands to the video game?
@@ -38,7 +38,7 @@ A Python script sends commands to a bash script which in turn uses a tool call x
 Below is a gif of the image processing and object identification being done on the captured frame, the character is currently being moved randomly via simulated keyboard and mouse inputs  being sent to the window 
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
-### How to use it
+### How to use it?
 1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games although in theory can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
 2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
 3. The IDE’s used were eclipes C++ and pycharm.
