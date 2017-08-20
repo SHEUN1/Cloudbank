@@ -9,10 +9,13 @@ A library named gstreamer was used with the below arguments in a bash script:
 
 gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg 
 
-How do you send data across and what?
-Data is sent from C++ to Python using a library called Python boost. What is sent is an identified objects location in the image (x,y coordinates), there feature points and the identified characters/words in the frame and their location points. 
+Below is a screenshot of gstremer in action:
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2015:36:49.png)
+
+
+How do you send data across and what?
+Data is sent from C++ to Python using a library called Python boost. What is sent is an identified objects location in the image (x,y coordinates), there feature points and the identified characters/words in the frame and their location points. 
 
 [[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]
 [[106, 65], []]
