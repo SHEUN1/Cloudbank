@@ -26,12 +26,13 @@ mouse_clickL = ["ClickMouseL2", ""]
 mouse_clickR = ["ClickMouseR2", ""]
 #name of the VideoGame
 GameEnvironment ='Transistor'
+opencv.vision()
 # Currently part of a test so only random keyboard and mouse clicks sent alond side and mouse posistion
 while True:
 
     GetGameEnvironmentWindow = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     while GetGameEnvironmentWindow == GameEnvironment:
-        # open.vision() #the funtion with in the OpenCV C++ part of the code where the image processing takes place
+        # open.vision() the funtion with in the OpenCV C++ part of the code where the image processing takes place
         objectInformation = opencv.vision()
         for i in range(0, len(objectInformation)):
             print objectInformation[i]

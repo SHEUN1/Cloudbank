@@ -142,7 +142,7 @@ boost::python::dict vision_analysis()
 		OCR word_capture;
 		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
 
-		recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
+		//recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
 
 
 		//send data of objects in image to python
