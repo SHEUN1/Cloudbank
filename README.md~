@@ -7,7 +7,9 @@ The C++ version of OpenCV is much more mature than it's Python counterpart and, 
 ### How is the video game frame captured?
 A library named gstreamer was used with the below arguments in a bash script:
 
-gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg 
+gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg 
+
+This capture the current frame of the game and saves it as 'current_game_frame.jpg' 
 
 Below is a screenshot of gstremer in action:
 
@@ -43,17 +45,17 @@ Below is a gif of the image processing and object identification being done on t
 2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
 3. The IDE’s used were eclipes C++ and pycharm.
 Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
-4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game>
+4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
 5. Go to .../Cloudbank/game_controller/send_control_cmds_to_game file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
 6. Go to .../Cloudbank/game_controller/controller.py and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
 7. Start your Steam game. 
 8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the from the current image frame. 
 
 ### Keep in mind 
-1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise no mouse and keyboard inputs would jump between screens
+1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise the mouse and keyboard inputs would jump between screens.
 
-2. As expected, the image processing speeds down the framerate considerably due to the fact that the processing is gone on mainly  on the CPU hence the need for GPU parallelisation. 
+2. As expected, the image processing speeds down the framerate considerably due to the fact that the processing is done mainly on the CPU hence the need for GPU parallelisation. 
 
-3. It is planned for tensorflow to be implemented and to make use of the data being sent to python controller and will be used to train the AI agent but will most likely be done after the GPU implementation
+3. It is planned for Tensorflow to be implemented and to make use of the data being sent to python controller. The dat will be used to train the AI agent but will most likely be done after the GPU implementation.
       
 

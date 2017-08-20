@@ -41,21 +41,20 @@ Below is a gif of the image processing and object identification being done on t
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
 ### How to use it?
-1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games although in theory can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
-2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
-3. The IDE’s used were eclipes C++ and pycharm.
-Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
-4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
-5. Go to .../Cloudbank/game_controller/send_control_cmds_to_game file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
-6. Go to .../Cloudbank/game_controller/controller.py and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
+1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games. Although in theory Cloudbank can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
+2. The “game_vision” folder contains the code needed to analyse the game currently being played, frame-by-frame, using OpenCV C++.
+3. The IDE’s used were eclipes C++ and pycharm community edition. Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
+4. Go to the ".../Cloudbank/game_vision/gstream_command_to_capture_image" file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
+5. Go to ".../Cloudbank/game_controller/send_control_cmds_to_game" file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
+6. Go to ".../Cloudbank/game_controller/controller.py" and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
 7. Start your Steam game. 
-8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the from the current image frame. 
+8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the current image frame. 
 
 ### Keep in mind 
-1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise no mouse and keyboard inputs would jump between screens
+1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise the mouse and keyboard inputs would jump between screens.
 
-2. As expected, the image processing speeds down the framerate considerably due to the fact that the processing is gone on mainly  on the CPU hence the need for GPU parallelisation. 
+2. As expected, the image processing speeds down the framerate considerably due to the fact that the processing is done mainly on the CPU hence the need for GPU parallelisation. 
 
-3. It is planned for tensorflow to be implemented and to make use of the data being sent to python controller and will be used to train the AI agent but will most likely be done after the GPU implementation
+3. It is planned for Tensorflow to be implemented and to make use of the data being sent to python controller. The dat will be used to train the AI agent but will most likely be done after the GPU implementation.
       
 
