@@ -49,10 +49,11 @@ Set the eclipse workspace to the project folder and build your project (I curren
 7. Start your Steam game. 
 8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the from the current image frame. 
 
-### Problems so far
+### Keep in mind 
 1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise no mouse and keyboard inputs would jump between screens
 
 2. As expected, the image processing speeds down the framerate considerably due to the fact that the processing is gone on mainly  on the CPU hence the need for GPU parallelisation. 
-   
+
+3. It is planned for tensorflow to be implemented and to make use of the data being sent to python controller and will be used to train the AI agent but will most likely be done after the GPU implementation
       
 
