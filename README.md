@@ -33,7 +33,7 @@ Below is a gif of the image processing and object identification being done on t
 ### How to use it
 1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games although in theory can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
 2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
-3. The IDE’s used were eclipes C++ and pycharm
+3. The IDE’s used were eclipes C++ and pycharm.
 Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
 4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game>
 5. Go to .../Cloudbank/game_controller/send_control_cmds_to_game file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
