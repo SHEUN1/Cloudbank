@@ -7,7 +7,9 @@ The C++ version of OpenCV is much more mature than it's Python counterpart and, 
 ### How is the video game frame captured?
 A library named gstreamer was used with the below arguments in a bash script:
 
-gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg 
+gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg 
+
+This capture the current frame of the game and saves it as 'current_game_frame.jpg' 
 
 Below is a screenshot of gstremer in action:
 
@@ -43,7 +45,7 @@ Below is a gif of the image processing and object identification being done on t
 2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
 3. The IDE’s used were eclipes C++ and pycharm.
 Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
-4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game>
+4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
 5. Go to .../Cloudbank/game_controller/send_control_cmds_to_game file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
 6. Go to .../Cloudbank/game_controller/controller.py and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
 7. Start your Steam game. 

@@ -74,7 +74,7 @@ void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_wor
 			imwrite(file,light_world_view);
 		}
 		++frameNumber;
-		if (frameNumber==500){frameNumber=0;}
+		if (frameNumber==number_of_frames_to_record){frameNumber=0;}
 }
 
 boost::python::dict vision_analysis()
@@ -98,13 +98,15 @@ boost::python::dict vision_analysis()
 		// turn on script that save get current frame from video game
 		if (activateImageCapture == 0)
 		{
-			system("/home/sheun/Gaming_Project/game_vision/gstream_command_to_capture_image &");
+			//change to your abosulute path on your system i.e <.../Cloudbank/game_vision/gstream_command_to_capture_image>
+			system("/home/sheun/Cloudbank/game_vision/gstream_command_to_capture_image &");
 			++activateImageCapture;
 
 		}
 
 	    //read current video_game frame
-	    Mat img = imread("/home/sheun/Gaming_Project/game_vision/current_game_frame.jpg");
+		//change to your abosulute path on your system i.e <.../Cloudbank/game_vision/current_game_frame.jpg>
+	    Mat img = imread("/home/sheun/Cloudbank/game_vision/current_game_frame.jpg");
 
 	    //convert to grayscale
 		Mat gray;
