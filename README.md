@@ -18,9 +18,12 @@ Data is sent from C++ to Python using a library called Python boost. What is sen
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2017:27:25.png)
 
-[[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]
+[[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]]
+([151, 73] - represents object coordinates. [56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...] - represents a list of keypoint feature vectors of object 
 [[106, 65], []]
+
 [[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, …]
+
 [[[50, 230], [151, 224], [285, 224], [122, 243], ...], ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...']]
 
 ### How do you send keyboard commands to the video game?
