@@ -39,7 +39,7 @@ int frameNumber = 0;
 int activateImageCapture = 0;
 /**
  *****************************************************************************************
- *  @brief		Optional: save processd image frames of current captured video game frame.
+ *  @brief		save processd image frames of current captured video game frame.
  *
  *
  *  @param      True = save bounded box to specified directory
@@ -144,7 +144,6 @@ boost::python::dict vision_analysis()
 		OCR word_capture;
 		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
 
-		//Optional code: record frames with bounded boxes drawn on.
 		//recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
 
 
