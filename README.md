@@ -25,6 +25,7 @@ Data is sent from C++ to Python using a library called Python boost. What is sen
 [[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, …]
 
 [[[50, 230], [151, 224], [285, 224], [122, 243], ...], ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...']]
+([[50, 230], [151, 224], [285, 224], [122, 243], ...] - represents list of x and y coordinates of identified words/chracters. ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...'] - list of identified chracters/words/numbers on the current frame)
 
 ### How do you send keyboard commands to the video game?
 A Python script sends commands to a bash script which in turn uses a tool call xdotool to simulate keyboard commands  (http://www.semicomplete.com/projects/xdotool/) and send them to the window containing the name of the Steam Game you currently want to test on. 
