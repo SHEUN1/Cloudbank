@@ -1,7 +1,7 @@
 # Cloudbank
 Cloud bank is built to be a Computer Vision and AI training platform alternative to its inspiration OpenAI universe where AI agents can be trained to complete task within a video game environment. The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python) . Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send the keyboard and mouse clicks to the Steam Window currently playing the game. 
 
-# Why opencv cplusplus and not python?
+## Why opencv cplusplus and not python?
 The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance. Also, it is planned in the future to implement some GPU parallel processing into the Computer Vision part of the this project which so far can only be done in the C++ version.
 
 How is the video game frame captured
