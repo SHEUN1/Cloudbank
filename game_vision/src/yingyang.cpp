@@ -3,6 +3,8 @@
  *
  *  Created on: 13 Jun 2017
  *      Author: sheun
+ *
+ *      return a binary image
  */
 
 #include "yingyang.h"

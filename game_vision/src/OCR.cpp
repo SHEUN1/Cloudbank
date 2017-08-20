@@ -3,6 +3,8 @@
  *
  *  Created on: 18 Aug 2017
  *      Author: sheun
+ *
+ *      Identify characters in the image
  */
 
 #include "OCR.h"

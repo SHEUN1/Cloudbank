@@ -1,9 +1,9 @@
 //============================================================================
-// Name        : transistor_vision.cpp
+// Name        : main.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Extract objects and their features from a playing game
+// Description : Process the captured video game frame, analyse and then send data over to Python caller
 //============================================================================
 #include<stdio.h>
 #include<iostream>

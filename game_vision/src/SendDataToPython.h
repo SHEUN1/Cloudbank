@@ -3,6 +3,8 @@
  *
  *  Created on: 14 Aug 2017
  *      Author: sheun
+ *
+ *      send data over to python project
  */
 
 #ifndef SENDDATATOPYTHON_H_

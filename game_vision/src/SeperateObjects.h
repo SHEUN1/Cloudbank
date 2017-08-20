@@ -3,6 +3,8 @@
  *
  *  Created on: 9 Jul 2017
  *      Author: sheun
+ *
+ *      Separate objects/regions in an image and draw bounded boxes around them in the original captured image frame.
  */
 #ifndef SEPERATEOBJECTS_H_
 #define SEPERATEOBJECTS_H_

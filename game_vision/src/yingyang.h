@@ -4,6 +4,8 @@
  *
  *  Created on: 13 Jun 2017
  *      Author: sheun
+ *
+ *      return a binary image
  */
 #ifndef YINGYANG_H_
 #define YINGYANG_H_
