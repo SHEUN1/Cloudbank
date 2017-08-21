@@ -1,5 +1,5 @@
 # Cloudbank
-Cloud bank is built to be a Computer Vision and AI training platform alternative to its inspiration OpenAI universe where AI agents can be trained to complete task within a video game environment. The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python) . Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send the keyboard and mouse clicks to the Steam Window currently playing the game. 
+Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment on Steam (http://store.steampowered.com/). The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python). Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send simulated keyboard and mouse clicks to the Steam window currently playing the game. 
 
 ### Why opencv C++ and not python?
 The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance. Also, it is planned in the future to implement some GPU parallel processing into the Computer Vision part of the this project which so far can only be done in the C++ version.
@@ -9,14 +9,14 @@ A library named gstreamer was used with the below arguments in a bash script:
 
 gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg 
 
-This capture the current frame of the game and saves it as 'current_game_frame.jpg' 
+This captures the current frame of the game and saves it as 'current_game_frame.jpg' 
 
 Below is a screenshot of gstremer in action:
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2015:36:49.png)
 
 ### How do you send data across and what?
-Data is sent from C++ to Python using a library called Python boost. What is sent is an identified objects location in the image (x,y coordinates), there feature points and the identified characters/words in the frame and their location points.
+Data is sent from C++ to Python using a library called 'Boost.Python'(http://www.boost.org/doc/libs/1_64_0/libs/python/doc/html/tutorial/index.html). What is sent is an identified objects location in the image (x,y coordinates), its feature points and the identified characters/words in the frame and their location points.
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2017:27:25.png)
 
@@ -34,22 +34,21 @@ Data is sent from C++ to Python using a library called Python boost. What is sen
 ([[50, 230], [151, 224], [285, 224], [122, 243], ...] - represents list of x and y coordinates of identified words/chracters. ['r', 'PROCESS', 'TERMINATED', 'Location', 'Data', 'Unavailable', 'f4U,,', 'Next', 'User', ...'] - list of identified chracters/words/numbers on the current frame)
 
 ### How do you send keyboard commands to the video game?
-A Python script sends commands to a bash script which in turn uses a tool call xdotool to simulate keyboard commands  (http://www.semicomplete.com/projects/xdotool/) and send them to the window containing the name of the Steam Game you currently want to test on. 
+A Python script sends commands to a bash script which in turn uses a tool call xdotool to simulate keyboard commands  (http://www.semicomplete.com/projects/xdotool/) and send them to the window containing the name of the Steam game you currently want to test on. 
 
 
-Below is a gif of the image processing and object identification being done on the captured frame, the character is currently being moved randomly via simulated keyboard and mouse inputs  being sent to the window 
+Below is a gif of the image processing and object identification being done on the captured frame, the character is currently being moved randomly via simulated keyboard and mouse inputs being sent to the window from the controller
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
 ### How to use it?
-1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games although in theory can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
-2. The “game_vision” folder contains the code needed to analyse the game currently being played frame by frame using OpenCV c++.
-3. The IDE’s used were eclipes C++ and pycharm.
-Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
-4. Go to the /game_vision/gstream_command_to_capture_image file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
-5. Go to .../Cloudbank/game_controller/send_control_cmds_to_game file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
-6. Go to .../Cloudbank/game_controller/controller.py and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
+1. The ‘game_controller’ directory contains the files needed to control the video game and has been tested on one game so far: "Transistor" by supergiant games. Although in theory Cloudbank can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
+2. The “game_vision” folder contains the code needed to analyse the game currently being played, frame-by-frame, using OpenCV C++.
+3. The IDE’s used were eclipes C++ and pycharm community edition. Set the eclipse workspace to the project folder and build your project (I currently used the watershed technique to process the image and segment objects) 
+4. Go to the ".../Cloudbank/game_vision/gstream_command_to_capture_image" file and modyfy the “xname=Transistor” into whatever your Steam game is called.  i.e. xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
+5. Go to ".../Cloudbank/game_controller/send_control_cmds_to_game" file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
+6. Go to ".../Cloudbank/game_controller/controller.py" and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
 7. Start your Steam game. 
-8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the from the current image frame. 
+8. Run python scripts this should build the shared opencv shared library. Once built this should activate the gstremer and should start reciveing data from the current image frame. 
 
 ### Keep in mind 
 1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise the mouse and keyboard inputs would jump between screens.
