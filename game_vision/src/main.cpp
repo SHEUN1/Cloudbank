@@ -56,19 +56,19 @@ void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_wor
 		char file [100];
 		if (boundbox == true)
 		{
-			sprintf(file,"/home/sheun/cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
+			sprintf(file,"../cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
 			imwrite(file,Original_image_clone);
 		}
 
 		if (dark_world_Binary == true)
 		{
-			sprintf(file,"/home/sheun/cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
+			sprintf(file,"../cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
 			imwrite(file,dark_world_view);
 		}
 
 		if(light_world_Binary==true)
 		{
-			sprintf(file,"/home/sheun/cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
+			sprintf(file,"../cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
 			imwrite(file,light_world_view);
 		}
 		++frameNumber;
@@ -96,15 +96,13 @@ boost::python::dict vision_analysis()
 		// turn on script that save get current frame from video game
 		if (activateImageCapture == 0)
 		{
-			//change to your abosulute path on your system i.e <.../Cloudbank/game_vision/gstream_command_to_capture_image>
-			system("/home/sheun/Cloudbank/game_vision/gstream_command_to_capture_image &");
+			system("../game_vision/gstream_command_to_capture_image &");
 			++activateImageCapture;
 
 		}
 
 	    //read current video_game frame
-		//change to your abosulute path on your system i.e <.../Cloudbank/game_vision/current_game_frame.jpg>
-	    Mat img = imread("/home/sheun/Cloudbank/game_vision/current_game_frame.jpg");
+	    Mat img = imread("../game_vision/current_game_frame.jpg");
 
 	    //convert to grayscale
 		Mat gray;
@@ -143,7 +141,7 @@ boost::python::dict vision_analysis()
 		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
 
 		//Optional code: record frames with bounded boxes drawn on.
-		//recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
+		recordProcessedImage(true,false,false,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
 
 
 		//send data of objects in image to python

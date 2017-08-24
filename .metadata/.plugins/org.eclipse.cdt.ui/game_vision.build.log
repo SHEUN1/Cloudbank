@@ -1,4 +1,4 @@
-19:26:09 **** Incremental Build of configuration Debug for project game_vision ****
+22:57:17 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
@@ -11,5 +11,5 @@ g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.
 Finished building target: game_vision
  
 
-19:26:16 Build Finished (took 6s.971ms)
+22:57:23 Build Finished (took 6s.335ms)
 

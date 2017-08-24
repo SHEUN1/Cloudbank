@@ -1,5 +1,8 @@
 import subprocess
-import os
+import os, sys
+#follow path tp directry that holds the OpenCV shared library
+lib_path = os.path.abspath(os.path.join('..', 'game_vision', 'Debug'))
+sys.path.append(lib_path)
 import time
 import random
 from random import randint
@@ -32,7 +35,7 @@ while True:
 
     GetGameEnvironmentWindow = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     while GetGameEnvironmentWindow == GameEnvironment:
-        # open.vision() the funtion with in the OpenCV C++ part of the code where the image processing takes place
+        # open.vision() the function with in the OpenCV C++ part of the code where the image processing takes place
         objectInformation = opencv.vision()
         for i in range(0, len(objectInformation)):
             print objectInformation[i]
