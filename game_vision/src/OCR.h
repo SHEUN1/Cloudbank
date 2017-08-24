@@ -18,8 +18,6 @@
 #include <algorithm>
 #include <map>
 #include <iterator>
-#include <tesseract/baseapi.h>
-#include <leptonica/allheaders.h>
 #include <string>
 #ifndef OCR_H_
 #define OCR_H_

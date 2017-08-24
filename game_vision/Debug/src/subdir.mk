@@ -7,25 +7,25 @@ CPP_SRCS += \
 ../src/OCR.cpp \
 ../src/SendDataToPython.cpp \
 ../src/SeperateObjects.cpp \
+../src/convertToBinaryImage.cpp \
 ../src/featureextraction.cpp \
-../src/main.cpp \
-../src/yingyang.cpp 
+../src/main.cpp 
 
 OBJS += \
 ./src/OCR.o \
 ./src/SendDataToPython.o \
 ./src/SeperateObjects.o \
+./src/convertToBinaryImage.o \
 ./src/featureextraction.o \
-./src/main.o \
-./src/yingyang.o 
+./src/main.o 
 
 CPP_DEPS += \
 ./src/OCR.d \
 ./src/SendDataToPython.d \
 ./src/SeperateObjects.d \
+./src/convertToBinaryImage.d \
 ./src/featureextraction.d \
-./src/main.d \
-./src/yingyang.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

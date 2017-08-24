@@ -5,22 +5,20 @@
 // Copyright   : Your copyright notice
 // Description : Process the captured video game frame, analyse and then send data over to Python caller
 //============================================================================
-#include<stdio.h>
-#include<iostream>
-#include<opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
-#include<opencv2/opencv.hpp>
+#include <stdio.h>
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 #include "opencv2/text/ocr.hpp"
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 #include <algorithm>
 #include <map>
 #include <iterator>
-#include <tesseract/baseapi.h>
-#include <leptonica/allheaders.h>
 
-#include "yingyang.h"
+#include "convertToBinaryImage.h"
 #include "SeperateObjects.h"
 #include "featureextraction.h"
 #include "SendDataToPython.h"
@@ -119,7 +117,7 @@ boost::python::dict vision_analysis()
 		Mat Original_image_clone = img.clone();
 
 		//convert to binary
-		ying_yang world_view;
+		convertToBinaryImage world_view;
 		Mat dark_world_view = world_view.binary(gray,img);
 		Mat light_world_view = world_view.binary_Inverse(gray,img);
 

@@ -9,12 +9,12 @@
 #ifndef SEPERATEOBJECTS_H_
 #define SEPERATEOBJECTS_H_
 
-#include<iostream>
-#include<opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
-#include<opencv2/opencv.hpp>
-#include<vector>
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
+#include <vector>
 #include <algorithm>
 #include <stdlib.h>
 #include <map>

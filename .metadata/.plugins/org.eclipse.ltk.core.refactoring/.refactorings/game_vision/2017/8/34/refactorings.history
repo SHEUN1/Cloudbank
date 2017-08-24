@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;game_vision/src/yingyang.h&apos; to &apos;convertToBinaryImage.h&apos;" description="Rename resource &apos;yingyang.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/yingyang.h" name="convertToBinaryImage.h" stamp="1503598847934" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;game_vision/src/yingyang.cpp&apos; to &apos;convertToBinaryImage.cpp&apos;" description="Rename resource &apos;yingyang.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/yingyang.cpp" name="convertToBinaryImage.cpp" stamp="1503598862184" updateReferences="true"/>
+</session>
