@@ -1,0 +1,174 @@
+//============================================================================
+// Name        : main.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Process the captured video game frame, analyse and then send data over to Python caller
+//============================================================================
+#include <stdio.h>
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
+#include "opencv2/text/ocr.hpp"
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <iterator>
+
+#include "convertToBinaryImage.h"
+#include "SeperateObjects.h"
+#include "featureextraction.h"
+#include "SendDataToPython.h"
+#include "OCR.h"
+
+using namespace std;
+using namespace cv;
+
+#include <boost/python.hpp>
+#include <boost/python/suite/indexing/vector_indexing_suite.hpp>
+#include <boost/python/suite/indexing/map_indexing_suite.hpp>
+
+using namespace boost::python;
+
+int frameNumber = 0;
+int activateImageCapture = 0;
+/**
+ *****************************************************************************************
+ *  @brief		Optional: save processd image frames of current captured video game frame.
+ *
+ *
+ *  @param      True = save bounded box to specified directory
+ *  @param      True = save dark world binary image frame to specified directory
+ *  @param      True = save light world binary image frame to specified directory
+ *  @param      <int>current frame number
+ *  @param      <int>max number of frames to record
+ *  @param      <Mat>image with bounded box draw on it
+ *  @param      <Mat>binary image frame for the dark world
+ *  @param      <Mat>binary image frame for the light world
+ *
+ *  @return
+ ****************************************************************************************/
+void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_world_Binary, int& current_frame_number,int number_of_frames_to_record,Mat Original_image_clone,Mat dark_world_view,Mat light_world_view)
+{
+		char file [200];
+		if (boundbox == true)
+		{
+			sprintf(file,"../cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
+			imwrite(file,Original_image_clone);
+		}
+
+		if (dark_world_Binary == true)
+		{
+			sprintf(file,"../cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
+			imwrite(file,dark_world_view);
+		}
+
+		if(light_world_Binary==true)
+		{
+			sprintf(file,"../cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
+			imwrite(file,light_world_view);
+		}
+		++frameNumber;
+		if (frameNumber==number_of_frames_to_record){frameNumber=0;}
+}
+
+boost::python::dict vision_analysis()
+{
+
+		//this map will hold all the information on the image such as its position in the frame and feature points
+		typedef int object; //object number
+		typedef std::pair<int, int > coordinates; //this will hold x,y coordinates of object in the frame
+		typedef vector<KeyPoint> featurePoints; // feature points of object
+
+
+		std::map <object, std::pair<coordinates, featurePoints > > dark_object_info;
+		std::map <object, std::pair<coordinates, featurePoints > > light_object_info;
+		//hold coordinates to be later inserted for dark contrast objects
+		vector<int>dark_x_coordinate;
+		vector<int>dark_y_coordinate;
+		//hold coordinates to be later inserted for light contrast objects
+		vector<int>light_x_coordinate;
+		vector<int>light_y_coordinate;
+
+		// turn on script that save get current frame from video game
+		if (activateImageCapture == 0)
+		{
+			//system("../game_vision/gstream_command_to_capture_image &");
+			++activateImageCapture;
+
+		}
+
+	    //read current video_game frame
+	    Mat img = imread("../game_vision/current_game_frame.jpg");
+
+	    //convert to grayscale
+		Mat gray;
+		cvtColor(img, gray, COLOR_RGB2GRAY);
+
+		char file [200];
+		sprintf(file,"../cloudbank_images/Bounded_box_on_image/Image%d.jpg",1);
+		imwrite(file,gray);
+
+		//smooth image
+		blur(gray, gray, Size(3,3));
+
+		//this is he image on which the bounded boxes will be drawn on
+		Mat Original_image_clone = img.clone();
+
+		//convert to binary
+		convertToBinaryImage world_view;
+		Mat dark_world_view = world_view.binary(gray,img);
+		Mat light_world_view = world_view.binary_Inverse(gray,img);
+
+		//get objects in each world view (light and dark contrast images) and put each of them into a vector
+		SeperateObjects worldObjects;
+		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, true);
+		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, true);
+
+		//get feature points of each object
+		feature_extraction features_of_objects;
+		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true);
+		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true);
+
+		//Append/combine feature vectors so that all objects can be put into the python dictionary
+		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
+
+		dark_x_coordinate.insert(dark_x_coordinate.end(), light_x_coordinate.begin(), light_x_coordinate.end());
+		dark_y_coordinate.insert(dark_y_coordinate.end(), light_y_coordinate.begin(), light_y_coordinate.end());
+
+
+		//get words in frame
+		OCR word_capture;
+		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
+
+		//Optional code: record frames with bounded boxes drawn on.
+		recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
+
+
+		//send data of objects in image to python
+		SendDataToPython python_features_of_objects;
+		boost::python::dict send_to_python_Object_info= python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, chracterInfo);
+
+		return send_to_python_Object_info;
+
+}
+
+
+int main()
+{
+
+	vision_analysis();
+	return 0;
+
+}
+
+BOOST_PYTHON_MODULE(opencv)
+{
+
+	//definition that out python program will call start and retrieve informatin from our c++ code.
+	 def("vision", vision_analysis);
+
+}

@@ -97,13 +97,13 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Orig
 	    {
 			if (world_number == 0)
 			{
-				if (lock_dark_file == 0) {system("exec rm -r ../cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
-				sprintf(file,"../cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
+				if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
+				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
 			}
 			else if(world_number == 1)
 			{
-				if (lock_light_file == 0) {system("exec rm -r ../cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
-				sprintf(file,"../cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
+				if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
+				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
 			}
 
 			imwrite(file,roi[i]);

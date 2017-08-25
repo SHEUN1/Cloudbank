@@ -58,13 +58,13 @@ vector< vector<KeyPoint> > feature_extraction::featurePoints(vector<Mat> images,
 		{
 			if (world_number == 0)
 			{
-				if (lock_dark_file == 0) {system("exec rm -r ../cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/*");lock_dark_file++; }
-				sprintf(file,"../cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/Image%d.jpg",i);
+				if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/*");lock_dark_file++; }
+				sprintf(file,"../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/Image%d.jpg",i);
 			}
 			else if(world_number == 1)
 			{
-				if (lock_light_file == 0) {system("exec rm -r ../cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/*");lock_light_file++; }
-				sprintf(file,"../cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/Image%d.jpg",i);
+				if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/*");lock_light_file++; }
+				sprintf(file,"../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/Image%d.jpg",i);
 			}
 
 			imwrite(file,img_keypoints_1);

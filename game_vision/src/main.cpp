@@ -53,22 +53,22 @@ int activateImageCapture = 0;
  ****************************************************************************************/
 void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_world_Binary, int& current_frame_number,int number_of_frames_to_record,Mat Original_image_clone,Mat dark_world_view,Mat light_world_view)
 {
-		char file [100];
+		char file [200];
 		if (boundbox == true)
 		{
-			sprintf(file,"../cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
+			sprintf(file,"../game_vision/cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
 			imwrite(file,Original_image_clone);
 		}
 
 		if (dark_world_Binary == true)
 		{
-			sprintf(file,"../cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
+			sprintf(file,"../game_vision/cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
 			imwrite(file,dark_world_view);
 		}
 
 		if(light_world_Binary==true)
 		{
-			sprintf(file,"../cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
+			sprintf(file,"../game_vision/cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
 			imwrite(file,light_world_view);
 		}
 		++frameNumber;
@@ -121,13 +121,13 @@ boost::python::dict vision_analysis()
 
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
 		SeperateObjects worldObjects;
-		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, false);
-		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, false);
+		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, true);
+		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, true);
 
 		//get feature points of each object
 		feature_extraction features_of_objects;
-		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, false);
-		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, false);
+		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true);
+		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true);
 
 		//Append/combine feature vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
@@ -141,7 +141,7 @@ boost::python::dict vision_analysis()
 		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
 
 		//Optional code: record frames with bounded boxes drawn on.
-		recordProcessedImage(true,false,false,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
+		recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
 
 
 		//send data of objects in image to python
