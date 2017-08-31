@@ -78,14 +78,8 @@ void recordProcessedImage (bool boundbox, bool dark_world_Binary, bool light_wor
 boost::python::dict vision_analysis()
 {
 
-		//this map will hold all the information on the image such as its position in the frame and feature points
-		typedef int object; //object number
-		typedef std::pair<int, int > coordinates; //this will hold x,y coordinates of object in the frame
-		typedef vector<KeyPoint> featurePoints; // feature points of object
+		typedef std::pair<int, int > coordinates; //x,y coordinates pairs
 
-
-		std::map <object, std::pair<coordinates, featurePoints > > dark_object_info;
-		std::map <object, std::pair<coordinates, featurePoints > > light_object_info;
 		//hold coordinates to be later inserted for dark contrast objects
 		vector<int>dark_x_coordinate;
 		vector<int>dark_y_coordinate;
@@ -138,7 +132,7 @@ boost::python::dict vision_analysis()
 
 		//get words in frame
 		OCR word_capture;
-		pair< vector<string>, vector < pair< int , int  > > > chracterInfo = word_capture.getWords(img);
+		pair< vector<string>, vector < coordinates > > chracterInfo = word_capture.getWords(img);
 
 		//Optional code: record frames with bounded boxes drawn on.
 		recordProcessedImage(true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view);
