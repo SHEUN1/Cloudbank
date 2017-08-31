@@ -56,5 +56,7 @@ Below is a gif of the image processing and object identification being done on t
 2. As expected, the image processing slows down the framerate considerably due to the fact that the processing is done mainly on the CPU, hence the need for GPU parallelisation. 
 
 3. It is planned for Tensorflow to be implemented and to make use of the data being sent to python controller. The data will be used to train the AI agent but this will most likely be done after the GPU implementation.
+
+4. To avoid problems with gstreamer please set your game screen resolution to no more than 1024x768
       
 
