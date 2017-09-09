@@ -564,3 +564,789 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
 Finished building target: game_vision
  
+18:51:16 **** Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+18:51:36 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:52:23 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:52:37 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:52:57 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/local/include/opencv2/core/cvstd.hpp:1064:0,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:16,
+                 from ../src/featureextraction.cpp:10:
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’:
+../src/featureextraction.cpp:38:45:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::ORB* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+ Ptr<T>::Ptr(const Ptr<Y>& o) : owner(o.owner), stored(o.stored)
+                                                               ^
+make: *** [src/featureextraction.o] Error 1
+18:53:18 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+18:57:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:58:33 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+19:06:16 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:62:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:06:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:62:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:20:03 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:6: error: missing template arguments before ‘detector’
+  Ptr detector;
+      ^
+../src/featureextraction.cpp:39:6: error: expected ‘;’ before ‘detector’
+../src/featureextraction.cpp:63:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:28:01 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:40:2: error: expected initializer before ‘if’
+  if (featureExtration == 1)
+  ^
+../src/featureextraction.cpp:45:2: error: ‘else’ without a previous ‘if’
+  else if (featureExtration == 2)
+  ^
+../src/featureextraction.cpp:48:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:53:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:66:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:28:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/local/include/opencv2/core/cvstd.hpp:1064:0,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:16,
+                 from ../src/featureextraction.cpp:10:
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:48:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::ORB* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+ Ptr<T>::Ptr(const Ptr<Y>& o) : owner(o.owner), stored(o.stored)
+                                                               ^
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:53:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::BRISK* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+make: *** [src/featureextraction.o] Error 1
+19:28:57 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:43:11: error: cannot convert ‘cv::Ptr<cv::xfeatures2d::SIFT>’ to ‘cv::Ptr<cv::xfeatures2d::SIFT>*’ in assignment
+   detector= detectorChoice;
+           ^
+../src/featureextraction.cpp:48:11: error: cannot convert ‘cv::Ptr<cv::ORB>’ to ‘cv::Ptr<cv::xfeatures2d::SIFT>*’ in assignment
+   detector= detectorChoice;
+           ^
+../src/featureextraction.cpp:53:11: error: cannot convert ‘cv::Ptr<cv::BRISK>’ to ‘cv::Ptr<cv::xfeatures2d::SIFT>*’ in assignment
+   detector= detectorChoice;
+           ^
+../src/featureextraction.cpp:66:13: error: ‘struct cv::Ptr<cv::xfeatures2d::SIFT>’ has no member named ‘detect’
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+             ^
+make: *** [src/featureextraction.o] Error 1
+19:29:06 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/local/include/opencv2/core/cvstd.hpp:1064:0,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:16,
+                 from ../src/featureextraction.cpp:10:
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:48:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::ORB* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+ Ptr<T>::Ptr(const Ptr<Y>& o) : owner(o.owner), stored(o.stored)
+                                                               ^
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:53:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::BRISK* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+make: *** [src/featureextraction.o] Error 1
+19:30:10 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:2: error: a template declaration cannot appear at block scope
+  template <typename T>
+  ^
+../src/featureextraction.cpp:41:2: error: expected ‘;’ before ‘if’
+  if (featureExtration == 1)
+  ^
+../src/featureextraction.cpp:46:2: error: ‘else’ without a previous ‘if’
+  else if (featureExtration == 2)
+  ^
+../src/featureextraction.cpp:49:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:54:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:67:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:30:17 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:2: error: a template declaration cannot appear at block scope
+  template <typename T>;
+  ^
+../src/featureextraction.cpp:40:2: error: expected ‘;’ before ‘Ptr’
+  Ptr<T> detector;
+  ^
+../src/featureextraction.cpp:44:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:49:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:54:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:67:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:30:34 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:2: error: a template declaration cannot appear at block scope
+  template <typename T>;
+  ^
+../src/featureextraction.cpp:40:2: error: expected ‘;’ before ‘Ptr’
+  Ptr<T> detector;
+  ^
+../src/featureextraction.cpp:44:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:49:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:54:3: error: ‘detector’ was not declared in this scope
+   detector= detectorChoice;
+   ^
+../src/featureextraction.cpp:67:3: error: ‘detector’ was not declared in this scope
+   detector->detect(images_clone[i], keypoints_hold_1_image);
+   ^
+make: *** [src/featureextraction.o] Error 1
+19:44:53 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/local/include/opencv2/core/cvstd.hpp:1064:0,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:16,
+                 from ../src/featureextraction.cpp:10:
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::ORB; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:49:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::ORB* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+ Ptr<T>::Ptr(const Ptr<Y>& o) : owner(o.owner), stored(o.stored)
+                                                               ^
+/usr/local/include/opencv2/core/ptr.inl.hpp: In instantiation of ‘cv::Ptr<T>::Ptr(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’:
+/usr/local/include/opencv2/core/ptr.inl.hpp:170:5:   required from ‘cv::Ptr<T>& cv::Ptr<T>::operator=(const cv::Ptr<Y>&) [with Y = cv::BRISK; T = cv::xfeatures2d::SIFT]’
+../src/featureextraction.cpp:54:11:   required from here
+/usr/local/include/opencv2/core/ptr.inl.hpp:141:63: error: cannot convert ‘cv::BRISK* const’ to ‘cv::xfeatures2d::SIFT*’ in initialization
+make: *** [src/featureextraction.o] Error 1
+20:05:17 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+20:05:57 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+In file included from /usr/include/string.h:32:0,
+                 from /usr/include/c++/4.8/cstring:42,
+                 from /usr/local/include/opencv2/core/cvstd.hpp:54,
+                 from /usr/local/include/opencv2/core/base.hpp:58,
+                 from /usr/local/include/opencv2/core.hpp:54,
+                 from ../src/featureextraction.h:16,
+                 from ../src/featureextraction.cpp:10:
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:8: error: could not convert ‘0l’ from ‘long int’ to ‘std::vector<std::vector<cv::KeyPoint> >’
+ return NULL;
+        ^
+../src/featureextraction.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/featureextraction.o] Error 1
+20:09:50 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:8: error: ‘invalid_argument’ is not a member of ‘std’
+  throw std::invalid_argument( "received negative value" ); ;
+        ^
+../src/featureextraction.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/featureextraction.o] Error 1
+20:10:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:15: error: ‘invalid_argument’ is not a member of ‘std’
+  return throw std::invalid_argument( "received negative value" ); ;
+               ^
+../src/featureextraction.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/featureextraction.o] Error 1
+20:10:52 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:64: error: could not convert ‘<throw-expression>’ from ‘void’ to ‘std::vector<std::vector<cv::KeyPoint> >’
+  return throw std::invalid_argument( "received negative value" ); ;
+                                                                ^
+../src/featureextraction.cpp:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/featureextraction.o] Error 1
+20:11:50 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+20:12:20 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+20:27:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:30:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:30:38 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:31:53 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:36:07 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:40:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+20:41:15 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:42:17 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+20:47:20 **** Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:00:17 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:00:47 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:01:47 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:02:19 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:03:34 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:07:47 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:14:19 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘boost::python::dict vision_analysis()’:
+../src/main.cpp:99:89: error: conversion from ‘void’ to non-scalar type ‘cv::Mat’ requested
+      Mat img = imread("../game_vision/current_game_frame.jpg",0).convertTo(img, CV_32FC1);;
+                                                                                         ^
+make: *** [src/main.o] Error 1
+21:14:53 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘boost::python::dict vision_analysis()’:
+../src/main.cpp:99:87: error: conversion from ‘void’ to non-scalar type ‘cv::Mat’ requested
+      Mat img = imread("../game_vision/current_game_frame.jpg").convertTo(img, CV_32FC1);
+                                                                                       ^
+make: *** [src/main.o] Error 1
+21:17:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘boost::python::dict vision_analysis()’:
+../src/main.cpp:99:87: error: conversion from ‘void’ to non-scalar type ‘cv::Mat’ requested
+      Mat img = imread("../game_vision/current_game_frame.jpg").convertTo(img, CV_32FC1);
+                                                                                       ^
+make: *** [src/main.o] Error 1
+21:18:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:19:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:21:00 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:23:33 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:23:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:24:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:24:15 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:24:24 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:24:56 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘boost::python::dict vision_analysis()’:
+../src/main.cpp:123:126: error: no matching function for call to ‘feature_extraction::featurePoints(std::vector<cv::Mat>&, int, bool, int)’
+   vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true, 1);
+                                                                                                                              ^
+../src/main.cpp:123:126: note: candidate is:
+In file included from ../src/main.cpp:23:0:
+../src/featureextraction.h:44:29: note: std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool)
+  vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result);
+                             ^
+../src/featureextraction.h:44:29: note:   candidate expects 3 arguments, 4 provided
+../src/main.cpp:124:128: error: no matching function for call to ‘feature_extraction::featurePoints(std::vector<cv::Mat>&, int, bool, int)’
+   vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true, 1);
+                                                                                                                                ^
+../src/main.cpp:124:128: note: candidate is:
+In file included from ../src/main.cpp:23:0:
+../src/featureextraction.h:44:29: note: std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool)
+  vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result);
+                             ^
+../src/featureextraction.h:44:29: note:   candidate expects 3 arguments, 4 provided
+make: *** [src/main.o] Error 1
+21:25:23 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:26:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:29:44 **** Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:38:16 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:38:37 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+21:40:24 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:42:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:46:38 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:7: warning: unused variable ‘minHessian’ [-Wunused-variable]
+   int minHessian = 400;
+       ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:47:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+21:52:29 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+../src/featureextraction.cpp: In member function ‘std::vector<std::vector<cv::KeyPoint> > feature_extraction::featurePoints(std::vector<cv::Mat>, int, bool, int)’:
+../src/featureextraction.cpp:39:7: warning: unused variable ‘minHessian’ [-Wunused-variable]
+   int minHessian = 400;
+       ^
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+15:37:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+16:07:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+16:12:07 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o   -lopencv_cudabgsegm -lopencv_cudaobjdetect -lopencv_cudastereo -lopencv_stitching -lopencv_cudafeatures2d -lopencv_superres -lopencv_cudacodec -lopencv_videostab -lopencv_cudaoptflow -lopencv_cudalegacy -lopencv_photo -lopencv_cudawarping -lopencv_cudaimgproc -lopencv_cudafilters -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_text -lopencv_dnn -lopencv_plot -lopencv_ml -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_cudaarithm -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core -lopencv_cudev -lboost_python -lboost_system -lpython2.7
+Finished building target: game_vision
+ 

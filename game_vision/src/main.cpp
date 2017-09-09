@@ -120,8 +120,8 @@ boost::python::dict vision_analysis()
 
 		//get feature points of each object
 		feature_extraction features_of_objects;
-		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true);
-		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true);
+		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true,4);
+		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true,4);
 
 		//Append/combine feature vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
