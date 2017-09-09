@@ -17,10 +17,16 @@
 #include "opencv2/features2d.hpp"
 #include "opencv2/xfeatures2d.hpp"
 #include "opencv2/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 
+
+#include "opencv2/cudafeatures2d.hpp"
+#include "opencv2/xfeatures2d/cuda.hpp"
+#include "opencv2/cudaimgproc.hpp"
 
 using namespace cv;
 using namespace cv::xfeatures2d;
+
 using namespace std;
 
 class feature_extraction {
@@ -42,7 +48,7 @@ public:
 	 *  @return     vector of keypoints per object
 	 ****************************************************************************************/
 
-	vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result, int extractorType=0);
+	vector< vector<KeyPoint> > featurePoints (vector<Mat> image,int world_number, bool save_image_result, int extractorType=1);
 
 
 };

@@ -19,6 +19,10 @@
 #include <vector>
 #include <algorithm>
 
+#include "opencv2/core/cuda.hpp"
+#include "opencv2/cudafilters.hpp"
+#include "opencv2/cudaimgproc.hpp"
+#include "opencv2/cudaarithm.hpp"
 
 using namespace std;
 using namespace cv;
@@ -41,6 +45,7 @@ private:
 		 *  @return     Binary image
 		 ****************************************************************************************/
 	Mat cleanupBinary (Mat Binary);
+	cv::cuda::GpuMat cleanupBinary (cv::cuda::GpuMat Binary);
 	/**
 		 *****************************************************************************************
 		 *  @brief      Watershed segmentation

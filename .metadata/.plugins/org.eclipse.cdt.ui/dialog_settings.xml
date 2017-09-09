@@ -25,5 +25,7 @@
 	<section name="CRenameRefactoringInputPage">
 	</section>
 	<section name="completion_proposal_size">
+		<item value="268" key="size.y"/>
+		<item value="394" key="size.x"/>
 	</section>
 </section>

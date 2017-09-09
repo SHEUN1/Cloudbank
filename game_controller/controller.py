@@ -1,3 +1,4 @@
+import time
 import subprocess
 import os, sys
 #follow path tp directry that holds the OpenCV shared library
@@ -36,9 +37,13 @@ while True:
     GetGameEnvironmentWindow = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     while GetGameEnvironmentWindow == GameEnvironment:
         # open.vision() the function with in the OpenCV C++ part of the code where the image processing takes place
+        t0 = time.time()
         objectInformation = opencv.vision()
-        for i in range(0, len(objectInformation)):
-            print objectInformation[i]
+        t1 = time.time()
+
+        #for i in range(0, len(objectInformation)):
+           # print objectInformation[i]
+        print 'time taken to retrieve data: ', t1 - t0
         sendControl = subprocess.Popen(
              [executableControlFile, "Move", random.choice(up), random.choice(down), random.choice(left), random.choice(right),
               random.choice(Select_attack), random.choice(Press_space), str(randint(0, 1400)), str(randint(0, 1400)),

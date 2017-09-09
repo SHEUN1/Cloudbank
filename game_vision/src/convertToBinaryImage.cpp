@@ -81,12 +81,20 @@ convertToBinaryImage::~convertToBinaryImage() {
  	 ****************************************************************************************/
 Mat convertToBinaryImage::binary (Mat img,Mat origanal)
 {
-
 	 Mat binaryImage;
 	 //create binary image
 	 threshold(img, binaryImage, 0.5, 255, CV_THRESH_BINARY | CV_THRESH_OTSU);
 	 //clean up the binary image i.e. remove small blobs
-	 binaryImage = cleanupBinary(binaryImage);
+
+
+	 cv::cuda::GpuMat binaryImageGPU;
+	 binaryImageGPU.upload(binaryImage);
+
+
+	 binaryImageGPU = cleanupBinary(binaryImageGPU);
+
+	 binaryImageGPU.download(binaryImage);
+
 	 Mat Binary_post_watershed = Watershed(binaryImage,  origanal);
 
 
@@ -113,7 +121,14 @@ Mat convertToBinaryImage::binary_Inverse (Mat img,Mat origanal)
 	img.convertTo(contrasted, -1, alpha, beta);
 
 	threshold(contrasted, binaryImage,0.5,255,THRESH_BINARY| CV_THRESH_OTSU);
-	binaryImage = cleanupBinary(binaryImage);
+
+
+	 cv::cuda::GpuMat binaryImageGPU;
+	 binaryImageGPU.upload(binaryImage);
+
+
+	 binaryImageGPU = cleanupBinary(binaryImageGPU);
+	 binaryImageGPU.download(binaryImage);
 	//inverse the binary image
 	bitwise_not(binaryImage, binaryImage_inv);
 
@@ -122,8 +137,6 @@ Mat convertToBinaryImage::binary_Inverse (Mat img,Mat origanal)
 
 	return Binary_post_watershed;
 }
-
-
 
 
 /**
@@ -152,4 +165,39 @@ Mat convertToBinaryImage::cleanupBinary(Mat Binary)
 	    CleanedBinaryImage.setTo(Scalar(0), mask == 0);
 
 	    return CleanedBinaryImage;
+}
+/**
+	 *****************************************************************************************
+	 *  @brief      clean up a binary image (GPU Version)
+	 *
+	 *  @usage      remove small blobs from a binary image
+	 *
+	 *
+	 *  @param      Binary image you want to clean
+	 *
+	 *  @return     Binary image
+	 ****************************************************************************************/
+cv::cuda::GpuMat convertToBinaryImage::cleanupBinary(cv::cuda::GpuMat Binary)
+{
+
+		Mat se1 = getStructuringElement(MORPH_RECT, Size(10, 10));
+	    Mat se2 = getStructuringElement(MORPH_RECT, Size(4, 4));
+
+	    // Perform closing then opening
+	    cv::cuda::GpuMat mask;
+	    Ptr<cuda::Filter> openFilter1 = cv::cuda::createMorphologyFilter(MORPH_CLOSE, Binary.type(), se1);
+	    openFilter1->apply(Binary, mask);
+
+	    Ptr<cuda::Filter> openFilter2 = cv::cuda::createMorphologyFilter(MORPH_OPEN, mask.type(), se2);
+	    openFilter2->apply(mask, mask);
+	    Mat Binary_to_CPU;
+	    Mat mask_to_CPU;
+	    Binary.download(Binary_to_CPU);
+	    mask.download(mask_to_CPU);
+	    // Filter the output
+	    Mat CleanedBinaryImage = Binary_to_CPU.clone();
+	    CleanedBinaryImage.setTo(Scalar(0), mask_to_CPU == 0);
+	    cv::cuda::GpuMat CleanedBinaryImage_to_GPU;
+	    CleanedBinaryImage_to_GPU.upload(CleanedBinaryImage);
+	    return CleanedBinaryImage_to_GPU;
 }
