@@ -1,8 +1,16 @@
 # Cloudbank
-Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment on Steam (http://store.steampowered.com/). The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python). Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send simulated keyboard and mouse clicks to the Steam window currently playing the game. 
+Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment on Steam (http://store.steampowered.com/). The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python). Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send simulated keyboard and mouse clicks to the Steam window currently playing the game.
 
-### Why opencv C++ and not python?
-The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance. Also, it is planned in the future to implement some GPU parallel processing into the Computer Vision part of the this project which so far can only be done in the C++ version.
+### What you'll need.
+1. Linux OS (ubuntu 14.04 or higher)
+2. Gstreamer
+3. OpenCV version 3 
+4. Steam video game platform 
+5. xdotool
+6. Tensoflow (or any machine learning library you want to use to make use the data. This is note needed for the vision processing half)   
+
+### Why opencv C++ and not Python for vision processing ?
+The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance and enables you to implement some GPU parallel processing into the Computer Vision part of the this project.
 
 ### How is the video game frame captured?
 A library named gstreamer was used with the below arguments in a bash script:
