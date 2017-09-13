@@ -5,9 +5,10 @@ Cloudbank is built to be a Computer Vision and AI training platform alternative 
 1. Linux OS (ubuntu 14.04 or higher)
 2. Gstreamer
 3. OpenCV version 3 
-4. Steam video game platform 
-5. xdotool
-6. Tensoflow (or any machine learning library you want to use to make use the data. This is note needed for the vision processing half)   
+4. python 2.7
+5. Steam video game platform 
+6. xdotool
+7. Tensoflow (or any machine learning library you want to use to make use the data. This is note needed for the vision processing half)   
 
 ### Why opencv C++ and not Python for vision processing ?
 The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance and enables you to implement some GPU parallel processing into the Computer Vision part of the this project.
