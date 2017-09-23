@@ -138,7 +138,8 @@ if(extractorType == 3)
 	for(uint32_t i = 0; i < images_clone.size(); i++)
 	{
 		//gpu surf will not take small sizes. objects have been resized to accommodate this.
-		resize(images_clone[i], images_clone[i],  cvSize(200 , 200 ));
+		resize(images_clone[i], images_clone[i],  cvSize(200 , 200 ) );
+
 		cv::cuda::GpuMat images_clone_1_image;
 		images_clone_1_image.upload(images_clone[i]);
 		images_clone_gpu.push_back(images_clone_1_image);

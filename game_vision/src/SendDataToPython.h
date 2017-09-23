@@ -48,10 +48,11 @@ public:
 	 *  @param 		vector of x coordinates per object
 	 *  @param 		vector of y coordinates per object
 	 *  @param      (pair< vector<string>, vector < pair< int , int  > > >): pair of characters in images and their associated x and y positions.
+	 *  @param 		vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
 	 *  @return     python dictionary
 	 ****************************************************************************************/
 
-	boost::python::dict objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  pair< vector<string>, vector < pair< int , int  > > > testing);
+	boost::python::dict objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate, vector<Rect> boundRectWorld ,pair< vector<string>,  vector < pair< int , int  > > > words);
 };
 
 #endif /* SENDDATATOPYTHON_H_ */

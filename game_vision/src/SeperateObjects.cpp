@@ -28,8 +28,9 @@ SeperateObjects::~SeperateObjects() {
 	 *  @brief      identify objects and get their X and Y coordinates in the image frame
 	 *
 	 *  @usage      draw boxes around each object/region,
-	 *  			create a vector of seperated objects/regions7
+	 *  			create a vector of separated objects/regions
 	 *  			get coordinates of each object/region
+	 *  			get boundedbox of each object/region
 	 *
 	 *
 	 *  @param      Binary image
@@ -38,12 +39,13 @@ SeperateObjects::~SeperateObjects() {
 	 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
 	 *  @param      vector which will hold x coordinates of each object/region
 	 *  @param      vector which will hold y coordinates of each object/region
+	 *  @param 		vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
 	 *  @param 		true = save separated objects/regions in directory of your choice
 	 *
 	 *  @return     vector of object/regions
 	 ****************************************************************************************/
 
-vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result)
+vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, vector<Rect> &boundRectWorld, bool save_image_result)
 {
 	//bounded box will be draw on this copy of the original image instead
 	vector<vector<Point> > contours;
@@ -77,13 +79,14 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Orig
 	int lock_dark_file = 0 ;
 	int lock_light_file = 0;
 
+
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
 
 		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
 
 		boundRect[i] = boundingRect(Mat(contours_poly[i]));
-
+		boundRectWorld.push_back(boundRect[i]);
 		x2_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
 		y2_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
 
@@ -113,7 +116,6 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Orig
 	}
 	x_coordinate = x2_coordinate;
 	y_coordinate = y2_coordinate;
-
 
 
 	return roi;

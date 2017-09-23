@@ -61,8 +61,7 @@ OCR::~OCR() {
 
 	wordsInfo.first = words;
 	wordsInfo.second = coordinatesPairs;
-	//vector < pair< vector<string>, pair< vector<int>,vector<int> > > > WordsandCoordinates;
-	//WordsandCoordinates[0]  = wordsInfo;
+
 
 	return wordsInfo;
 

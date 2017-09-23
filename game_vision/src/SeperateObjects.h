@@ -53,7 +53,7 @@ public:
 	 *  @param 		true = save separated objects/regions in directory of your choice
 	 *  @return     vector of object/regions
  ****************************************************************************************/
-	vector <Mat>  BoundBox(Mat Binary, Mat origanal_image, Mat &Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, bool save_image_result);
+	vector <Mat>  BoundBox(Mat Binary, Mat origanal_image, Mat &Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, vector<Rect> &boundRectWorld, bool save_image_result);
 
 
 };
