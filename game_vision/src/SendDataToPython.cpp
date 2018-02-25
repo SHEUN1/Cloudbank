@@ -10,13 +10,10 @@
 #include "SendDataToPython.h"
 
 SendDataToPython::SendDataToPython() {
-	cout<<"sending image data to python"<<endl;
+	std::cout<<"sending image data to python"<<std::endl;
 
 }
 
-SendDataToPython::~SendDataToPython() {
-
-}
 
 /**
 	 *****************************************************************************************
@@ -36,13 +33,13 @@ SendDataToPython::~SendDataToPython() {
 	 *  @return     python dictionary
 	 ****************************************************************************************/
 
-boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate,  vector<Rect> boundRectWorld, pair< vector<string>, vector < pair< int , int  > > > words)
+boost::python::dict SendDataToPython::SendObjectInformationToDict(std::vector< std::vector<cv::KeyPoint> > vectorToSend, std::vector<int>x_coordinate,std::vector<int>y_coordinate,  std::vector<cv::Rect> boundRectWorld, std::pair< std::vector<std::string>, std::vector < std::pair< int , int  > > > words)
 {
 
 	//iterator for each objects
-	typename vector< vector<KeyPoint> >::iterator iterEachObject;
+	typename std::vector< std::vector<cv::KeyPoint> >::iterator iterEachObject;
 	//iterator for each keypoint for each object
-	typename vector<KeyPoint>::iterator iterKeyPoints;
+	typename std::vector<cv::KeyPoint>::iterator iterKeyPoints;
 
 	//map/dictionary will hold the keypoints acciociated with each object
 	boost::python::dict keypointMap;
@@ -104,7 +101,7 @@ boost::python::dict SendDataToPython::objectInformationToDict(vector< vector<Key
 		collectionOfletters.append(words.first[i]);
 	}
 	//letters.append(collectionOfletters);
-	vector < pair< int , int  > > wordXYPairs = words.second;
+	std::vector < std::pair< int , int  > > wordXYPairs = words.second;
 	boost::python::list XYPairs;
 
 	for (uint32_t i = 0; i<wordXYPairs.size();i++)

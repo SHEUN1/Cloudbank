@@ -10,30 +10,18 @@
 #define SEPERATEOBJECTS_H_
 
 #include <iostream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
 #include <vector>
 #include <algorithm>
-#include <stdlib.h>
 #include <map>
 
-
-using namespace std;
-using namespace cv;
-
-
-
 class SeperateObjects {
-
-private:
 
 
 public:
 
 	SeperateObjects();
-	virtual ~SeperateObjects();
+	virtual ~SeperateObjects() = default;
 
 /**
 	 *****************************************************************************************
@@ -53,7 +41,7 @@ public:
 	 *  @param 		true = save separated objects/regions in directory of your choice
 	 *  @return     vector of object/regions
  ****************************************************************************************/
-	vector <Mat>  BoundBox(Mat Binary, Mat origanal_image, Mat &Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, vector<Rect> &boundRectWorld, bool save_image_result);
+	std::vector <cv::Mat>  BoundBox(cv::Mat Binary, cv::Mat origanal_image, cv::Mat &Original_image_clone, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result);
 
 
 };

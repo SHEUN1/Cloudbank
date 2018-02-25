@@ -11,23 +11,9 @@
 #define CONVERTTOBINARYIMAGE_H_
 
 #include <iostream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
-#include <iostream>
 #include <vector>
 #include <algorithm>
-
-#include "opencv2/core/cuda.hpp"
-#include "opencv2/cudafilters.hpp"
-#include "opencv2/cudaimgproc.hpp"
-#include "opencv2/cudaarithm.hpp"
-
-using namespace std;
-using namespace cv;
-
-
 
 class convertToBinaryImage {
 
@@ -35,7 +21,19 @@ private:
 
 	/**
 		 *****************************************************************************************
-		 *  @brief      clean up a binary image
+		 *  @brief      clean up a binary image (CPU Version)
+		 *
+		 *  @usage      remove small blobs from a binary image
+		 *
+		 *  @param      Binary image you want to clean
+		 *
+		 *  @return     Binary image
+		 ****************************************************************************************/
+
+	cv::Mat cleanupBinary (cv::Mat Binary);
+	/**
+		 *****************************************************************************************
+		 *  @brief      clean up a binary image (GPU Version)
 		 *
 		 *  @usage      remove small blobs from a binary image
 		 *
@@ -44,7 +42,6 @@ private:
 		 *
 		 *  @return     Binary image
 		 ****************************************************************************************/
-	Mat cleanupBinary (Mat Binary);
 	cv::cuda::GpuMat cleanupBinary (cv::cuda::GpuMat Binary);
 	/**
 		 *****************************************************************************************
@@ -57,10 +54,11 @@ private:
 		 *
 		 *  @return     Mat Binary image
 		 ****************************************************************************************/
-	Mat  Watershed(Mat Binary, Mat origanal_image);
+	cv::Mat  Watershed(cv::Mat Binary, cv::Mat origanal_image);
+
 public:
 	convertToBinaryImage();
-	virtual ~convertToBinaryImage();
+	virtual ~convertToBinaryImage() = default;
 
 	 /**
 	 	 *****************************************************************************************
@@ -70,11 +68,12 @@ public:
 	 	 *
 	 	 *  @param      grayscale image
 	 	 *  @param      origanal (non-grayscale image)
+	 	 *  @param		0 = use OpenCL, 1 = use CUDA
 	 	 *
 	 	 *  @return     Mat Binary image
 	 	 ****************************************************************************************/
 
-	Mat binary (Mat img, Mat origanal);
+	cv::Mat Binary (cv::Mat const &img, cv::Mat origanal, int run_on_cuda_GPU);
 	/**
 		 *****************************************************************************************
 		 *  @brief      binary image converter on inverse of a grayscale image
@@ -84,10 +83,11 @@ public:
 		 *
 		 *  @param      grayscale image
 		 *  @param      original (non-grayscale image)
+		 *  @param		0 = use OpenCL, 1 = use CUDA
 		 *
 		 *  @return     Mat Binary image
 		 ****************************************************************************************/
-	Mat binary_Inverse (Mat img, Mat origanal);
+	cv::Mat BinaryInverse (cv::Mat const &img, cv::Mat origanal, int run_on_cuda_GPU);
 
 
 };

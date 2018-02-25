@@ -8,20 +8,13 @@
  */
 
 #include "SeperateObjects.h"
-//#include <vector>
-//#include <stdlib.h>
 
-//using namespace std;
-//RNG rng(12345);
 SeperateObjects::SeperateObjects() {
 
-	std::cout<<"identyfying objects in seperate objects class"<<endl;
+	std::cout<<"identyfying objects in seperate objects class"<<std::endl;
 
 }
 
-SeperateObjects::~SeperateObjects() {
-
-}
 
 /**
 	 *****************************************************************************************
@@ -45,33 +38,33 @@ SeperateObjects::~SeperateObjects() {
 	 *  @return     vector of object/regions
 	 ****************************************************************************************/
 
-vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Original_image_clone, int world_number, vector<int>& x_coordinate, vector<int>& y_coordinate, vector<Rect> &boundRectWorld, bool save_image_result)
+std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origanal_image,cv::Mat& Original_image_clone, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result)
 {
 	//bounded box will be draw on this copy of the original image instead
-	vector<vector<Point> > contours;
-	vector<Vec4i> hierarchy;
+	std::vector<std::vector<cv::Point> > contours;
+	std::vector<cv::Vec4i> hierarchy;
 
 	//find contours
-	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0,0));
+	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0,0));
 
 	 /// Get the moments(weighted average of image pixels intensities )
-	  vector<Moments> mu(contours.size());
+	  std::vector<cv::Moments> mu(contours.size());
 	  for( uint32_t i = 0; i < contours.size(); i++ )
 	     { mu[i] = moments( contours[i], false ); }
 
 	  ///  Get the mass centres:
-	    vector<Point2f> mc( contours.size() );
+	    std::vector<cv::Point2f> mc( contours.size() );
 	    for( uint32_t i = 0; i < contours.size(); i++ )
-	       { mc[i] = Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 ); }
+	       { mc[i] = cv::Point2f( mu[i].m10/mu[i].m00 , mu[i].m01/mu[i].m00 ); }
 
 	//Approximate contours to polygons + get bounding rects
-	vector<vector<Point> > contours_poly(contours.size());
-	vector<Rect> boundRect(contours.size());
+	std::vector<std::vector<cv::Point> > contours_poly(contours.size());
+	std::vector<cv::Rect> boundRect;
 	//region of interest
-	vector<Mat> roi(contours.size());
+	std::vector<cv::Mat> roi;
 	//get image coordinate;
-	vector<int> x2_coordinate ( contours.size() );
-	vector<int> y2_coordinate ( contours.size() );
+	std::vector<int> x2_coordinate;
+	std::vector<int> y2_coordinate;
 
 
 	//character length for roi filename to be saved in separate folder
@@ -83,19 +76,27 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Orig
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
 
-		approxPolyDP(Mat(contours[i]), contours_poly[i], 3, true);
+		approxPolyDP(cv::Mat(contours[i]), contours_poly[i], 3, true);
 
-		boundRect[i] = boundingRect(Mat(contours_poly[i]));
-		boundRectWorld.push_back(boundRect[i]);
-		x2_coordinate[i] = ((boundRect[i].x + boundRect[i].width) / 2);
-		y2_coordinate[i] = ((boundRect[i].y + boundRect[i].height) / 2);
+		if (((boundingRect(cv::Mat(contours_poly[i])).width == origanal_image.cols) && (boundingRect(cv::Mat(contours_poly[i])).height == origanal_image.rows)))
+		{
+			continue;
+		}
 
-		Scalar color( rand()&255, rand()&255, rand()&255 );
-		rectangle (Original_image_clone, boundRect[i].tl(), boundRect[i].br(), color, 2,8,0);
+
+		boundRect.push_back(boundingRect(cv::Mat(contours_poly[i])));
+
+		boundRectWorld.push_back(boundRect.back());
+		x2_coordinate.push_back(((boundRect.back().x + boundRect.back().width) / 2));
+		y2_coordinate.push_back(((boundRect.back().y + boundRect.back().height) / 2));
+
+		cv::Scalar color( rand()&255, rand()&255, rand()&255 );
+		rectangle (Original_image_clone, boundRect.back().tl(), boundRect.back().br(), color, 2,8,0);
 
 		// Crop the original image to the defined ROI
-	    roi[i] = origanal_image(boundRect[i]);
+		roi.push_back(origanal_image(boundRect.back()));
 	    //save regions of interest into a folder
+
 	    if ( save_image_result == true)
 	    {
 			if (world_number == 0)
@@ -109,7 +110,7 @@ vector <Mat>  SeperateObjects::BoundBox(Mat Binary, Mat origanal_image,Mat& Orig
 				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
 			}
 
-			imwrite(file,roi[i]);
+			imwrite(file,roi.back());
 		}
 
 

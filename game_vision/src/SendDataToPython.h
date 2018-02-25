@@ -11,14 +11,10 @@
 #define SENDDATATOPYTHON_H_
 
 
-#include<stdio.h>
-#include<iostream>
-#include<opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
-#include<opencv2/opencv.hpp>
-#include<iostream>
-#include<vector>
+
+#include <iostream>
+#include <opencv2/opencv.hpp>
+#include <vector>
 #include <algorithm>
 #include <map>
 #include <iterator>
@@ -27,13 +23,11 @@
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
-using namespace std;
-using namespace cv;
 
 class SendDataToPython {
 public:
 	SendDataToPython();
-	virtual ~SendDataToPython();
+	virtual ~SendDataToPython() = default;
 
 /**
 	 *****************************************************************************************
@@ -52,7 +46,7 @@ public:
 	 *  @return     python dictionary
 	 ****************************************************************************************/
 
-	boost::python::dict objectInformationToDict(vector< vector<KeyPoint> > vectorToSend, vector<int>x_coordinate,vector<int>y_coordinate, vector<Rect> boundRectWorld ,pair< vector<string>,  vector < pair< int , int  > > > words);
+	boost::python::dict SendObjectInformationToDict(std::vector< std::vector<cv::KeyPoint> > vectorToSend, std::vector<int>x_coordinate,std::vector<int>y_coordinate, std::vector<cv::Rect> boundRectWorld ,std::pair< std::vector<std::string>,  std::vector < std::pair< int , int  > > > words);
 };
 
 #endif /* SENDDATATOPYTHON_H_ */
