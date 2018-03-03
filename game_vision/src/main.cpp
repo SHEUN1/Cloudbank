@@ -100,16 +100,16 @@ boost::python::dict vision_analysis()
 		std::vector<int>light_y_coordinate;
 
 		// turn on script that save get current frame from video game
-		/*if (activateImageCapture == 0)
+		if (activateImageCapture == 0)
 		{
 			system("../game_vision/gstream_command_to_capture_image &");
 			++activateImageCapture;
 
-		}*/
+		}
 
 	    //read current video_game frame
-	    //cv::Mat img = cv::imread("../game_vision/current_game_frame.jpg");
-		cv::Mat img = cv::imread("/home/sheun/Pictures/transistor_images/transistor6.jpg");
+	    cv::Mat img = cv::imread("../game_vision/current_game_frame.jpg");
+
 
 	    //convert to grayscale
 		cv::Mat gray;
