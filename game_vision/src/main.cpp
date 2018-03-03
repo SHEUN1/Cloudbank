@@ -5,18 +5,14 @@
 // Copyright   : Your copyright notice
 // Description : Process the captured video game frame, analyse and then send data over to Python caller
 //============================================================================
-#include <stdio.h>
+
 #include <iostream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/opencv.hpp>
-#include "opencv2/text/ocr.hpp"
-#include <iostream>
 #include <vector>
-#include <algorithm>
-#include <map>
-#include <iterator>
+
+#include <chrono>
+#include <ctime>
+
 
 #include "convertToBinaryImage.h"
 #include "SeperateObjects.h"
@@ -24,20 +20,19 @@
 #include "SendDataToPython.h"
 #include "OCR.h"
 
-using namespace std;
-using namespace cv;
 
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
+#define timeNow() std::chrono::high_resolution_clock::now();
+
 using namespace boost::python;
 
-int frameNumber = 0;
-int activateImageCapture = 0;
+
 /**
  *****************************************************************************************
- *  @brief		Optional: save processd image frames of current captured video game frame.
+ *  @brief		Optional: save processed image frames of current captured video game frame.
  *
  *
  *  @param      True = save bounded box to specified directory
@@ -52,8 +47,10 @@ int activateImageCapture = 0;
  *
  *  @return
  ****************************************************************************************/
-void recordProcessedImage (bool capturedframe, bool boundbox, bool dark_world_Binary, bool light_world_Binary, int& current_frame_number,int number_of_frames_to_record,Mat Original_image_clone,Mat dark_world_view,Mat light_world_view, Mat capturedFrame)
+void recordProcessedImage (bool capturedframe, bool boundbox, bool dark_world_Binary, bool light_world_Binary/*, int& current_frame_number*/,int number_of_frames_to_record,cv::Mat const &Original_image_clone,cv::Mat const &dark_world_view,cv::Mat const &light_world_view, cv::Mat const &capturedFrame)
 {
+		static int frameNumber = 0;
+
 		char file [200];
 		if (capturedframe == true)
 		{
@@ -73,69 +70,82 @@ void recordProcessedImage (bool capturedframe, bool boundbox, bool dark_world_Bi
 			imwrite(file,dark_world_view);
 		}
 
-		if(light_world_Binary==true)
+		if(light_world_Binary == true)
 		{
 			sprintf(file,"../game_vision/cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
 			imwrite(file,light_world_view);
 		}
 		++frameNumber;
-		if (frameNumber==number_of_frames_to_record){frameNumber=0;}
+		if (frameNumber == number_of_frames_to_record){frameNumber = 0;}
 }
+
 
 boost::python::dict vision_analysis()
 {
 
-		typedef std::pair<int, int > coordinates; //x,y coordinates pairs
+		static int activateImageCapture = 0;
+
+		//get  time at execution
+		using time_variable = std::chrono::high_resolution_clock::time_point;
+
+
+		time_variable start = timeNow();
+
 
 		//hold coordinates to be later inserted for dark contrast objects
-		vector<int>dark_x_coordinate;
-		vector<int>dark_y_coordinate;
+		std::vector<int>dark_x_coordinate;
+		std::vector<int>dark_y_coordinate;
 		//hold coordinates to be later inserted for light contrast objects
-		vector<int>light_x_coordinate;
-		vector<int>light_y_coordinate;
+		std::vector<int>light_x_coordinate;
+		std::vector<int>light_y_coordinate;
 
 		// turn on script that save get current frame from video game
-		if (activateImageCapture == 0)
+		/*if (activateImageCapture == 0)
 		{
 			system("../game_vision/gstream_command_to_capture_image &");
 			++activateImageCapture;
 
-		}
+		}*/
 
 	    //read current video_game frame
-	     Mat img = imread("../game_vision/current_game_frame.jpg");
-		 //Mat img = imread("/home/sheun/Pictures/transistor_images/transistor2.jpg");
+	    //cv::Mat img = cv::imread("../game_vision/current_game_frame.jpg");
+		cv::Mat img = cv::imread("/home/sheun/Pictures/transistor_images/transistor6.jpg");
 
 	    //convert to grayscale
-		Mat gray;
-		cvtColor(img, gray, COLOR_RGB2GRAY);
+		cv::Mat gray;
+		cv::cvtColor(img, gray, cv::COLOR_RGB2GRAY);
 
 		//smooth image
-		blur(gray, gray, Size(3,3));
+		blur(gray, gray, cv::Size(3,3));
 
 		//this is he image on which the bounded boxes will be drawn on
-		Mat Original_image_clone = img.clone();
+		cv::Mat original_image_clone = img.clone();
 
 		//convert to binary
-		convertToBinaryImage world_view;
-		Mat dark_world_view = world_view.binary(gray,img);
-		Mat light_world_view = world_view.binary_Inverse(gray,img);
+		convertToBinaryImage mConvertToBinaryImage;
+		cv::Mat binary_image_dark_contrast  = mConvertToBinaryImage.Binary(gray,img);
+		cv::Mat binary_image_light_contrast = mConvertToBinaryImage.BinaryInverse(gray,img);
 
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
-		SeperateObjects worldObjects;
-		vector<Rect> boundRectforDarkWorld;
-		vector<Rect> boundRectforlightWorld;
-		vector <Mat> dark_world_objects  = worldObjects.BoundBox(dark_world_view, gray,Original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, boundRectforDarkWorld,true);
-		vector <Mat> light_world_objects = worldObjects.BoundBox(light_world_view, gray,Original_image_clone, 1, light_x_coordinate, light_y_coordinate, boundRectforlightWorld,true);
+		SeperateObjects frame_objects;
+		std::vector<cv::Rect> bound_rect_for_dark_contrast_frame;
+		std::vector<cv::Rect> bound_rect_for_light_contrast_frame;
+		std::vector<cv::Mat> dark_contrast_frame_objects  = frame_objects.BoundBox(binary_image_dark_contrast, gray,original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame,true);
+		std::vector<cv::Mat> light_contrast_frame_objects = frame_objects.BoundBox(binary_image_light_contrast, gray,original_image_clone, 1, light_x_coordinate, light_y_coordinate, bound_rect_for_light_contrast_frame,true);
+
 
 		//Append/combine boundbox vectors so that all objects can be put into the python dictionary
-		boundRectforDarkWorld.insert(boundRectforDarkWorld.end(), boundRectforlightWorld.begin(), boundRectforlightWorld.end());
+		bound_rect_for_dark_contrast_frame.insert(bound_rect_for_dark_contrast_frame.end(), bound_rect_for_light_contrast_frame.begin(), bound_rect_for_light_contrast_frame.end());
 
 
 		//get feature points of each object
-		feature_extraction features_of_objects;
-		vector< vector<KeyPoint> > features_of_dark_world_objects = features_of_objects.featurePoints(dark_world_objects,0, true);
-		vector< vector<KeyPoint> > features_of_light_world_objects = features_of_objects.featurePoints(light_world_objects,1, true);
+
+		using surf_OCL = cv::xfeatures2d::SURF;
+		using sift_OCL = cv::xfeatures2d::SIFT;
+
+		feature_extraction <surf_OCL> features_of_objects;
+		std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects  ,0, true);
+	    std::vector< std::vector< cv::KeyPoint > > features_of_light_world_objects = features_of_objects.FeaturePoints_OCL(light_contrast_frame_objects ,1, true);
 
 		//Append/combine feature vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
@@ -143,28 +153,36 @@ boost::python::dict vision_analysis()
 		dark_x_coordinate.insert(dark_x_coordinate.end(), light_x_coordinate.begin(), light_x_coordinate.end());
 		dark_y_coordinate.insert(dark_y_coordinate.end(), light_y_coordinate.begin(), light_y_coordinate.end());
 
-
 		//get words in frame
-		OCR word_capture;
-		pair< vector<string>, vector < coordinates > > chracterInfo = word_capture.getWords(img);
+		OCR capture_words_in_image;
 
-		//Optional code: record frames with bounded boxes drawn on.
-		recordProcessedImage(true,true,true,true,frameNumber,500,Original_image_clone,dark_world_view,light_world_view, img);
+		//hold x,y coordinates of words in the frame
+		using coordinates = std::pair<int, int > ;
 
+		std::pair< std::vector<std::string>, std::vector < coordinates > > chracterInfo = capture_words_in_image.GetWordsAndLocations(img);
 
+		//Optional code: record frames with bounded boxes drawn on into their own directories.
+		recordProcessedImage(true,true,true,true,500,original_image_clone,binary_image_dark_contrast,binary_image_light_contrast, img);
+
+		//get time at end of image processing and print it
+		time_variable end = timeNow();
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start ).count();
+		std::cout<< "this program took about " << duration<< " milliseconds to process the image" << std::endl;
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
-		boost::python::dict send_to_python_Object_info= python_features_of_objects.objectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, boundRectforDarkWorld, chracterInfo);
+		boost::python::dict send_to_python_Object_info= python_features_of_objects.SendObjectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame, chracterInfo);
 
 		return send_to_python_Object_info;
 
 }
 
 
+
 int main()
 {
 
 	vision_analysis();
+
 	return 0;
 
 }
@@ -172,7 +190,7 @@ int main()
 BOOST_PYTHON_MODULE(opencv)
 {
 
-	//definition that out python program will call start and retrieve informatin from our c++ code.
+	//definition that the python program will call  and retrieve information from the c++ code.
 	 def("vision", vision_analysis);
 
 }

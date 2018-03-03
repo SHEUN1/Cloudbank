@@ -10,13 +10,10 @@
 #include "OCR.h"
 
 OCR::OCR() {
-	cout<<"getting words from the frame"<<endl;
+	std::cout<<"getting words from the frame"<<std::endl;
 
 }
 
-OCR::~OCR() {
-
-}
 
 /**
  *****************************************************************************************
@@ -26,44 +23,43 @@ OCR::~OCR() {
  *  @param      Original (non-processed) image frame
  *  @return     pair of characters in images and their associated x and y positions.
  ****************************************************************************************/
- pair< vector<string>, vector < pair < int , int  > > > OCR::getWords(Mat img)
+ std::pair< std::vector<std::string>, std::vector < std::pair < int , int  > > > OCR::GetWordsAndLocations(cv::Mat img)
 {
 
-	Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, 2 /*oem*/, 3 /*psmode*/);
-	string output;
-	vector<Rect>   boxes;
-	vector<string> words;
-	vector<float>  confidences;
+	cv::Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, 2 /*oem*/, 3 /*psmode*/);
+	std::string output;
+	std::vector<cv::Rect>   boxes;
+	std::vector<std::string> words;
+	std::vector<float>  confidences;
 	int x_coordinate;
 	int y_coordinate;
 
 	ocr->run(img, output, &boxes, &words, &confidences, 0);
 
 	// collection of x,y positions of all characters in the image
-	pair< int , int  > coordinates;
+	std::pair< int , int  > coordinates;
+
 	// individual x,y pairs positions of characters in the image
-	vector < pair< int , int  > > coordinatesPairs;
+	std::vector < std::pair< int , int  > > coordinates_pairs;
 
-	for(uint32_t i = 0; i < words.size(); i++)
+	for(auto const &box : boxes)
 	{
-
-		x_coordinate = ((boxes[i].x + boxes[i].width) / 2);
-		y_coordinate = ((boxes[i].y + boxes[i].height) / 2);
+		x_coordinate = ((box.x + box.width) / 2);
+		y_coordinate = ((box.y + box.height) / 2);
 
 		coordinates.first = x_coordinate;
 		coordinates.second = y_coordinate;
-		coordinatesPairs.push_back(coordinates);
-
+		coordinates_pairs.push_back(coordinates);
 	}
 
-	//Characters in the image and there locations
-	pair< vector<string>, vector < pair<int , int> > > wordsInfo;
+	//Characters in the image and their locations within the frame
+	std::pair< std::vector<std::string>, std::vector < std::pair<int , int> > > words_and_coordinates;
 
-	wordsInfo.first = words;
-	wordsInfo.second = coordinatesPairs;
+	words_and_coordinates.first = words;
+	words_and_coordinates.second = coordinates_pairs;
 
 
-	return wordsInfo;
+	return words_and_coordinates;
 
 }
 
@@ -75,14 +71,14 @@ OCR::~OCR() {
   *  @param      Original (non-processed) image frame
   *  @return
   ****************************************************************************************/
-void OCR::find_suitable_ocr_values(Mat img)
+void OCR::FindSuitableOcrValues(cv::Mat img)
 {
-	for (int a = 0; a<4; ++a)
+	for (uint32_t a = 0; a<4; a++)
 	{
-		for (int b=0;b<11;++b)
+		for (uint32_t b=0;b<11;b++)
 		{
-			cout<<"oem: "<<a<<" psmode: "<<b<<endl;
-			Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, a /*oem*/, b /*psmode*/);
+			std::cout<<"oem: "<<a<<" psmode: "<<b<<std::endl;
+			cv::Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, a /*oem*/, b /*psmode*/);
 			/* oem value choice:
 			    0 = Original Tesseract only.
 			    1 = Neural nets LSTM only.
@@ -103,15 +99,16 @@ void OCR::find_suitable_ocr_values(Mat img)
 				10 = Treat the image as a single character.
 		     */
 
-			string output;
-			vector<Rect>   boxes;
-			vector<string> words;
-			vector<float>  confidences;
+			std::string output;
+			std::vector<cv::Rect>   boxes;
+			std::vector<std::string> words;
+			std::vector<float>  confidences;
 
 			ocr->run(img, output, &boxes, &words, &confidences, 0);
-			for (uint32_t i = 0; i<words.size(); i++)
+
+			for (auto const &word : words)
 			{
-				cout<<words[i]<<endl;
+				std::cout<<word<<std::endl;
 			}
 
 		}

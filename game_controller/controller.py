@@ -44,6 +44,10 @@ def drawclassificationBox (img, objectInformation, object_classification, boundb
 
 #path to bash file which send the keyboard and mouse clicks to the videoagame
 executableControlFile = os.path.join("./", 'send_control_cmds_to_game')
+
+# reward and punishment measure
+Reward = 0
+
 #controls
 up= ["Up", ""]
 down= ["Down", ""]
@@ -65,24 +69,56 @@ GameEnvironment ='Transistor'
 frameNumber = 0
 #we will only record upto a certain number of frames
 maxFrameNumberSize = 500
+maxNumberOfStatesToRecord = 100
 # types of objects
 types_of_object = ['enemy', 'resource', 'unclassified', 'Object we can control']
+
+RecordOfStates = []
 # Currently part of a test so only random keyboard and mouse clicks sent alond side and mouse posistion
 while True:
-
     GetGameEnvironmentWindow = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     while GetGameEnvironmentWindow == GameEnvironment:
+        StatesToRecord = 0
         # record how much time it takes to analyse and retrive data from the image farme using our opencv library
         t0 = time.time()
         # open.vision() the function with in the OpenCV C++ part of the code where the image processing takes place
         objectInformation = opencv.vision()
         t1 = time.time()
+        words_in_frame =  objectInformation[len(objectInformation)-1][1]
+
+        RecordOfStates[StatesToRecord] = objectInformation
+        StatesToRecord+1
+        if (StatesToRecord==100):
+            {
+                StatesToRecord = 0
+
+            }
+        if ('RETRY' in words_in_frame):
+            {
+                Reward-100
+                #Theory
+                # save the last 100 frames and build a therory about what must hapen that would cause the
+                # ai agent to lose points. SAve this theory and compare it to other therorise when you lose a reward
+                # we then pick the common traits between the thoeries and use it to strenghten future heories
+
+                BuildTherom(RecordOfStates);
+            }
+        elif ('PROCESS' in words_in_frame and 'TERMINATED' in words_in_frame ):
+            {
+                Reward+100
+                # Theory
+                # save the last 100 frames and build a therory about what must hapen that would cause the
+                # ai agent to gain points. SAve this theory and compare it to other therorise when you gain a reward
+                # we then pick the common traits between the thoeries and use it to strenghten future heories
+                BuildTherom(RecordOfStates);
+            }
+
+
         #the path to a image of the current frame being analysed on which we can freely draw a visual representation (boundedBox) of our analyses
         imageToDrawBoundedBoxClassification = 'Image%d.jpg' % (frameNumber)
         boundboxframe = os.path.abspath(os.path.join('..', 'game_vision', 'cloudbank_images', 'Frame', imageToDrawBoundedBoxClassification))
         img = cv2.imread(boundboxframe)
         for i in range(0, len(objectInformation)-1):
-            print objectInformation[i]
             #classify each object (currently random)
             object_classification = random.choice(types_of_object)
             #draw a box around the object and save it to a folder
