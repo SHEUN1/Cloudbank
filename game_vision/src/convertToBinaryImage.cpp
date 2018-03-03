@@ -83,11 +83,10 @@ std::cout<<"converting to binary"<<std::endl;
  	 *
  	 *  @param      grayscale image
  	 *  @param      original (non-grayscale image)
- 	 *  @param		0 = use OpenCL, 1 = use CUDA
  	 *
  	 *  @return     Mat Binary image
  	 ****************************************************************************************/
-cv::Mat  convertToBinaryImage::Binary (cv::Mat const &grayscale_original_img,cv::Mat original_img, int run_on_cuda_GPU)
+cv::Mat  convertToBinaryImage::Binary (cv::Mat const &grayscale_original_img,cv::Mat original_img)
 {
 	 cv::Mat  binaryImage;
 
@@ -98,21 +97,7 @@ cv::Mat  convertToBinaryImage::Binary (cv::Mat const &grayscale_original_img,cv:
 
 	 cv::cuda::GpuMat binaryImageGPU;
 
-	 if (run_on_cuda_GPU == 0){
-
-		 binaryImage = cleanupBinary(binaryImage);
-
-	 }
-
-	 else  if (run_on_cuda_GPU == 1) {
-
-		 binaryImageGPU.upload(binaryImage);
-
-		 binaryImageGPU = cleanupBinary(binaryImageGPU);
-
-		 binaryImageGPU.download(binaryImage);
-
-	 }
+	 binaryImage = cleanupBinary(binaryImage);
 
 	 cv::Mat Binary_post_watershed = Watershed(binaryImage,  original_img);
 
@@ -124,16 +109,16 @@ cv::Mat  convertToBinaryImage::Binary (cv::Mat const &grayscale_original_img,cv:
 	 *****************************************************************************************
 	 *  @brief      binary image converter on inverse of a grayscale image
 	 *
-	 *  @usage      Heighten contrast on and convert grayscale image into a binary image using the watershed segmentation method
+	 *  @usage      Heighten contrast on and convert grayscale image into a binary image
+	 *  			using the watershed segmentation method
 	 *
 	 *
 	 *  @param      grayscale image
 	 *  @param      original (non-grayscale image)
-	 *  @param		0 = use OpenCL, 1 = use CUDA
 	 *
 	 *  @return     Mat Binary image
 	 ****************************************************************************************/
-cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origanal, int run_on_cuda_GPU)
+cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origanal)
 {
 	//contrast control
 	auto alpha = 2.2;
@@ -146,18 +131,7 @@ cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origan
 
 	cv::threshold(contrasted, binaryImage,0.5,255,cv::THRESH_BINARY| CV_THRESH_OTSU);
 
-	if (run_on_cuda_GPU == 0){
-
-		binaryImage = cleanupBinary(binaryImage);
-	}
-
-	else  if (run_on_cuda_GPU == 1) {
-		cv::cuda::GpuMat binaryImageGPU;
-		binaryImageGPU.upload(binaryImage);
-
-		binaryImageGPU = cleanupBinary(binaryImageGPU);
-		binaryImageGPU.download(binaryImage);
-	}
+	binaryImage = cleanupBinary(binaryImage);
 
 	//inverse the binary image
 	bitwise_not(binaryImage, binaryImage_inv);
@@ -165,7 +139,7 @@ cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origan
 	cv::Mat  Binary_post_watershed = Watershed(binaryImage_inv,  origanal);
 
 	return Binary_post_watershed;
-}
+ }
 
 
 /**
@@ -178,57 +152,22 @@ cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origan
 	 *
 	 *  @return     Binary image
 	 ****************************************************************************************/
+
 cv::Mat  convertToBinaryImage::cleanupBinary(cv::Mat binary_image)
 {
-		cv::Mat  se1 = getStructuringElement(cv::MORPH_RECT, cv::Size(10, 10));
-	    cv::Mat  se2 = getStructuringElement(cv::MORPH_RECT, cv::Size(4, 4));
+	cv::Mat  se1 = getStructuringElement(cv::MORPH_RECT, cv::Size(10, 10));
+	cv::Mat  se2 = getStructuringElement(cv::MORPH_RECT, cv::Size(4, 4));
 
-	    // Perform closing then opening
-	    cv::Mat  mask;
-	    cv::morphologyEx(binary_image, mask, cv::MORPH_CLOSE, se1);
-	    cv::morphologyEx(mask, mask, cv::MORPH_OPEN, se2);
+	// Perform closing then opening
+	cv::Mat  mask;
+	cv::morphologyEx(binary_image, mask, cv::MORPH_CLOSE, se1);
+	cv::morphologyEx(mask, mask, cv::MORPH_OPEN, se2);
 
-	    // Filter the output
-	    cv::Mat  CleanedBinaryImage = binary_image.clone();
+	// Filter the output
+	cv::Mat  CleanedBinaryImage = binary_image.clone();
 
-	    CleanedBinaryImage.setTo(cv::Scalar(0), mask==0);
-	    //cv::compare(mask, 0, CleanedBinaryImage, cv::CMP_EQ);
-	    return CleanedBinaryImage;
+	CleanedBinaryImage.setTo(cv::Scalar(0), mask==0);
+
+	return CleanedBinaryImage;
 }
-/**
-	 *****************************************************************************************
-	 *  @brief      clean up a binary image (GPU Version)
-	 *
-	 *  @usage      remove small blobs from a binary image
-	 *
-	 *
-	 *  @param      Binary image you want to clean
-	 *
-	 *  @return     Binary image
-	 ****************************************************************************************/
-cv::cuda::GpuMat convertToBinaryImage::cleanupBinary(cv::cuda::GpuMat Binary)
-{
 
-		cv::Mat  se1 = getStructuringElement(cv::MORPH_RECT, cv::Size(10, 10)),
-				 se2 = getStructuringElement(cv::MORPH_RECT, cv::Size(4, 4));
-
-	    // Perform closing then opening
-	    cv::cuda::GpuMat mask;
-	    cv::Ptr<cv::cuda::Filter> openFilter1 = cv::cuda::createMorphologyFilter(cv::MORPH_CLOSE, Binary.type(), se1);
-	    openFilter1->apply(Binary, mask);
-
-	    cv::Ptr<cv::cuda::Filter> openFilter2 = cv::cuda::createMorphologyFilter(cv::MORPH_OPEN, mask.type(), se2);
-	    openFilter2->apply(mask, mask);
-
-	    //download binary image onto the cpu
-	    cv::Mat  Binary_to_CPU, mask_to_CPU;
-	    Binary.download(Binary_to_CPU);
-	    mask.download(mask_to_CPU);
-
-	    // Filter the output
-	    cv::Mat  CleanedBinaryImage = Binary_to_CPU.clone();
-	    CleanedBinaryImage.setTo(cv::Scalar(0), mask_to_CPU == 0);
-	    cv::cuda::GpuMat CleanedBinaryImage_to_GPU;
-	    CleanedBinaryImage_to_GPU.upload(CleanedBinaryImage);
-	    return CleanedBinaryImage_to_GPU;
-}

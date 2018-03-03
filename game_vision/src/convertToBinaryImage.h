@@ -31,18 +31,7 @@ private:
 		 ****************************************************************************************/
 
 	cv::Mat cleanupBinary (cv::Mat Binary);
-	/**
-		 *****************************************************************************************
-		 *  @brief      clean up a binary image (GPU Version)
-		 *
-		 *  @usage      remove small blobs from a binary image
-		 *
-		 *
-		 *  @param      Binary image you want to clean
-		 *
-		 *  @return     Binary image
-		 ****************************************************************************************/
-	cv::cuda::GpuMat cleanupBinary (cv::cuda::GpuMat Binary);
+
 	/**
 		 *****************************************************************************************
 		 *  @brief      Watershed segmentation
@@ -73,7 +62,7 @@ public:
 	 	 *  @return     Mat Binary image
 	 	 ****************************************************************************************/
 
-	cv::Mat Binary (cv::Mat const &img, cv::Mat origanal, int run_on_cuda_GPU);
+	cv::Mat Binary (cv::Mat const &img, cv::Mat origanal);
 	/**
 		 *****************************************************************************************
 		 *  @brief      binary image converter on inverse of a grayscale image
@@ -87,7 +76,7 @@ public:
 		 *
 		 *  @return     Mat Binary image
 		 ****************************************************************************************/
-	cv::Mat BinaryInverse (cv::Mat const &img, cv::Mat origanal, int run_on_cuda_GPU);
+	cv::Mat BinaryInverse (cv::Mat const &img, cv::Mat origanal);
 
 
 };

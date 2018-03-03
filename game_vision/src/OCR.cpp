@@ -73,9 +73,9 @@ OCR::OCR() {
   ****************************************************************************************/
 void OCR::FindSuitableOcrValues(cv::Mat img)
 {
-	for (int a = 0; a<4; ++a)
+	for (uint32_t a = 0; a<4; a++)
 	{
-		for (int b=0;b<11;++b)
+		for (uint32_t b=0;b<11;b++)
 		{
 			std::cout<<"oem: "<<a<<" psmode: "<<b<<std::endl;
 			cv::Ptr<cv::text::OCRTesseract> ocr = cv::text::OCRTesseract::create(NULL /*datapath*/, "eng" /*lang*/, NULL /*whitelist*/, a /*oem*/, b /*psmode*/);

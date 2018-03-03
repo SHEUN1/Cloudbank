@@ -4,12 +4,13 @@ Cloudbank is built to be a Computer Vision and AI training platform alternative 
 ### What you'll need.
 1. Linux OS (ubuntu 14.04 or higher)
 2. Gstreamer
-3. OpenCV version 3 
-4. python 2.7
-5. Steam video game platform 
-6. xdotool
-7. Tensoflow (or any machine learning library you want to use to make use the data. This is not needed for the vision processing half)   
-8. a cuda enabled GPU 
+3. OpenCV version 3.4.0 (recommended to build with opencl enabled)
+4. c++ 11
+5. python 2.7
+6. Steam video game platform 
+7. xdotool
+8. Tensoflow (or any machine learning library you want to use to make use the data. This is not needed for the vision processing half)   
+9. a GPU 
 
 ### Why opencv C++ and not Python for vision processing ?
 The C++ version of OpenCV is much more mature than it's Python counterpart and, in my experience, is often faster in terms of performance and enables you to implement some GPU parallel processing into the Computer Vision part of the this project.
@@ -30,10 +31,10 @@ Data is sent from C++ to Python using a library called 'Boost.Python'(http://www
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2017:27:25.png)
 
-[[151, 73], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]]
+[[151, 73],[26, 30, 947, 553], [[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...]]
 
 #### Meaning of data
-([151, 73] - represents object coordinates. [56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...] - represents a list of keypoint feature vectors of object 
+([151, 73] - represents object coordinates. [26, 30, 947, 553] -boundedbox points of object .[56.31380081176758, 48.36287307739258, 4.163553237915039, 327.9974365234375, 0.01612447015941143, 10682624],...] - represents a list of keypoint feature vectors of object 
 
 .
 .

@@ -25,6 +25,8 @@
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
+#define timeNow() std::chrono::high_resolution_clock::now();
+
 using namespace boost::python;
 
 
@@ -85,7 +87,7 @@ boost::python::dict vision_analysis()
 
 		//get  time at execution
 		using time_variable = std::chrono::high_resolution_clock::time_point;
-		#define timeNow() std::chrono::high_resolution_clock::now();
+
 
 		time_variable start = timeNow();
 
@@ -121,8 +123,8 @@ boost::python::dict vision_analysis()
 
 		//convert to binary
 		convertToBinaryImage mConvertToBinaryImage;
-		cv::Mat binary_image_dark_contrast  = mConvertToBinaryImage.Binary(gray,img, 0);
-		cv::Mat binary_image_light_contrast = mConvertToBinaryImage.BinaryInverse(gray,img, 0);
+		cv::Mat binary_image_dark_contrast  = mConvertToBinaryImage.Binary(gray,img);
+		cv::Mat binary_image_light_contrast = mConvertToBinaryImage.BinaryInverse(gray,img);
 
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
 		SeperateObjects frame_objects;
@@ -140,11 +142,10 @@ boost::python::dict vision_analysis()
 
 		using surf_OCL = cv::xfeatures2d::SURF;
 		using sift_OCL = cv::xfeatures2d::SIFT;
-		using surf_CUDA = cv::cuda::SURF_CUDA;
 
 		feature_extraction <surf_OCL> features_of_objects;
-		std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects  ,0, false);
-	    std::vector< std::vector< cv::KeyPoint > > features_of_light_world_objects = features_of_objects.FeaturePoints_OCL(light_contrast_frame_objects ,1, false);
+		std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects  ,0, true);
+	    std::vector< std::vector< cv::KeyPoint > > features_of_light_world_objects = features_of_objects.FeaturePoints_OCL(light_contrast_frame_objects ,1, true);
 
 		//Append/combine feature vectors so that all objects can be put into the python dictionary
 		features_of_dark_world_objects.insert(features_of_dark_world_objects.end(), features_of_light_world_objects.begin(), features_of_light_world_objects.end());
@@ -167,7 +168,6 @@ boost::python::dict vision_analysis()
 		time_variable end = timeNow();
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start ).count();
 		std::cout<< "this program took about " << duration<< " milliseconds to process the image" << std::endl;
-
 		//send data of objects in image to python
 		SendDataToPython python_features_of_objects;
 		boost::python::dict send_to_python_Object_info= python_features_of_objects.SendObjectInformationToDict(features_of_dark_world_objects, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame, chracterInfo);

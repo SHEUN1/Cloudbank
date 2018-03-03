@@ -72,6 +72,20 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 	int lock_dark_file = 0 ;
 	int lock_light_file = 0;
 
+	//delete all images in a folder
+	if ( save_image_result == true)
+	{
+		if (lock_dark_file == 0 && world_number == 0){
+			system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
+			lock_dark_file++;
+		}
+
+		if (lock_light_file == 0 && world_number == 1) {
+			system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");
+			lock_light_file++;
+		}
+	}
+
 
 	for(uint32_t i = 0; i < contours.size(); i++)
 	{
@@ -101,12 +115,12 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 	    {
 			if (world_number == 0)
 			{
-				if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
+				//if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
 				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
 			}
 			else if(world_number == 1)
 			{
-				if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
+				//if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
 				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
 			}
 
