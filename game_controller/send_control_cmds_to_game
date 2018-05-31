@@ -1,53 +1,61 @@
-#!/bin/sh
 #!/bin/bash
-# Naked variables
 
-wmctrl -a Transistor;
-xdotool keyup "Up";
-xdotool keyup "Down";
-xdotool keyup "Left";
-xdotool keyup "Right";
-xdotool keyup "1";
-xdotool keyup "2";
-xdotool keyup "3";
-xdotool keyup "4";
-xdotool keyup "space";
-xdotool keyup "R";
-ID=xdotool search --name Transistor
-ID2=$(xdotool search --name Transistor)
+#switch to the window that is playing the video game 
+wmctrl -a Transistor
+
+#initial setup of keys (make sure that none of them is pressed down)
+xdotool keyup "Up"
+xdotool keyup "Down"
+xdotool keyup "Left"
+xdotool keyup "Right"
+xdotool keyup "1"
+xdotool keyup "2"
+xdotool keyup "3"
+xdotool keyup "4"
+xdotool keyup "space"
+xdotool keyup "R"
+
+#name of the window that is displaying the videogame
+ID=$(xdotool search --name Transistor)
+
+#get the name of the current active window
 isWindowName=$(xdotool getactivewindow getwindowname)
-#xdotool mousedown 1; sleep 0.001; xdotool mouseup 1;
-#xdotool windowactivate $ID2
 
-function Move 
-{
-	       
-	       
-	xdotool keydown --window $ID2 "$2";
-	xdotool keydown --window $ID2 "$3";
-	xdotool keydown --window $ID2 "$4";
-	xdotool keydown --window $ID2 "$5";
-	xdotool key --window $ID2 "$6";
-	xdotool key --window $ID2 "$7";
-	xdotool key --window $ID2 "${10}";
-	xdotool mousemove --window $ID2 "$8" "$9"  ${11} ${12};
 
-	      
+Move () { 
+	  
+	xdotool keydown --window $ID "$1"
+	xdotool keydown --window $ID "$2"
+	xdotool keydown --window $ID "$3"
+	xdotool keydown --window $ID "$4"
+	xdotool key --window $ID "$5"
+	xdotool key --window $ID "$6"
+	xdotool keydown --window $ID "$9"
+	xdotool mousemove --window $ID "$7" "$8" 	      
 }
 
-function ClickMouseL
+ClickMouseL()
 {
-	xdotool mousedown --window $ID2 1; sleep 0.001; xdotool mouseup --window $ID2 1;
+	xdotool mousedown --window $ID 1
+	sleep 0.001
+	xdotool mouseup --window $ID 1
 }
 
-function ClickMouseR
+ClickMouseR()
 {
-	xdotool mousedown --window $ID2 3; sleep 0.001; xdotool mouseup --window $ID2 3;
+	xdotool mousedown --window $ID 3 
+	sleep 0.001 
+	xdotool mouseup --window $ID 3
 }
 
- 
-while [isWindowName=Transistor] :
-do	       
-	  $1;
+#make sure that there is a whitespace after "[" and before "]"
+if [ $isWindowName="Transistor" ]; then
+
+	#send keyboard arguments
+	Move "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" 
+
+	#send mouse arguments
+	${10} 
+	${11}
 	      	      
-done
+fi
