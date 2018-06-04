@@ -17,10 +17,12 @@
 
 class SeperateObjects {
 
+private:
+	cv::Mat mGrayScale, mOriginal_image_clone;
 
 public:
 
-	SeperateObjects();
+	SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_image_clone);
 	virtual ~SeperateObjects() = default;
 
 /**
@@ -41,7 +43,7 @@ public:
 	 *  @param 		true = save separated objects/regions in directory of your choice
 	 *  @return     vector of object/regions
  ****************************************************************************************/
-	std::vector <cv::Mat>  BoundBox(cv::Mat Binary, cv::Mat origanal_image, cv::Mat &Original_image_clone, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result);
+	std::vector <cv::Mat>  BoundBox(cv::Mat Binary, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result);
 
 
 };

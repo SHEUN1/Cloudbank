@@ -1,0 +1,31 @@
+/*
+ * recordProcessedImage.h
+ *
+ *  Created on: 1 Jun 2018
+ *      Author: sheun
+ */
+
+#ifndef RECORDPROCESSEDIMAGE_H_
+#define RECORDPROCESSEDIMAGE_H_
+
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+class recordProcessedImage {
+private:
+	static int mFrameNumber = -1;
+	char mFile [200];
+	int mNumber_of_frames_to_record;
+
+public:
+	recordProcessedImage(uint32_t Number_of_frames_to_record):mNumber_of_frames_to_record(Number_of_frames_to_record){};
+	virtual ~recordProcessedImage(){};
+
+	void capturedframe(cv::UMat const &capturedFrame);
+	void boundbox(cv::UMat const &Original_image_clone);
+	void dark_world_Binary(cv::UMat const &dark_world_view);
+	void light_world_Binary(cv::UMat const &light_world_view,);
+
+};
+
+#endif /* RECORDPROCESSEDIMAGE_H_ */

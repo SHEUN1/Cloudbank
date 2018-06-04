@@ -3435,3 +3435,61 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:399)
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:177)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-06-01 10:31:18.022 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-01 10:37:05.445
+!MESSAGE Indexed 'game_vision' (6 sources, 2,137 headers) in 45.5 sec: 124,112 declarations; 1,323,395 references; 0 unresolved inclusions; 1 syntax errors; 42 unresolved names (0.0029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-01 10:39:02.452
+!MESSAGE Indexed 'game_vision' (6 sources, 2,136 headers) in 32.4 sec: 124,103 declarations; 1,323,358 references; 0 unresolved inclusions; 1 syntax errors; 42 unresolved names (0.0029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-01 10:40:45.528
+!MESSAGE Indexed 'game_vision' (6 sources, 5 headers) in 0.162 sec: 190 declarations; 340 references; 39 unresolved inclusions; 2 syntax errors; 953 unresolved names (64%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-06-01 11:02:36.636
+!MESSAGE Indexed 'game_vision' (6 sources, 5 headers) in 0.103 sec: 189 declarations; 340 references; 39 unresolved inclusions; 2 syntax errors; 950 unresolved names (64%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-01 11:03:07.473
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-01 11:03:07.474
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2018-06-01 14:44:22.413 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-06-01 14:44:27.004
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2018-06-01 14:44:39.613
+!MESSAGE The Eclipse Git-hosted URI 'http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup' is blocked for direct access.
+Please open a Bugzilla to add it to an official Oomph catalog.
+For initial testing, use the file system local version of the resource.
+Alternatively, run the setup archiver application as follows:
+  /home/sheun/eclipse/cpp-neon/eclipse/eclipse -application org.eclipse.oomph.setup.core.SetupArchiver -consoleLog -noSplash -uris http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+!SESSION 2018-06-04 11:46:44.801 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-06-04 11:47:06.089
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-04 15:04:50.595
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-06-04 15:04:50.608
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType

@@ -9,7 +9,17 @@
 
 #include "SeperateObjects.h"
 
-SeperateObjects::SeperateObjects() {
+/**
+	 *****************************************************************************************
+	 *  @brief      identify objects and get their X and Y coordinates in the image frame
+	 *
+	 *  @param      cv::Mat: grayscale image
+	 *  @param       cv::Mat: image that will have bounded boxes draw on it
+	 *
+	 *  @return     vector <cv::Mat>: vector of object/regions
+	 ****************************************************************************************/
+
+SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_image_clone) : mGrayScale(grayscaleImage), mOriginal_image_clone(Original_image_clone) {
 
 	std::cout<<"identyfying objects in seperate objects class"<<std::endl;
 
@@ -26,19 +36,17 @@ SeperateObjects::SeperateObjects() {
 	 *  			get boundedbox of each object/region
 	 *
 	 *
-	 *  @param      Binary image
-	 *  @param      grayscale image
-	 *  @param      Original (non- processed) image frame
-	 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
-	 *  @param      vector which will hold x coordinates of each object/region
-	 *  @param      vector which will hold y coordinates of each object/region
-	 *  @param 		vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
-	 *  @param 		true = save separated objects/regions in directory of your choice
+	 *  @param      cv::Mat: Binary image
+	 *  @param      int: indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
+	 *  @param      std::vector<int>: vector which will hold x coordinates of each object/region
+	 *  @param      std::vector<int>: vector which will hold y coordinates of each object/region
+	 *  @param 		std::vector<cv::Rect>: vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
+	 *  @param 		bool: save separated objects/regions in directory of your choice
 	 *
-	 *  @return     vector of object/regions
+	 *  @return     vector <cv::Mat>: vector of object/regions
 	 ****************************************************************************************/
 
-std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origanal_image,cv::Mat& Original_image_clone, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result)
+std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOriginOfObjects, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result)
 {
 	//bounded box will be draw on this copy of the original image instead
 	std::vector<std::vector<cv::Point> > contours;
@@ -69,27 +77,30 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 
 	//character length for roi filename to be saved in separate folder
 	char file [100];
-	int lock_dark_file = 0 ;
-	int lock_light_file = 0;
+	//bool clearDarkObjectsFolder = false ;
+	//bool clearLightObjectsFolder = false;
 
 	int systemRem;
 	//delete all images in a folder
 	if ( save_image_result == true)
 	{
-		if (lock_dark_file == 0 && world_number == 0){
+		if (/*clearDarkObjectsFolder == false &&*/ contrastOriginOfObjects == 0){
 			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
 			if (systemRem == -1){
 				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
 			}
-			lock_dark_file++;
+			//clearDarkObjectsFolder = true;
 		}
 
-		if (lock_light_file == 0 && world_number == 1) {
+		else if (/*clearLightObjectsFolder == false &&*/ contrastOriginOfObjects == 1) {
 			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");
 			if (systemRem == -1){
 				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
 			}
-			lock_light_file++;
+			//clearLightObjectsFolder = true ;
+		}
+		else {
+			throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
 		}
 	}
 
@@ -99,7 +110,7 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 
 		approxPolyDP(cv::Mat(contours[i]), contours_poly[i], 3, true);
 
-		if (((boundingRect(cv::Mat(contours_poly[i])).width == origanal_image.cols) && (boundingRect(cv::Mat(contours_poly[i])).height == origanal_image.rows)))
+		if (((boundingRect(cv::Mat(contours_poly[i])).width == mGrayScale.cols) && (boundingRect(cv::Mat(contours_poly[i])).height == mGrayScale.rows)))
 		{
 			continue;
 		}
@@ -112,23 +123,26 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 		y2_coordinate.push_back(((boundRect.back().y + boundRect.back().height) / 2));
 
 		cv::Scalar color( rand()&255, rand()&255, rand()&255 );
-		rectangle (Original_image_clone, boundRect.back().tl(), boundRect.back().br(), color, 2,8,0);
+		rectangle (mOriginal_image_clone, boundRect.back().tl(), boundRect.back().br(), color, 2,8,0);
 
 		// Crop the original image to the defined ROI
-		roi.push_back(origanal_image(boundRect.back()));
+		roi.push_back(mGrayScale(boundRect.back()));
 	    //save regions of interest into a folder
 
 	    if ( save_image_result == true)
 	    {
-			if (world_number == 0)
+			if (contrastOriginOfObjects == 0)
 			{
 				//if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
 				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
 			}
-			else if(world_number == 1)
+			else if(contrastOriginOfObjects == 1)
 			{
 				//if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
 				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
+			}
+			else{
+				throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
 			}
 
 			imwrite(file,roi.back());

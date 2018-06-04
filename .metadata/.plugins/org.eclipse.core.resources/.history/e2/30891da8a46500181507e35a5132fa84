@@ -1,0 +1,17 @@
+/*
+ * recordProcessedImage.h
+ *
+ *  Created on: 1 Jun 2018
+ *      Author: sheun
+ */
+
+#ifndef RECORDPROCESSEDIMAGE_H_
+#define RECORDPROCESSEDIMAGE_H_
+
+class recordProcessedImage {
+public:
+	recordProcessedImage();
+	virtual ~recordProcessedImage();
+};
+
+#endif /* RECORDPROCESSEDIMAGE_H_ */

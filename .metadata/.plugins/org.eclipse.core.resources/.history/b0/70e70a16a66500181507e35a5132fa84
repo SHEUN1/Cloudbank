@@ -1,0 +1,18 @@
+/*
+ * recordProcessedImage.cpp
+ *
+ *  Created on: 1 Jun 2018
+ *      Author: sheun
+ */
+
+#include "recordProcessedImage.h"
+
+recordProcessedImage::recordProcessedImage() {
+	// TODO Auto-generated constructor stub
+
+}
+
+recordProcessedImage::~recordProcessedImage() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,50 @@
+/*
+ * OCR.h
+ *
+ *  Created on: 18 Aug 2017
+ *      Author: sheun
+ *
+ *      Identify characters in the image
+ */
+
+#ifndef OCR_H_
+#define OCR_H_
+
+#include <iostream>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/text/ocr.hpp>
+#include <opencv2/opencv.hpp>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <iterator>
+#include <string>
+
+
+class OCR {
+
+public:
+	OCR();
+	virtual ~OCR(){};
+
+/**
+ *****************************************************************************************
+ *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+						 most suitable values by printing the results out.
+
+ *  @param      Original (non-processed) image frame
+ *  @return
+ ****************************************************************************************/
+	void FindSuitableOcrValues(const cv::Mat &img);
+/**
+ *****************************************************************************************
+ *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
+						 most suitable values
+ *
+ *  @param      Original (non-processed) image frame
+ *  @return     pair of characters in images and their associated x and y positions.
+ ****************************************************************************************/
+	std::pair< std::vector<std::string>, std::vector < std::pair< int , int  > > >  GetWordsAndLocations(const cv::Mat &img);
+};
+
+#endif /* OCR_H_ */

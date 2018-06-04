@@ -1,0 +1,51 @@
+/*
+ * SeperateObjects.h
+ *
+ *  Created on: 9 Jul 2017
+ *      Author: sheun
+ *
+ *      Separate objects/regions in an image and draw bounded boxes around them in the original captured image frame.
+ */
+#ifndef SEPERATEOBJECTS_H_
+#define SEPERATEOBJECTS_H_
+
+#include <iostream>
+#include <opencv2/opencv.hpp>
+#include <vector>
+#include <algorithm>
+#include <map>
+
+class SeperateObjects {
+
+private:
+	cv::Mat mGrayScale, mOriginal_image_clone;
+
+public:
+
+	SeperateObjects(cv::Mat grayscaleImage, cv::Mat Original_image_clone) : mGrayScale(grayscaleImage), mOriginal_image_clone(Original_image_clone){};
+	virtual ~SeperateObjects() = default;
+
+/**
+	 *****************************************************************************************
+	 *  @brief      identify objects and get their X and Y coordinates in the image frame
+	 *
+	 *  @usage      draw boxes around each object/region,
+	 *  			create a vector of seperated objects/regions7
+	 *  			get coordinates of each object/region
+	 *
+	 *
+	 *  @param      Binary image
+	 *  @param      grayscale image
+	 *  @param      Original (non- processed) image frame
+	 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
+	 *  @param      vector which will hold x coordinates of each object/region
+	 *  @param      vector which will hold y coordinates of each object/region
+	 *  @param 		true = save separated objects/regions in directory of your choice
+	 *  @return     vector of object/regions
+ ****************************************************************************************/
+	std::vector <cv::Mat>  BoundBox(cv::Mat Binary, cv::Mat origanal_image, cv::Mat &Original_image_clone, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result);
+
+
+};
+
+#endif /* SEPERATEOBJECTS_H_ */

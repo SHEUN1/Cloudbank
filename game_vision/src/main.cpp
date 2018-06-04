@@ -55,7 +55,7 @@ boost::python::dict vision_analysis()
 		{
 			systemRem = system("../game_vision/gstream_command_to_capture_image &");
 			if (systemRem == -1){
-				throw "failed to start screen capture software";
+				throw std::runtime_error("failed to start screen capture software");
 			}
 			++activateImageCapture;
 
@@ -81,11 +81,12 @@ boost::python::dict vision_analysis()
 		cv::Mat binary_image_light_contrast = mConvertToBinaryImage.BinaryInverse(gray,img);
 
 		//get objects in each world view (light and dark contrast images) and put each of them into a vector
-		SeperateObjects frame_objects;
+		enum contrastOriginOfObjects {darkComtrastImage, lightContrastImage};
+		SeperateObjects frame_objects (gray,original_image_clone);
 		std::vector<cv::Rect> bound_rect_for_dark_contrast_frame;
 		std::vector<cv::Rect> bound_rect_for_light_contrast_frame;
-		std::vector<cv::Mat> dark_contrast_frame_objects  = frame_objects.BoundBox(binary_image_dark_contrast, gray,original_image_clone, 0, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame,true);
-		std::vector<cv::Mat> light_contrast_frame_objects = frame_objects.BoundBox(binary_image_light_contrast, gray,original_image_clone, 1, light_x_coordinate, light_y_coordinate, bound_rect_for_light_contrast_frame,true);
+		std::vector<cv::Mat> dark_contrast_frame_objects  = frame_objects.BoundBox(binary_image_dark_contrast, darkComtrastImage, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame,true);
+		std::vector<cv::Mat> light_contrast_frame_objects = frame_objects.BoundBox(binary_image_light_contrast, lightContrastImage, light_x_coordinate, light_y_coordinate, bound_rect_for_light_contrast_frame,true);
 
 
 		//Append/combine boundbox vectors so that all objects can be put into the python dictionary
@@ -95,7 +96,6 @@ boost::python::dict vision_analysis()
 		//get feature points of each object
 
 		using surf_OCL = cv::xfeatures2d::SURF;
-		//using sift_OCL = cv::xfeatures2d::SIFT;
 
 		feature_extraction <surf_OCL> features_of_objects;
 		std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects  ,0, true);
@@ -118,9 +118,9 @@ boost::python::dict vision_analysis()
 		//Optional code: record frames with bounded boxes drawn on into their own directories.
 		recordProcessedImage saveProcessedImages (starting_frame_number++,50);
 		saveProcessedImages.boundbox(original_image_clone);
-		saveProcessedImages.capturedframe(img);
-		saveProcessedImages.dark_world_Binary(binary_image_dark_contrast);
-		saveProcessedImages.light_world_Binary(binary_image_light_contrast);
+		//saveProcessedImages.capturedframe(img);
+		//saveProcessedImages.dark_world_Binary(binary_image_dark_contrast);
+		//saveProcessedImages.light_world_Binary(binary_image_light_contrast);
 
 
 		//get time at end of image processing and print it
