@@ -85,15 +85,22 @@ std::vector < std::vector< cv::KeyPoint > > feature_extraction<T>::FeaturePoints
 		static int lock_dark_file = 0;
 		static int lock_light_file = 0;
 
+		int systemRem;
 		if ( save_image_result == true)
 		{
 			if (lock_dark_file == 0){
-				system("exec rm -rf ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/*");
+				systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_darkFeatures_images/*");
+				if (systemRem == -1){
+					std::cout<<"failed to delete recorded images belonging to previous run images in folder (feature extraction)"<<std::endl;
+				}
 				lock_dark_file++;
 			}
 
 			else if (lock_light_file == 0) {
-				system("exec rm -rf ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/*");
+				systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects_with_feature_points/trasistor_vision_lightFeatures_images/*");
+				if (systemRem == -1){
+					std::cout<<"failed to delete recorded images belonging to previous run images in folder (feature extraction)"<<std::endl;
+				}
 				lock_light_file++;
 			}
 		}

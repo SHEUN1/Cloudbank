@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lboost_python -ltbb -lboost_system -lpython2.7 -lopencv_world
+LIBS := -lboost_python -lopencv_world -lboost_system -lpython2.7
 

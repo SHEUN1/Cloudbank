@@ -72,16 +72,23 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, cv::Mat origana
 	int lock_dark_file = 0 ;
 	int lock_light_file = 0;
 
+	int systemRem;
 	//delete all images in a folder
 	if ( save_image_result == true)
 	{
 		if (lock_dark_file == 0 && world_number == 0){
-			system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
+			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
+			if (systemRem == -1){
+				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
+			}
 			lock_dark_file++;
 		}
 
 		if (lock_light_file == 0 && world_number == 1) {
-			system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");
+			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");
+			if (systemRem == -1){
+				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
+			}
 			lock_light_file++;
 		}
 	}

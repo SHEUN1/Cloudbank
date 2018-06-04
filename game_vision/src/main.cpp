@@ -19,71 +19,21 @@
 #include "featureextraction.h"
 #include "SendDataToPython.h"
 #include "OCR.h"
-
+#include "recordProcessedImage.h"
 
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
+
 #define timeNow() std::chrono::high_resolution_clock::now();
 
 using namespace boost::python;
 
-
-/**
- *****************************************************************************************
- *  @brief		Optional: save processed image frames of current captured video game frame.
- *
- *
- *  @param      True = save bounded box to specified directory
- *  @param      True = save dark world binary image frame to specified directory
- *  @param      True = save light world binary image frame to specified directory
- *  @param      <int>current frame number
- *  @param      <int>max number of frames to record
- *  @param      <Mat>image with bounded box draw on it
- *  @param      <Mat>binary image frame for the dark world
- *  @param      <Mat>binary image frame for the light world
- *  @param      <Mat>un-modified origanal image frame
- *
- *  @return
- ****************************************************************************************/
-void recordProcessedImage (bool capturedframe, bool boundbox, bool dark_world_Binary, bool light_world_Binary/*, int& current_frame_number*/,int number_of_frames_to_record,cv::Mat const &Original_image_clone,cv::Mat const &dark_world_view,cv::Mat const &light_world_view, cv::Mat const &capturedFrame)
-{
-		static int frameNumber = 0;
-
-		char file [200];
-		if (capturedframe == true)
-		{
-			sprintf(file,"../game_vision/cloudbank_images/Frame/Image%d.jpg",frameNumber);
-			imwrite(file,capturedFrame);
-		}
-
-		if (boundbox == true)
-		{
-			sprintf(file,"../game_vision/cloudbank_images/Bounded_box_on_image/Image%d.jpg",frameNumber);
-			imwrite(file,Original_image_clone);
-		}
-
-		if (dark_world_Binary == true)
-		{
-			sprintf(file,"../game_vision/cloudbank_images/objects_waterfall_binary/darkworld/Image%d.jpg",frameNumber);
-			imwrite(file,dark_world_view);
-		}
-
-		if(light_world_Binary == true)
-		{
-			sprintf(file,"../game_vision/cloudbank_images/objects_waterfall_binary/lightworld/Image%d.jpg",frameNumber);
-			imwrite(file,light_world_view);
-		}
-		++frameNumber;
-		if (frameNumber == number_of_frames_to_record){frameNumber = 0;}
-}
-
-
 boost::python::dict vision_analysis()
 {
-
-		static int activateImageCapture = 0;
+		static uint32_t starting_frame_number = 0;
+		static uint32_t activateImageCapture = 0;
 
 		//get  time at execution
 		using time_variable = std::chrono::high_resolution_clock::time_point;
@@ -99,10 +49,14 @@ boost::python::dict vision_analysis()
 		std::vector<int>light_x_coordinate;
 		std::vector<int>light_y_coordinate;
 
+		int systemRem;
 		// turn on script that save get current frame from video game
 		if (activateImageCapture == 0)
 		{
-			system("../game_vision/gstream_command_to_capture_image &");
+			systemRem = system("../game_vision/gstream_command_to_capture_image &");
+			if (systemRem == -1){
+				throw "failed to start screen capture software";
+			}
 			++activateImageCapture;
 
 		}
@@ -141,7 +95,7 @@ boost::python::dict vision_analysis()
 		//get feature points of each object
 
 		using surf_OCL = cv::xfeatures2d::SURF;
-		using sift_OCL = cv::xfeatures2d::SIFT;
+		//using sift_OCL = cv::xfeatures2d::SIFT;
 
 		feature_extraction <surf_OCL> features_of_objects;
 		std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects  ,0, true);
@@ -162,7 +116,12 @@ boost::python::dict vision_analysis()
 		std::pair< std::vector<std::string>, std::vector < coordinates > > chracterInfo = capture_words_in_image.GetWordsAndLocations(img);
 
 		//Optional code: record frames with bounded boxes drawn on into their own directories.
-		recordProcessedImage(true,true,true,true,500,original_image_clone,binary_image_dark_contrast,binary_image_light_contrast, img);
+		recordProcessedImage saveProcessedImages (starting_frame_number++,50);
+		saveProcessedImages.boundbox(original_image_clone);
+		saveProcessedImages.capturedframe(img);
+		saveProcessedImages.dark_world_Binary(binary_image_dark_contrast);
+		saveProcessedImages.light_world_Binary(binary_image_light_contrast);
+
 
 		//get time at end of image processing and print it
 		time_variable end = timeNow();
