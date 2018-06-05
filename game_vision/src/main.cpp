@@ -85,8 +85,8 @@ boost::python::dict vision_analysis()
 		SeperateObjects frame_objects (gray,original_image_clone);
 		std::vector<cv::Rect> bound_rect_for_dark_contrast_frame;
 		std::vector<cv::Rect> bound_rect_for_light_contrast_frame;
-		std::vector<cv::Mat> dark_contrast_frame_objects  = frame_objects.BoundBox(binary_image_dark_contrast, darkComtrastImage, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame,true);
-		std::vector<cv::Mat> light_contrast_frame_objects = frame_objects.BoundBox(binary_image_light_contrast, lightContrastImage, light_x_coordinate, light_y_coordinate, bound_rect_for_light_contrast_frame,true);
+		std::vector<cv::Mat> dark_contrast_frame_objects  = frame_objects.BoundBox(binary_image_dark_contrast, darkComtrastImage, dark_x_coordinate, dark_y_coordinate, bound_rect_for_dark_contrast_frame,false);
+		std::vector<cv::Mat> light_contrast_frame_objects = frame_objects.BoundBox(binary_image_light_contrast, lightContrastImage, light_x_coordinate, light_y_coordinate, bound_rect_for_light_contrast_frame,false);
 
 
 		//Append/combine boundbox vectors so that all objects can be put into the python dictionary
@@ -117,7 +117,7 @@ boost::python::dict vision_analysis()
 
 		//Optional code: record frames with bounded boxes drawn on into their own directories.
 		recordProcessedImage saveProcessedImages (starting_frame_number++,50);
-		saveProcessedImages.boundbox(original_image_clone);
+		//saveProcessedImages.boundbox(original_image_clone);
 		//saveProcessedImages.capturedframe(img);
 		//saveProcessedImages.dark_world_Binary(binary_image_dark_contrast);
 		//saveProcessedImages.light_world_Binary(binary_image_light_contrast);
