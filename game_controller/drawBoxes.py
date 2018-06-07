@@ -25,6 +25,6 @@ class drawBoxes:
             cv2.rectangle(self.frame, (objectInformation[1][2], objectInformation[1][3]), (xandWidth, yandHeight), (0, 255, 0), line_thickness)
 
         elif (object_classification == "enemy"): #color red
-            cv2.rectangle(self.frame, (objectInformation[1][2], objectInformation[1][3]), (xandWidth, yandHeight),(0, 0, 255), line_thickness)
+            cv2.rectangle(self.frame, (objectInformation[1][2], objectInformation[1][3]), (xandWidth, yandHeight), (0, 0, 255), line_thickness)
 
         return self.frame

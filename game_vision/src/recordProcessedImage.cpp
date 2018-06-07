@@ -9,15 +9,7 @@
 
 #include "recordProcessedImage.h"
 
-recordProcessedImage::recordProcessedImage(uint32_t FrameNumber, uint32_t Number_of_frames_to_record) {
-	mFrameNumber = FrameNumber;
-	mNumber_of_frames_to_record = Number_of_frames_to_record;
-
-	if (mFrameNumber == mNumber_of_frames_to_record){
-
-		mFrameNumber = 0;
-	}
-}
+recordProcessedImage::recordProcessedImage(uint32_t  FrameNumber, uint32_t Number_of_frames_to_record):mFrameNumber(FrameNumber), mNumber_of_frames_to_record(Number_of_frames_to_record)  {}
 
 /**
  *****************************************************************************************

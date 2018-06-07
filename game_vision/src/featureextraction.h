@@ -15,9 +15,6 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/xfeatures2d.hpp>
 
-#include "tbb/tbb.h"
-
-using namespace tbb;
 template<typename T>
 class feature_extraction {
 private:
@@ -39,7 +36,7 @@ public:
 	 *  @return     vector of keypoints per object
 	 ****************************************************************************************/
 
-	std::vector< std::vector<cv::KeyPoint> > FeaturePoints_OCL (std::vector<cv::Mat> const &image,int world_number, bool save_image_result);
+	std::vector< std::vector<cv::KeyPoint> > FeaturePoints_OCL (std::vector<cv::Mat> image,int world_number, bool save_image_result);
 
 };
 
@@ -70,7 +67,7 @@ feature_extraction<T>::feature_extraction()
 }
 
 template <typename T>
-std::vector < std::vector< cv::KeyPoint > > feature_extraction<T>::FeaturePoints_OCL(std::vector<cv::Mat> const &images,int world_number, bool save_image_result)
+std::vector < std::vector< cv::KeyPoint > > feature_extraction<T>::FeaturePoints_OCL(std::vector<cv::Mat> images,int world_number, bool save_image_result)
 {
 
 		std::vector<cv::Mat> images_clone = images;

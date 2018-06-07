@@ -44,7 +44,7 @@ all: game_vision
 game_vision: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/usr/local/lib -lX11 -o "game_vision" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

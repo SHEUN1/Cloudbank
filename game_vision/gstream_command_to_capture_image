@@ -1,3 +1,4 @@
 #!/bin/bash
 
-gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! videorate ! "video/x-raw,framerate=30/1" ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg
+gnome-terminal -x gst-launch-1.0 ximagesrc xname=Transistor use-damage=0 ! tee name=t ! queue ! videoconvert ! videorate ! "video/x-raw,framerate=30/1" ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/Cloudbank/game_vision/current_game_frame/current_game_frame.jpg
+

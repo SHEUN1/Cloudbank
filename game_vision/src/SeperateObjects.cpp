@@ -156,4 +156,3 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 
 	return roi;
 }
-
