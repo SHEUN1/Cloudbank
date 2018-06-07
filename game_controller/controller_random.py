@@ -52,8 +52,8 @@ while True:
             t1 = time.time()
             print t1-t0
 
-            #for i in range(0, len(objectInformation)):
-                #print objectInformation[i]
+            for i in range(0, len(objectInformation)):
+                print objectInformation[i]
                 #frame_`to_draw_on.draw_classification_box(objectInformation[i], random.choice(object_classification_type))
 
             #cv2.imwrite('/home/sheun/Cloudbank/game_vision/cloudbank_images/pythonClassificationImages/img{}.jpg'.format(frame_number), frame_to_draw_on.frame)
