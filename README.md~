@@ -49,6 +49,7 @@ A Python script sends commands to a bash script which in turn uses a tool call x
 
 
 Below is a gif of the image processing and object identification being done on the captured frame, the character is currently being moved randomly via simulated keyboard and mouse inputs being sent to the window from the controller
+[![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbank.png)](https://www.youtube.com/watch?v=hRo3HSo-eYM)
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
 ### How to use it?
