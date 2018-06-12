@@ -51,7 +51,7 @@ Below is a gif of the image processing and object identification being done on t
 [![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbank.png)](https://www.youtube.com/watch?v=hRo3HSo-eYM "IMAGE ALT TEXT HERE")
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
-###instructions
+### Instructions
 1. make sure that you have the following installed
 	*'xdatool'
 	*'gstreamer 1.0' 
@@ -65,7 +65,7 @@ Below is a gif of the image processing and object identification being done on t
 7. Run the python script which will build and run the platform. Once built this should activate gstremer and should start reciveing data and sending keyboard inputs into the game. 
 
 
-### source file location for image processing and sending keyboard strokes to the videogame ?
+### Source file location for image processing and sending keyboard strokes to the videogame ?
 1. The “game_vision” folder contains the code needed to analyse the game currently being played, frame-by-frame, using OpenCV C++. The ‘game_controller’ directory contains the files needed to control the video game
 2. The OpenCv source files are located in the "Cloudbank/game_vision/src/" directory and the python controller file is lacated in the "Cloudbank/game_controller/"directory. 
 
@@ -76,6 +76,6 @@ Below is a gif of the image processing and object identification being done on t
 2. To avoid problems with gstreamer please set your game screen resolution to no more than 1024x768
 
 ### Curious about development environment?
-4. The IDE’s used during development were 'Eclipes C++' and 'Pycharm' community edition. You can use Eclipes by simply setting the Eclipse workspace to the project folder.
+1. The IDE’s used during development were 'Eclipes C++' and 'Pycharm' community edition. You can use Eclipes by simply setting the Eclipse workspace to the project folder.
       
 
