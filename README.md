@@ -65,7 +65,7 @@ Below is a gif of the image processing and object identification being done on t
 7. Run the python script which will build and run the platform. Once built this should activate gstremer and should start reciveing data and sending keyboard inputs into the game. 
 
 
-### Source file location for image processing and sending keyboard strokes to the videogame ?
+### Source file location for image processing and sending keyboard strokes to the videogame
 1. The “game_vision” folder contains the code needed to analyse the game currently being played, frame-by-frame, using OpenCV C++. The ‘game_controller’ directory contains the files needed to control the video game
 2. The OpenCv source files are located in the "Cloudbank/game_vision/src/" directory and the python controller file is lacated in the "Cloudbank/game_controller/"directory. 
 
