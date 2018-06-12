@@ -2,14 +2,13 @@
 Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment on Steam (http://store.steampowered.com/). The Computer Vision part is handled using OpenCV 3 (C++) while it is planned for the Machine Learning part to be handled using Tensorflow (Python). Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) will be used to capture the image frame and a bash script will be used to send simulated keyboard and mouse clicks to the Steam window currently playing the game.
 
 ### What you'll need.
-1. Linux OS (ubuntu 14.04 or higher)
-2. Gstreamer
-3. OpenCV version 3.4.0 (recommended to build with opencl enabled)
+1. Linux OS (at least ubuntu 14.04)
+2. Gstreamer 1.0
+3. OpenCV version 3.4.1 (recommended to build with opencl enabled)
 4. c++ 11
 5. python 2.7
-6. Steam video game platform 
+6. Steam video game client 
 7. xdotool
-8. Tensoflow (or any machine learning library you want to use to make use the data. This is not needed for the vision processing part)
 9. a GPU 
 
 ### Why opencv C++ and not Python for vision processing ?
@@ -52,22 +51,31 @@ Below is a gif of the image processing and object identification being done on t
 [![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbank.png)](https://www.youtube.com/watch?v=hRo3HSo-eYM "IMAGE ALT TEXT HERE")
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
-### How to use it?
+###instructions
+1. make sure that you have the following installed
+	*'xdatool'
+	*'gstreamer 1.0' 
+	* Steam video game client
+	* A videogame that can be played on an ubuntu environment (Default game for this repo is the videogame: transistor)
+2. Download the repo unto your system and unzip it into your chosen directory
+3. Go into the downloaded repo and  into follow the path ".../game_vision/gstream_command_to_capture_image" file and modyfy the “xname=Transistor” into the tile of your video game that appears in the game window title for example: xname=<name of window displaying the game> and modify the line "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system.
+4. Go to ".../Cloudbank/game_controller/send_control_cmds_to_game" file and replace all references to “Transistor” with the name of whatever your video game is called. (Modify key commands in the file according to your chosen game) 
+5. Go to ".../Cloudbank/game_controller/controller_random.py" and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
+6. Start your Steam game. 
+7. Run the python script which will build and run the platform. Once built this should activate gstremer and should start reciveing data and sending keyboard inputs into the game. 
+
+
+### source file location for image processing and sending keyboard strokes to the videogame ?
 1. The “game_vision” folder contains the code needed to analyse the game currently being played, frame-by-frame, using OpenCV C++. The ‘game_controller’ directory contains the files needed to control the video game
 2. The OpenCv source files are located in the "Cloudbank/game_vision/src/" directory and the python controller file is lacated in the "Cloudbank/game_controller/"directory. 
-3. Go to the ".../Cloudbank/game_vision/gstream_command_to_capture_image" file and modyfy the “xname=Transistor” into the tile of your Steam game for example: xname=<name of window displaying the game> and modify the "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system
-4. Go to ".../Cloudbank/game_controller/send_control_cmds_to_game" file and replace all references to “Transistor” with the name of whatever your Steam game is called. (Modify key commands in the file according to your chosen game)
-5. Go to ".../Cloudbank/game_controller/controller.py" and once again replace all references to “Transistor” with the name of whatever your chosen window is called  (Modify key commands in the file according to your chosen game)
-6. Start your Steam game. 
-7. Run the python script and this build and run the platform. Once built this should activate gstremer and should start reciveing data from the current image frame. 
+
 
 ### Keep in mind 
 1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise the mouse and keyboard inputs would jump between screens. 
 
 2. To avoid problems with gstreamer please set your game screen resolution to no more than 1024x768
 
-3. Note that this has been tested on one game so far: "Transistor" by 'Supergiant Games'. Although in theory Cloudbank can be used for any game in linux by simply modifying the name of the window currently hosting the videogame.
-
-4. The IDE’s used during development were 'Eclipes C++' and 'Pycharm' community edition.You can use Eclipes by simply setting the Eclipse workspace to the project folder.
+### Curious about development environment?
+4. The IDE’s used during development were 'Eclipes C++' and 'Pycharm' community edition. You can use Eclipes by simply setting the Eclipse workspace to the project folder.
       
 

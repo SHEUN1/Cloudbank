@@ -1,9 +1,10 @@
 #!/bin/bash
 
 #switch to the window that is playing the video game 
-wmctrl -a Transistor
+#wmctrl -a Transistor
 
-#initial setup of keys (make sure that none of them is pressed down)
+#Initial setup of keys (make sure that none of them is pressed down)
+#Add or remove keys that is needed to control the game you are trying to controll 
 xdotool keyup "Up"
 xdotool keyup "Down"
 xdotool keyup "Left"
@@ -21,7 +22,10 @@ ID=$(xdotool search --name Transistor)
 #get the name of the current active window
 isWindowName=$(xdotool getactivewindow getwindowname)
 
+#"$<number>" indicates number passed from the python script and are a place holder for the keys being sent 
 
+# function to interact and press buttons on keyboard and move mouse cursor to a specific location 
+# you can modify this to reflect the need of your game 
 Move () { 
 	  
 	xdotool keydown --window $ID "$1"
@@ -34,6 +38,7 @@ Move () {
 	xdotool mousemove --window $ID "$7" "$8" 	      
 }
 
+#click left button on mouse only once 
 ClickMouseL()
 {
 	xdotool mousedown --window $ID 1
@@ -41,6 +46,7 @@ ClickMouseL()
 	xdotool mouseup --window $ID 1
 }
 
+#click right button on mouse only once 
 ClickMouseR()
 {
 	xdotool mousedown --window $ID 3 
