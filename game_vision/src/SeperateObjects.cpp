@@ -46,7 +46,7 @@ SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_imag
 	 *  @return     vector <cv::Mat>: vector of object/regions
 	 ****************************************************************************************/
 
-std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOriginOfObjects, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result)
+std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOriginOfObjects, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result )
 {
 	//bounded box will be draw on this copy of the original image instead
 	std::vector<std::vector<cv::Point> > contours;
@@ -82,8 +82,9 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 
 	int systemRem;
 	//delete all images in a folder
-	if ( save_image_result == true)
+	if (save_image_result)
 	{
+		mColorCrop = mOriginal_image_clone.clone();
 		if (/*clearDarkObjectsFolder == false &&*/ contrastOriginOfObjects == 0){
 			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
 			if (systemRem == -1){
@@ -110,6 +111,7 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 
 		approxPolyDP(cv::Mat(contours[i]), contours_poly[i], 3, true);
 
+		//remove bounded box that covers the entire frame.
 		if (((boundingRect(cv::Mat(contours_poly[i])).width == mGrayScale.cols) && (boundingRect(cv::Mat(contours_poly[i])).height == mGrayScale.rows)))
 		{
 			continue;
@@ -129,7 +131,7 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 		roi.push_back(mGrayScale(boundRect.back()));
 	    //save regions of interest into a folder
 
-	    if ( save_image_result == true)
+	    if ( save_image_result)
 	    {
 			if (contrastOriginOfObjects == 0)
 			{
@@ -145,7 +147,7 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 				throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
 			}
 
-			imwrite(file,roi.back());
+			imwrite(file,mColorCrop(boundRect.back())/*roi.back(*)*/);
 		}
 
 

@@ -27,6 +27,8 @@ std::cout<<"converting to binary"<<std::endl;
 	 ****************************************************************************************/
  cv::Mat convertToBinaryImage::Watershed(cv::Mat  binary_image, cv::Mat origanal_image)
 {
+	 	 // increase/decrese this value to reduce/increase the number of objects segmented respectively
+	 	 auto markerThreshold =  0.043;
 	    // Use the distance transform algorithm
 
 	 	//hold output matrix result of distance transform function
@@ -40,8 +42,8 @@ std::cout<<"converting to binary"<<std::endl;
 	    cv::normalize(distance, distance, 0, 1., cv::NORM_MINMAX);
 
 	    // Threshold to obtain the peaks
-	    // This will be the markers for the foreground objects
-	    cv::threshold(distance, distance, 0.043, 1., CV_THRESH_BINARY);
+	    // These are the markers for the foreground objects
+	    cv::threshold(distance, distance, markerThreshold, 1., CV_THRESH_BINARY);
 
 	    // Dilate a bit the distance image
 	    //use  convolution matrix masking
@@ -62,7 +64,7 @@ std::cout<<"converting to binary"<<std::endl;
 	    cv::Mat  markers = cv::Mat ::zeros(distance.size(), CV_32SC1);
 
 	    // Draw the foreground markers
-	    for (size_t i = 0; i < contours.size(); i++){
+	    for (size_t i = 0; i < contours.size(); ++i){
 	        drawContours(markers, contours, static_cast<int>(i), cv::Scalar::all(static_cast<int>(i)+1), -1);
 	    }
 
@@ -91,11 +93,9 @@ cv::Mat  convertToBinaryImage::Binary (cv::Mat const &grayscale_original_img,cv:
 	 cv::Mat  binaryImage;
 
 	 //create binary image
-	 threshold(grayscale_original_img, binaryImage, 0.5, 255, CV_THRESH_BINARY | CV_THRESH_OTSU);
+	 cv::threshold(grayscale_original_img, binaryImage, 0.5, 255, CV_THRESH_BINARY | CV_THRESH_OTSU);
 
 	 //clean up the binary image i.e. remove small blobs
-
-	 cv::cuda::GpuMat binaryImageGPU;
 
 	 binaryImage = cleanupBinary(binaryImage);
 
