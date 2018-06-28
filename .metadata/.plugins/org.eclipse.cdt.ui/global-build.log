@@ -1,252 +1,8 @@
-14:33:31 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-../src/SeperateObjects.cpp:12:1: error: prototype for ‘SeperateObjects::SeperateObjects(cv::Mat, cv::Mat&)’ does not match any in class ‘SeperateObjects’
- SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_image_clone) : mGrayScale(grayscaleImage), mOriginal_image_clone(Original_image_clone) {
- ^
-In file included from ../src/SeperateObjects.cpp:10:0:
-../src/SeperateObjects.h:18:7: error: candidates are: SeperateObjects::SeperateObjects(const SeperateObjects&)
- class SeperateObjects {
-       ^
-../src/SeperateObjects.h:25:2: error:                 SeperateObjects::SeperateObjects(cv::Mat, cv::Mat)
-  SeperateObjects(cv::Mat grayscaleImage, cv::Mat Original_image_clone);
-  ^
-make: *** [src/SeperateObjects.o] Error 1
-14:34:03 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-14:35:09 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-make: Nothing to be done for `all'.
-15:04:51 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat> SeperateObjects::BoundBox(cv::Mat, int, std::vector<int>&, std::vector<int>&, std::vector<cv::Rect_<int> >&, bool)’:
-../src/SeperateObjects.cpp:121:8: error: ‘world_number’ was not declared in this scope
-    if (world_number == 0)
-        ^
-../src/SeperateObjects.cpp:70:7: warning: unused variable ‘clearDarkObjectsFolder’ [-Wunused-variable]
-  bool clearDarkObjectsFolder = false ;
-       ^
-../src/SeperateObjects.cpp:71:7: warning: unused variable ‘clearLightObjectsFolder’ [-Wunused-variable]
-  bool clearLightObjectsFolder = false;
-       ^
-make: *** [src/SeperateObjects.o] Error 1
-15:05:11 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-../src/SeperateObjects.cpp: In member function ‘std::vector<cv::Mat> SeperateObjects::BoundBox(cv::Mat, int, std::vector<int>&, std::vector<int>&, std::vector<cv::Rect_<int> >&, bool)’:
-../src/SeperateObjects.cpp:121:8: error: ‘world_number’ was not declared in this scope
-    if (world_number == 0)
-        ^
-make: *** [src/SeperateObjects.o] Error 1
-15:05:53 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:06:11 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-make: Nothing to be done for `all'.
-15:12:35 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:12:59 **** Incremental Build of configuration Debug for project game_vision ****
+18:08:04 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:15:46 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:17:02 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:26:10 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-15:34:18 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-13:40:39 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/OCR.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
-Finished building: ../src/OCR.cpp
- 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building file: ../src/convertToBinaryImage.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
-Finished building: ../src/convertToBinaryImage.cpp
- 
-Building file: ../src/featureextraction.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
-Finished building: ../src/featureextraction.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: ../src/recordProcessedImage.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
-Finished building: ../src/recordProcessedImage.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-14:38:15 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/OCR.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
-Finished building: ../src/OCR.cpp
- 
-Building file: ../src/SendDataToPython.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
-Finished building: ../src/SendDataToPython.cpp
- 
-Building file: ../src/SeperateObjects.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
-Finished building: ../src/SeperateObjects.cpp
- 
-Building file: ../src/convertToBinaryImage.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
-Finished building: ../src/convertToBinaryImage.cpp
- 
-Building file: ../src/featureextraction.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
-Finished building: ../src/featureextraction.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building file: ../src/recordProcessedImage.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
-Finished building: ../src/recordProcessedImage.cpp
- 
-Building target: game_vision
-Invoking: GCC C++ Linker
-g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
-Finished building target: game_vision
- 
-14:38:48 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-make: Nothing to be done for `all'.
-14:38:49 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-make: Nothing to be done for `all'.
-14:44:55 **** Incremental Build of configuration Debug for project game_vision ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
 Finished building: ../src/main.cpp
  
 Building target: game_vision
@@ -254,42 +10,694 @@ Invoking: GCC C++ Linker
 g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
 Finished building target: game_vision
  
-14:52:01 **** Incremental Build of configuration Debug for project game_vision ****
+18:08:28 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:08:43 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:09:40 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+18:10:33 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+18:15:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+18:18:49 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+22:46:10 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+22:46:36 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+23:00:43 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:00:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+23:01:05 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+23:02:13 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:03:42 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+23:20:04 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:20:21 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:22:04 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:22:45 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:25:54 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:26:55 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:27:24 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:28:15 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:31:52 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:32:59 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:37:42 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:39:59 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:43:41 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+23:44:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:45:19 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+23:47:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+19:32:14 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
 Building file: ../src/OCR.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
 Finished building: ../src/OCR.cpp
  
 Building file: ../src/SendDataToPython.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
 Finished building: ../src/SendDataToPython.cpp
  
 Building file: ../src/SeperateObjects.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
 Finished building: ../src/SeperateObjects.cpp
  
 Building file: ../src/convertToBinaryImage.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
 Finished building: ../src/convertToBinaryImage.cpp
  
 Building file: ../src/featureextraction.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
 Finished building: ../src/featureextraction.cpp
  
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
 Finished building: ../src/main.cpp
  
 Building file: ../src/recordProcessedImage.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
 Finished building: ../src/recordProcessedImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+13:14:37 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/recordProcessedImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
+Finished building: ../src/recordProcessedImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+13:18:23 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+14:25:45 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+14:33:02 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+17:09:29 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:20:43 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:21:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:24:14 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:26:31 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:28:11 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:29:14 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:30:22 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+17:32:02 **** Clean-only build of configuration Debug for project game_vision ****
+make clean 
+rm -rf  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o  ./src/OCR.d ./src/SendDataToPython.d ./src/SeperateObjects.d ./src/convertToBinaryImage.d ./src/featureextraction.d ./src/main.d ./src/recordProcessedImage.d  game_vision
+ 
+17:32:18 **** Clean-only build of configuration Debug for project game_vision ****
+make clean 
+rm -rf  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o  ./src/OCR.d ./src/SendDataToPython.d ./src/SeperateObjects.d ./src/convertToBinaryImage.d ./src/featureextraction.d ./src/main.d ./src/recordProcessedImage.d  game_vision
+ 
+17:32:27 **** Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/recordProcessedImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
+Finished building: ../src/recordProcessedImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:34:53 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building file: ../src/featureextraction.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/featureextraction.d" -MT"src/featureextraction.o" -o "src/featureextraction.o" "../src/featureextraction.cpp"
+Finished building: ../src/featureextraction.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/recordProcessedImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/recordProcessedImage.d" -MT"src/recordProcessedImage.o" -o "src/recordProcessedImage.o" "../src/recordProcessedImage.cpp"
+Finished building: ../src/recordProcessedImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:35:23 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+17:36:09 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:46:43 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:47:00 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+17:47:54 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:48:08 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+17:54:16 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:55:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/convertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/convertToBinaryImage.d" -MT"src/convertToBinaryImage.o" -o "src/convertToBinaryImage.o" "../src/convertToBinaryImage.cpp"
+Finished building: ../src/convertToBinaryImage.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+17:59:45 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+18:00:06 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
  
 Building target: game_vision
 Invoking: GCC C++ Linker

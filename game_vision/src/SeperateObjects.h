@@ -18,7 +18,9 @@
 class SeperateObjects {
 
 private:
-	cv::Mat mGrayScale, mOriginal_image_clone, mColorCrop;
+	cv::Mat mGrayScale;
+	cv::Mat mOriginal_image_clone;
+	cv::Mat mColorCrop;
 
 public:
 

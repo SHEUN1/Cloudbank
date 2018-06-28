@@ -77,28 +77,25 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 
 	//character length for roi filename to be saved in separate folder
 	char file [100];
-	//bool clearDarkObjectsFolder = false ;
-	//bool clearLightObjectsFolder = false;
 
 	int systemRem;
 	//delete all images in a folder
 	if (save_image_result)
 	{
 		mColorCrop = mOriginal_image_clone.clone();
-		if (/*clearDarkObjectsFolder == false &&*/ contrastOriginOfObjects == 0){
-			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");
+		if (contrastOriginOfObjects == 0){
+			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_normal_contrast_frame/*");
 			if (systemRem == -1){
 				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
 			}
-			//clearDarkObjectsFolder = true;
+
 		}
 
-		else if (/*clearLightObjectsFolder == false &&*/ contrastOriginOfObjects == 1) {
-			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");
+		else if (contrastOriginOfObjects == 1) {
+			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_highten_contrast_frame/*");
 			if (systemRem == -1){
 				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
 			}
-			//clearLightObjectsFolder = true ;
 		}
 		else {
 			throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
@@ -135,19 +132,17 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 	    {
 			if (contrastOriginOfObjects == 0)
 			{
-				//if (lock_dark_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/*");lock_dark_file++; }
-				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_darkworld_images/Image%d.jpg",i);
+				sprintf(file,"../game_vision/cloudbank_images/objects/objects_belonging_to_normal_contrast_frame/Image%d.jpg",i);
 			}
 			else if(contrastOriginOfObjects == 1)
 			{
-				//if (lock_light_file == 0) {system("exec rm -r ../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/*");lock_light_file++; }
-				sprintf(file,"../game_vision/cloudbank_images/objects/trasistor_vision_lightworld_images/Image%d.jpg",i);
+				sprintf(file,"../game_vision/cloudbank_images/objects/objects_belonging_to_highten_contrast_frame/Image%d.jpg",i);
 			}
 			else{
 				throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
 			}
 
-			imwrite(file,mColorCrop(boundRect.back())/*roi.back(*)*/);
+			cv::imwrite(file,mColorCrop(boundRect.back())/*roi.back(*)*/);
 		}
 
 

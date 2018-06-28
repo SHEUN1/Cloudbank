@@ -129,6 +129,7 @@ cv::Mat  convertToBinaryImage::BinaryInverse (cv::Mat const &img, cv::Mat origan
 	cv::Mat  contrasted, binaryImage, binaryImage_inv;
 	img.convertTo(contrasted, -1, alpha, beta);
 
+
 	cv::threshold(contrasted, binaryImage,0.5,255,cv::THRESH_BINARY| CV_THRESH_OTSU);
 
 	binaryImage = cleanupBinary(binaryImage);

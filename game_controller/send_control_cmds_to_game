@@ -17,7 +17,7 @@ xdotool keyup "space"
 xdotool keyup "R"
 
 #name of the window that is displaying the videogame
-ID=$(xdotool search --name Transistor)
+ID=$(xdotool search --name "Transistor")
 
 #get the name of the current active window
 isWindowName=$(xdotool getactivewindow getwindowname)
@@ -55,7 +55,7 @@ ClickMouseR()
 }
 
 #make sure that there is a whitespace after "[" and before "]"
-if [ $isWindowName="Transistor" ]; then
+if [[ "$isWindowName" == "Transistor" ]]; then
 
 	#send keyboard arguments
 	Move "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" 
