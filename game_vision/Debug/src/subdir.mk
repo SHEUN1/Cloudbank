@@ -4,31 +4,40 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/BinaryImage.cpp \
+../src/ConvertToBinaryImage.cpp \
+../src/FeatureExtraction.cpp \
+../src/ImageText.cpp \
 ../src/OCR.cpp \
+../src/RecordProcessedImage.cpp \
+../src/RegionOfInterest.cpp \
 ../src/SendDataToPython.cpp \
 ../src/SeperateObjects.cpp \
-../src/convertToBinaryImage.cpp \
-../src/featureextraction.cpp \
-../src/main.cpp \
-../src/recordProcessedImage.cpp 
+../src/main.cpp 
 
 OBJS += \
+./src/BinaryImage.o \
+./src/ConvertToBinaryImage.o \
+./src/FeatureExtraction.o \
+./src/ImageText.o \
 ./src/OCR.o \
+./src/RecordProcessedImage.o \
+./src/RegionOfInterest.o \
 ./src/SendDataToPython.o \
 ./src/SeperateObjects.o \
-./src/convertToBinaryImage.o \
-./src/featureextraction.o \
-./src/main.o \
-./src/recordProcessedImage.o 
+./src/main.o 
 
 CPP_DEPS += \
+./src/BinaryImage.d \
+./src/ConvertToBinaryImage.d \
+./src/FeatureExtraction.d \
+./src/ImageText.d \
 ./src/OCR.d \
+./src/RecordProcessedImage.d \
+./src/RegionOfInterest.d \
 ./src/SendDataToPython.d \
 ./src/SeperateObjects.d \
-./src/convertToBinaryImage.d \
-./src/featureextraction.d \
-./src/main.d \
-./src/recordProcessedImage.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

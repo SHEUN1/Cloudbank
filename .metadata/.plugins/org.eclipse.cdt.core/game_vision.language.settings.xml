@@ -768,6 +768,12 @@
 					<entry kind="macro" name="_LP64" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="_OPENMP" value="201107">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="_REENTRANT" value="1">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="_STDC_PREDEF_H" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>

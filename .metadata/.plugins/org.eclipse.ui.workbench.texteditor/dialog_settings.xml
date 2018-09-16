@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="save_image_result" key="selection"/>
+		<item value="system(cmdExecution.c_str());" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="return"/>
+			<item value="boundRect"/>
+			<item value="save_ROI_images"/>
+			<item value="detect"/>
 			<item value="save_image_result"/>
 			<item value="keypointMap"/>
 			<item value="iter"/>
 			<item value="cvWaitKey"/>
-			<item value="keypoints_hold_1_image"/>
-			<item value="bitwise"/>
-			<item value="=="/>
-			<item value="cv_"/>
 		</list>
 		<list key="replacehistory">
 			<item value="iterEachObject"/>

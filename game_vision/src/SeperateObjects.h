@@ -1,11 +1,12 @@
 /*
- * SeperateObjects.h
+ *        Name: SeperateObjects.h
  *
  *  Created on: 9 Jul 2017
  *      Author: sheun
  *
- *      Separate objects/regions in an image and draw bounded boxes around them in the original captured image frame.
+ *      Description: create RegionOfinterest objects.
  */
+
 #ifndef SEPERATEOBJECTS_H_
 #define SEPERATEOBJECTS_H_
 
@@ -14,7 +15,12 @@
 #include <vector>
 #include <algorithm>
 #include <map>
+#include <string>
+#include <stdlib.h>
 
+#include "BinaryImage.h"
+#include "RecordProcessedImage.h"
+#include "RegionOfInterest.h"
 class SeperateObjects {
 
 private:
@@ -22,30 +28,32 @@ private:
 	cv::Mat mOriginal_image_clone;
 	cv::Mat mColorCrop;
 
+	RecordProcessedImage m_record_processed_image;
+
 public:
 
-	SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_image_clone);
+/** *****************************************************************************************
+	 *  @name       SeperateObjects
+	 *
+	 *  @brief      constructor
+	 *
+	 *
+	 *  @param      cv::Mat: grayscale image
+	 *  @param      cv::Mat: unprocessed pre-grayscale image
+	****************************************************************************************/
+	SeperateObjects(cv::Mat grayscaleImage, cv::Mat & image);
 	virtual ~SeperateObjects() = default;
 
-/**
-	 *****************************************************************************************
-	 *  @brief      identify objects and get their X and Y coordinates in the image frame
+/** *****************************************************************************************
+	 *  @name       BoundBox
 	 *
-	 *  @usage      draw boxes around each object/region,
-	 *  			create a vector of seperated objects/regions7
-	 *  			get coordinates of each object/region
+	 *  @brief      identify a region of interest and get their X and Y coordinates in the image frame
 	 *
 	 *
-	 *  @param      Binary image
-	 *  @param      grayscale image
-	 *  @param      Original (non- processed) image frame
-	 *  @param      indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
-	 *  @param      vector which will hold x coordinates of each object/region
-	 *  @param      vector which will hold y coordinates of each object/region
-	 *  @param 		true = save separated objects/regions in directory of your choice
-	 *  @return     vector of object/regions
- ****************************************************************************************/
-	std::vector <cv::Mat>  BoundBox(cv::Mat Binary, int world_number, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result);
+	 *  @param      std::shared_ptr< BinaryImage>: Binary image
+	 *  @param      bool: indicate wheather an image should be saved
+    ****************************************************************************************/
+	void BoundBox(std::shared_ptr< BinaryImage>  Binary, bool saveImage);
 
 
 };

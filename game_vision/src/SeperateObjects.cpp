@@ -1,59 +1,30 @@
 /*
- * SeperateObjects.cpp
+ *        Name: SeperateObjects.cpp
  *
  *  Created on: 9 Jul 2017
- *      Author: sheun
+ *      Author: Olu Adebari
  *
- *      Separate objects/regions in an image and draw bounded boxes around them in the original captured image frame.
+ * Description: create RegionOfinterest objects.
  */
 
 #include "SeperateObjects.h"
 
-/**
-	 *****************************************************************************************
-	 *  @brief      identify objects and get their X and Y coordinates in the image frame
-	 *
-	 *  @param      cv::Mat: grayscale image
-	 *  @param       cv::Mat: image that will have bounded boxes draw on it
-	 *
-	 *  @return     vector <cv::Mat>: vector of object/regions
-	 ****************************************************************************************/
 
-SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & Original_image_clone) : mGrayScale(grayscaleImage), mOriginal_image_clone(Original_image_clone) {
+SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & image) : mGrayScale(grayscaleImage), mOriginal_image_clone(image) {
 
 	std::cout<<"identyfying objects in seperate objects class"<<std::endl;
 
 }
 
-
-/**
-	 *****************************************************************************************
-	 *  @brief      identify objects and get their X and Y coordinates in the image frame
-	 *
-	 *  @usage      draw boxes around each object/region,
-	 *  			create a vector of separated objects/regions
-	 *  			get coordinates of each object/region
-	 *  			get boundedbox of each object/region
-	 *
-	 *
-	 *  @param      cv::Mat: Binary image
-	 *  @param      int: indicate which directory to save separated object/regions images (only effective is last parameter is set to "true"). 0 = darkworld/non-contrasted binary image; 1 = lightworld/contrasted binary image
-	 *  @param      std::vector<int>: vector which will hold x coordinates of each object/region
-	 *  @param      std::vector<int>: vector which will hold y coordinates of each object/region
-	 *  @param 		std::vector<cv::Rect>: vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
-	 *  @param 		bool: save separated objects/regions in directory of your choice
-	 *
-	 *  @return     vector <cv::Mat>: vector of object/regions
-	 ****************************************************************************************/
-
-std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOriginOfObjects, std::vector<int>& x_coordinate, std::vector<int>& y_coordinate, std::vector<cv::Rect> &boundRectWorld, bool save_image_result )
+void SeperateObjects::BoundBox(std::shared_ptr< BinaryImage>  Binary, bool saveImage)
 {
+	auto image_to_crop_out_objects = mOriginal_image_clone.clone();
 	//bounded box will be draw on this copy of the original image instead
 	std::vector<std::vector<cv::Point> > contours;
 	std::vector<cv::Vec4i> hierarchy;
 
 	//find contours
-	findContours(Binary, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0,0));
+	findContours(Binary->getBinaryImage(), contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0,0));
 
 	 /// Get the moments(weighted average of image pixels intensities )
 	  std::vector<cv::Moments> mu(contours.size());
@@ -67,43 +38,20 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 
 	//Approximate contours to polygons + get bounding rects
 	std::vector<std::vector<cv::Point> > contours_poly(contours.size());
-	std::vector<cv::Rect> boundRect;
-	//region of interest
-	std::vector<cv::Mat> roi;
-	//get image coordinate;
-	std::vector<int> x2_coordinate;
-	std::vector<int> y2_coordinate;
+	cv::Rect boundRect;
 
-
-	//character length for roi filename to be saved in separate folder
-	char file [100];
-
-	int systemRem;
 	//delete all images in a folder
-	if (save_image_result)
+	if (saveImage)
 	{
-		mColorCrop = mOriginal_image_clone.clone();
-		if (contrastOriginOfObjects == 0){
-			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_normal_contrast_frame/*");
-			if (systemRem == -1){
-				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
-			}
-
+		if (m_record_processed_image.getCreatedDir().find("../game_vision/cloudbank_images/objects/objects_belonging_to_binary")!=m_record_processed_image.getCreatedDir().end()){
+			std::string cmdExecution = "exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_binary_"+ std::to_string(Binary->getID())+"/*";
+			 system(cmdExecution.c_str());
 		}
 
-		else if (contrastOriginOfObjects == 1) {
-			systemRem = system("exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_highten_contrast_frame/*");
-			if (systemRem == -1){
-				std::cout<<"failed to delete recorded images belonging to previous run images in folder (separate objects)"<<std::endl;
-			}
-		}
-		else {
-			throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
-		}
 	}
 
 
-	for(uint32_t i = 0; i < contours.size(); i++)
+	for(uint32_t i = 0; i < contours.size(); ++i)
 	{
 
 		approxPolyDP(cv::Mat(contours[i]), contours_poly[i], 3, true);
@@ -114,42 +62,21 @@ std::vector <cv::Mat>  SeperateObjects::BoundBox(cv::Mat Binary, int contrastOri
 			continue;
 		}
 
-
-		boundRect.push_back(boundingRect(cv::Mat(contours_poly[i])));
-
-		boundRectWorld.push_back(boundRect.back());
-		x2_coordinate.push_back(((boundRect.back().x + boundRect.back().width) / 2));
-		y2_coordinate.push_back(((boundRect.back().y + boundRect.back().height) / 2));
-
+		boundRect = boundingRect(cv::Mat(contours_poly[i]));
 		cv::Scalar color( rand()&255, rand()&255, rand()&255 );
-		rectangle (mOriginal_image_clone, boundRect.back().tl(), boundRect.back().br(), color, 2,8,0);
+		rectangle (mOriginal_image_clone, boundRect.tl(), boundRect.br(), color, 2,8,0);
 
-		// Crop the original image to the defined ROI
-		roi.push_back(mGrayScale(boundRect.back()));
+
+		Binary->addRegionOfInterest(i, mGrayScale(boundRect),((boundRect.x + boundRect.width) / 2), ((boundRect.y + boundRect.height) / 2),boundingRect(cv::Mat(contours_poly[i])));
 	    //save regions of interest into a folder
-
-	    if ( save_image_result)
+	    if (saveImage)
 	    {
-			if (contrastOriginOfObjects == 0)
-			{
-				sprintf(file,"../game_vision/cloudbank_images/objects/objects_belonging_to_normal_contrast_frame/Image%d.jpg",i);
-			}
-			else if(contrastOriginOfObjects == 1)
-			{
-				sprintf(file,"../game_vision/cloudbank_images/objects/objects_belonging_to_highten_contrast_frame/Image%d.jpg",i);
-			}
-			else{
-				throw std::runtime_error("contrastOriginOfObjects argument can only be 0 or 1");
-			}
-
-			cv::imwrite(file,mColorCrop(boundRect.back())/*roi.back(*)*/);
+	    	m_record_processed_image.saveImage(image_to_crop_out_objects(boundRect),"../game_vision/cloudbank_images/objects/objects_belonging_to_binary_"+ std::to_string(Binary->getID()),
+	    		"Image_"+std::to_string(Binary->getID())+"_ID_"+std::to_string(i)+".jpg");
 		}
 
 
 	}
-	x_coordinate = x2_coordinate;
-	y_coordinate = y2_coordinate;
 
 
-	return roi;
 }

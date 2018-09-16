@@ -1,161 +1,126 @@
 //============================================================================
 // Name        : main.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Process the captured video game frame, analyse and then send data over to Python caller
+// Author      : Olu Adebari
+// Description : Process the captured video game frame, analyse and then send data over to Python caller program
 //============================================================================
 
 #include <iostream>
-#include <opencv2/opencv.hpp>
 #include <vector>
-
 #include <chrono>
-#include <ctime>
-
-#include <functional>
 #include <future>
+#include <memory>
+#include <string>
+#include <opencv2/opencv.hpp>
 
-
-#include "convertToBinaryImage.h"
 #include "SeperateObjects.h"
-#include "featureextraction.h"
 #include "SendDataToPython.h"
 #include "OCR.h"
-#include "recordProcessedImage.h"
+#include "RegionOfInterest.h"
+#include "BinaryImage.h"
+#include "FeatureExtraction.h"
+#include "RecordProcessedImage.h"
+#include "ConvertToBinaryImage.h"
 
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
 #include <boost/python/suite/indexing/map_indexing_suite.hpp>
 
 
-using namespace boost::python;
 
-boost::python::dict vision_analysis()
+
+
+boost::python::dict processImageFrame()
 {
 
-	auto saveCurrentFrameWithBoundBox = true;
-	auto saveCurrentFrame = true;
-	auto saveBinaryImageOfCurrentFrame = true;
-	auto saveInverseBinaryImageOfCurrentFrame = true ;
-	auto saveObejectInCurrentFrameBinaryImage = true;
-	auto saveObejectInCurrentFrameInverseBinaryImage = true ;
-	auto saveObejectInCurrentFrameBinaryImageFeaturesPoints = true;
-	auto saveObejectInCurrentFrameInveseBinaryImageFeaturePoints = true ;
+	auto save_current_frame_with_bounded_boxes = true;
+	auto save_current_frame = true;
+	auto save_binary_image_of_current_frame = true;
+	auto save_regions_of_interest_from_current_frame_binary_image = true;
+	auto save_regions_of_interest_from_current_frame_binary_image_features_points = true;
 
 	static uint32_t starting_frame_number = 1;
 	uint32_t Number_of_frames_to_record = 1000;
 
-	//get  time at execution
-	using time_variable = std::chrono::high_resolution_clock::time_point;
-
-	time_variable start = std::chrono::high_resolution_clock::now();
-
-	//hold coordinates to be later inserted for dark contrast objects
-	std::vector<int>x_coordinates_for_normal_frame_constrast_objects;
-	std::vector<int>y_coordinates_for_normal_frame_constrast_objects;
-	//hold coordinates to be later inserted for light contrast objects
-	std::vector<int>light_x_coordinate;
-	std::vector<int>light_y_coordinate;
-
+	auto start = std::chrono::high_resolution_clock::now();
 
 	//read current video_game frame
 	cv::Mat img = cv::imread("../game_vision/current_game_frame/current_game_frame.jpg");
 
 	//get words in frame
 	OCR capture_words_in_image;
-
-	auto chracterInfo = std::async(std::launch::async,std::bind(&OCR::GetWordsAndLocations, capture_words_in_image,std::ref(img)));
+	auto words_and_coordinates = std::async(std::launch::async,std::bind(&OCR::GetWordsAndLocations, capture_words_in_image,std::ref(img)));
 
 	//convert to grayscale
-	cv::Mat gray;
+	cv::Mat gray = cv::Mat::zeros(img.size(), img.type());
 	cv::cvtColor(img, gray, cv::COLOR_RGB2GRAY);
-
 
 	//smooth image
 	blur(gray, gray, cv::Size(3,3));
 
-	//this is he image on which the bounded boxes will be drawn on
-	cv::Mat original_image_clone = img.clone();
+	cv::Mat image_with_bounded_boxes_drawn_on = img.clone();
 
-	//convert to binary
-	convertToBinaryImage mConvertToBinaryImage;
-	cv::Mat binary_image_normal_contrast  = mConvertToBinaryImage.Binary(gray,img);
-	cv::Mat binary_image_highten_contrast = mConvertToBinaryImage.BinaryInverse(gray,img);
+	//create binary images
+	std::vector< std::shared_ptr<BinaryImage> > binary_images;
+	binary_images.emplace_back(std::make_shared<BinaryImage> (1, ConvertToBinaryImage().convertToBinary(gray,img)));
+	binary_images.emplace_back(std::make_shared<BinaryImage> (2, ConvertToBinaryImage().convertToBinaryInverse(gray,img)));
 
-	//get objects in each world view (light and dark contrast images) and put each of them into a vector
-	enum contrastOriginOfObjects {darkComtrastImage, lightContrastImage};
-	SeperateObjects frame_objects (gray,original_image_clone);
-	std::vector<cv::Rect> bound_rect_for_dark_contrast_frame;
-	std::vector<cv::Rect> bound_rect_for_highten_contrast_frame;
-	auto normal_contrast_frame_objects  = std::async(std::launch::async,std::bind(&SeperateObjects::BoundBox, &frame_objects,binary_image_normal_contrast, 	darkComtrastImage,
-										std::ref(x_coordinates_for_normal_frame_constrast_objects), 	std::ref(y_coordinates_for_normal_frame_constrast_objects), 	std::ref(bound_rect_for_dark_contrast_frame),	saveObejectInCurrentFrameBinaryImage));
+	//extract regions of interest within an image
+	SeperateObjects seperate_regions_of_interest (gray,image_with_bounded_boxes_drawn_on);
+	auto get_binary_image_1_ROI_objects  = std::async(std::launch::async,std::bind(&SeperateObjects::BoundBox, &seperate_regions_of_interest,binary_images[0] ,save_regions_of_interest_from_current_frame_binary_image));
+	auto get_binary_image_2_ROI_objects = std::async(std::launch::async,std::bind(&SeperateObjects::BoundBox, &seperate_regions_of_interest,binary_images[1] ,save_regions_of_interest_from_current_frame_binary_image));
 
-	auto highten_contrast_frame_objects = std::async(std::launch::async,std::bind(&SeperateObjects::BoundBox, &frame_objects,binary_image_highten_contrast, lightContrastImage,
-										std::ref(light_x_coordinate), 	std::ref(light_y_coordinate), 	std::ref(bound_rect_for_highten_contrast_frame),	saveObejectInCurrentFrameInverseBinaryImage));
+	get_binary_image_1_ROI_objects.wait();
+	get_binary_image_2_ROI_objects.wait();
 
 
-	normal_contrast_frame_objects.wait();
-	highten_contrast_frame_objects.wait();
-	//Append/combine boundbox vectors so that all objects can be put into the python dictionary
-	bound_rect_for_dark_contrast_frame.insert(bound_rect_for_dark_contrast_frame.end(), bound_rect_for_highten_contrast_frame.begin(), bound_rect_for_highten_contrast_frame.end());
-
-
-	//get feature points of each object
-
+	//extract feature points for each region of interest
 	using surf_OCL = cv::xfeatures2d::SURF;
 
-	feature_extraction <surf_OCL> features_of_objects;
-	//std::vector< std::vector< cv::KeyPoint > > features_of_dark_world_objects  = features_of_objects.FeaturePoints_OCL(dark_contrast_frame_objects.get()  ,0, false);
-	auto features_of_normal_contrast_frame_objects = std::async(std::launch::async,std::bind(&feature_extraction <surf_OCL>::FeaturePoints_OCL,
-											&features_of_objects,normal_contrast_frame_objects.get()  ,0, saveObejectInCurrentFrameBinaryImageFeaturesPoints));
+	FeatureExtraction <surf_OCL> features_of_objects;
 
-	//std::vector< std::vector< cv::KeyPoint > > features_of_light_world_objects = features_of_objects.FeaturePoints_OCL(light_contrast_frame_objects.get() ,1, false);
-	auto features_of_highten_contrast_frame_objects = std::async(std::launch::async,std::bind(&feature_extraction <surf_OCL>::FeaturePoints_OCL,
-											&features_of_objects,highten_contrast_frame_objects.get()  ,1, saveObejectInCurrentFrameInveseBinaryImageFeaturePoints));
+	auto get_feature_points_for_binary_1_ROI_objects = std::async(std::launch::async,std::bind(&FeatureExtraction <surf_OCL>::extractFeaturePoints,
+											&features_of_objects,binary_images[0],save_regions_of_interest_from_current_frame_binary_image_features_points));
 
-	auto Object_features_for_normal_contrast = features_of_normal_contrast_frame_objects.get();
-	auto Object_features_for_highten_contrast = features_of_highten_contrast_frame_objects.get();
-	//Append/combine feature vectors so that all objects can be put into the python dictionary
-	Object_features_for_normal_contrast.insert(Object_features_for_normal_contrast.end(), Object_features_for_highten_contrast.begin(), Object_features_for_highten_contrast.end());
+	auto get_feature_points_for_binary_2_ROI_objects = std::async(std::launch::async,std::bind(&FeatureExtraction <surf_OCL>::extractFeaturePoints,
+											&features_of_objects,binary_images[1], save_regions_of_interest_from_current_frame_binary_image_features_points));
 
-	x_coordinates_for_normal_frame_constrast_objects.insert(x_coordinates_for_normal_frame_constrast_objects.end(), light_x_coordinate.begin(), light_x_coordinate.end());
-	y_coordinates_for_normal_frame_constrast_objects.insert(y_coordinates_for_normal_frame_constrast_objects.end(), light_y_coordinate.begin(), light_y_coordinate.end());
+	get_feature_points_for_binary_1_ROI_objects.wait();
+	get_feature_points_for_binary_2_ROI_objects.wait();
 
 
 
 	//Optional code: record frames with bounded boxes drawn on into their own directories.
-	recordProcessedImage saveProcessedImages (starting_frame_number++, Number_of_frames_to_record);
+	std::string current_frame_file_name = "Image"+std::to_string(starting_frame_number)+".jpg";
+	RecordProcessedImage saveProcessedImages;
 	if (starting_frame_number >= Number_of_frames_to_record){
 		starting_frame_number = 1;
 	}
 
-	if(saveCurrentFrameWithBoundBox){
-		auto recordBoundBoxAsync =  std::async(std::launch::async,std::bind(&recordProcessedImage::boundbox, saveProcessedImages,std::ref(original_image_clone)));
+	if(save_current_frame_with_bounded_boxes){
+		auto recordBoundBoxAsync =  std::async(std::launch::async,std::bind(&RecordProcessedImage::saveImage, saveProcessedImages,std::ref(image_with_bounded_boxes_drawn_on),"../game_vision/cloudbank_images/Frame/bounded_boxes/",current_frame_file_name ));
 	}
 
-	if (saveCurrentFrame){
-		auto recordCurrentFrameAsync = std::async(std::launch::async,std::bind(&recordProcessedImage::capturedframe, saveProcessedImages,std::ref(img)));
+	if (save_current_frame){
+		auto recordCurrentFrameAsync = std::async(std::launch::async,std::bind(&RecordProcessedImage::saveImage, saveProcessedImages,std::ref(img),"../game_vision/cloudbank_images/Frame/Unprocessed/",current_frame_file_name));
 
 	}
-	if (saveBinaryImageOfCurrentFrame){
-		auto recordDarkContrastBinaryImageAsync = std::async(std::launch::async,std::bind(&recordProcessedImage::dark_world_Binary, saveProcessedImages,std::ref(binary_image_normal_contrast)));
+	if (save_binary_image_of_current_frame){
+		for (auto const & binary_image : binary_images){
+			auto recordCurrentFrameAsync = std::async(std::launch::async,std::bind(&RecordProcessedImage::saveImage, saveProcessedImages,binary_image->getBinaryImage(),"../game_vision/cloudbank_images/Frame/Binary/binaryImage_ID_"+std::to_string(binary_image->getID()),current_frame_file_name));
+
+		}
+
 	}
-
-	if(saveInverseBinaryImageOfCurrentFrame){
-		auto recordLightContrastBinaryImageAsync = std::async(std::launch::async,std::bind(&recordProcessedImage::light_world_Binary, saveProcessedImages,std::ref(binary_image_highten_contrast)));
-	}
-
-
-	//get time at end of image processing and print it
-	time_variable end = std::chrono::high_resolution_clock::now();
+	++starting_frame_number;
+	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start ).count();
 	std::cout<< "this program took about " << duration<< " milliseconds to process the image" << std::endl;
-	//send data of objects in image to python
-	chracterInfo.wait();
-	SendDataToPython python_features_of_objects;
-	boost::python::dict send_to_python_Object_info= python_features_of_objects.SendObjectInformationToDict(Object_features_for_normal_contrast, x_coordinates_for_normal_frame_constrast_objects, y_coordinates_for_normal_frame_constrast_objects, bound_rect_for_dark_contrast_frame, chracterInfo.get());
 
+	words_and_coordinates.wait();
+
+	//send extracted image frame in python form into calling python process
+	SendDataToPython python_features_of_objects;
+	boost::python::dict send_to_python_Object_info= python_features_of_objects.SendObjectInformationToDict(binary_images, words_and_coordinates.get());
 
 	return send_to_python_Object_info;
 
@@ -167,7 +132,7 @@ int main()
 {
 
 	Py_Initialize();
-	vision_analysis();
+	processImageFrame();
 
 	return 0;
 
@@ -175,8 +140,5 @@ int main()
 
 BOOST_PYTHON_MODULE(opencv)
 {
-
-	//definition that the python program will call  and retrieve information from the c++ code.
-	 def("vision", vision_analysis);
-
+	 def("ProcessGameFrame", processImageFrame);
 }

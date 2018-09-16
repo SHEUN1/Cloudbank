@@ -1,10 +1,10 @@
 /*
- * SendDataToPython.h
+ *       Name: SendDataToPython.h
  *
  *  Created on: 14 Aug 2017
- *      Author: sheun
+ *      Author: Olu Adebari
  *
- *      send data over to python project
+ * Description: send data over to Python project
  */
 
 #ifndef SENDDATATOPYTHON_H_
@@ -18,6 +18,9 @@
 #include <algorithm>
 #include <map>
 #include <iterator>
+#include <memory>
+#include "BinaryImage.h"
+#include "ImageText.h"
 
 #include <boost/python.hpp>
 #include <boost/python/suite/indexing/vector_indexing_suite.hpp>
@@ -29,24 +32,19 @@ public:
 	SendDataToPython();
 	virtual ~SendDataToPython() = default;
 
-/**
-	 *****************************************************************************************
-	 *  @brief      create python dictionary to send over to python code file
+/** *****************************************************************************************
+	 *  @Name 		SendObjectInformationToDict
 	 *
-	 *	@usage 		dictionary will contain
-	 *				Objects: position in image and keypoints
-	 *				OCR charters: characters and their position in the image
+	 *  @brief      create a Python dictionary to send over to Python code file
 	 *
 	 *
-	 *  @param      vector of feature per objects
-	 *  @param 		vector of x coordinates per object
-	 *  @param 		vector of y coordinates per object
-	 *  @param      (pair< vector<string>, vector < pair< int , int  > > >): pair of characters in images and their associated x and y positions.
-	 *  @param 		vector<Rect> boundRectWorld will hold the corner points of the rectangle that acts as the bounded box
-	 *  @return     python dictionary
+	 *  @param      std::vector< std::shared_ptr<BinaryImage> >: vector of BinaryuImages
+	 *  @param 		std::vector< std::shared_ptr<ImageText> >:  Vector of ImageText
+	 *
+	 *  @return     Python dictionary
 	 ****************************************************************************************/
 
-	boost::python::dict SendObjectInformationToDict(std::vector< std::vector<cv::KeyPoint> > vectorToSend, std::vector<int>x_coordinate,std::vector<int>y_coordinate, std::vector<cv::Rect> boundRectWorld ,std::pair< std::vector<std::string>,  std::vector < std::pair< int , int  > > > words);
+	boost::python::dict SendObjectInformationToDict(std::vector< std::shared_ptr<BinaryImage> > binaryImages, std::vector< std::shared_ptr<ImageText> > words);
 };
 
 #endif /* SENDDATATOPYTHON_H_ */

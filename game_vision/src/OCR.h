@@ -1,10 +1,10 @@
 /*
- * OCR.h
+ * 		  Name:OCR.h
  *
  *  Created on: 18 Aug 2017
- *      Author: sheun
+ *      Author: Olu Adebari
  *
- *      Identify characters in the image
+ * Description:Identify characters in the image
  */
 
 #ifndef OCR_H_
@@ -15,36 +15,36 @@
 #include <opencv2/text/ocr.hpp>
 #include <opencv2/opencv.hpp>
 #include <vector>
-#include <algorithm>
-#include <map>
-#include <iterator>
+#include <memory>
 #include <string>
-
+#include "ImageText.h"
 
 class OCR {
 
 public:
 	OCR();
-	virtual ~OCR(){};
+	virtual ~OCR() = default;
 
-/**
- *****************************************************************************************
- *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
-						 most suitable values by printing the results out.
-
- *  @param      Original (non-processed) image frame
- *  @return
- ****************************************************************************************/
+/** *****************************************************************************************
+	  *  @Name		 FindSuitableOcrValues
+	  *
+	  *  @brief      display results of all possible oem and psmode values to determine the
+	  *  			 most suitable values.
+	  *
+	  *  @param      cv::Mat &img: Original non-processed image frame
+	  ****************************************************************************************/
 	void FindSuitableOcrValues(cv::Mat &img);
-/**
- *****************************************************************************************
- *  @brief      optional:Iterate and display results through all possible oem and psmode values so that you determine the
-						 most suitable values
- *
- *  @param      Original (non-processed) image frame
- *  @return     pair of characters in images and their associated x and y positions.
- ****************************************************************************************/
-	std::pair< std::vector<std::string>, std::vector < std::pair< int , int  > > >  GetWordsAndLocations(cv::Mat &img);
+
+/** *****************************************************************************************
+	 *  @Name 		GetWordsAndLocations
+	 *
+	 *  @brief      get ImageText objects containing identified text in an image and their locations
+	 *
+	 *  @param      cv::Mat &img:  Original non-processed image frame
+	 *
+	 *  @return		std::vector< std::shared_ptr<ImageText> >: collection of ImageText objects
+	 ****************************************************************************************/
+	std::vector< std::shared_ptr<ImageText> >  GetWordsAndLocations(cv::Mat &img);
 };
 
 #endif /* OCR_H_ */

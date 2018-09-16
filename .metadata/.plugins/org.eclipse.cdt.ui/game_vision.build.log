@@ -1,15 +1,15 @@
-18:00:06 **** Incremental Build of configuration Debug for project game_vision ****
+21:22:25 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
-Building file: ../src/main.cpp
+Building file: ../src/ConvertToBinaryImage.cpp
 Invoking: GCC C++ Compiler
-g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O1 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ConvertToBinaryImage.d" -MT"src/ConvertToBinaryImage.o" -o "src/ConvertToBinaryImage.o" "../src/ConvertToBinaryImage.cpp"
+Finished building: ../src/ConvertToBinaryImage.cpp
  
 Building target: game_vision
 Invoking: GCC C++ Linker
-g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/OCR.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/convertToBinaryImage.o ./src/featureextraction.o ./src/main.o ./src/recordProcessedImage.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/BinaryImage.o ./src/ConvertToBinaryImage.o ./src/FeatureExtraction.o ./src/ImageText.o ./src/OCR.o ./src/RecordProcessedImage.o ./src/RegionOfInterest.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/main.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
 Finished building target: game_vision
  
 
-18:00:16 Build Finished (took 9s.712ms)
+21:22:31 Build Finished (took 5s.259ms)
 

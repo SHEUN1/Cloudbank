@@ -1,15 +1,22 @@
-src/main.o: ../src/main.cpp ../src/convertToBinaryImage.h \
- ../src/SeperateObjects.h ../src/featureextraction.h \
- ../src/SendDataToPython.h ../src/OCR.h ../src/recordProcessedImage.h
-
-../src/convertToBinaryImage.h:
+src/main.o: ../src/main.cpp ../src/SeperateObjects.h ../src/BinaryImage.h \
+ ../src/RegionOfInterest.h ../src/RecordProcessedImage.h \
+ ../src/SendDataToPython.h ../src/ImageText.h ../src/OCR.h \
+ ../src/FeatureExtraction.h ../src/ConvertToBinaryImage.h
 
 ../src/SeperateObjects.h:
 
-../src/featureextraction.h:
+../src/BinaryImage.h:
+
+../src/RegionOfInterest.h:
+
+../src/RecordProcessedImage.h:
 
 ../src/SendDataToPython.h:
 
+../src/ImageText.h:
+
 ../src/OCR.h:
 
-../src/recordProcessedImage.h:
+../src/FeatureExtraction.h:
+
+../src/ConvertToBinaryImage.h:

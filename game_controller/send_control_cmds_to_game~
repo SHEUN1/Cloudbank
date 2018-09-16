@@ -1,67 +1,84 @@
 #!/bin/bash
 
-#switch to the window that is playing the video game 
-#wmctrl -a Transistor
 
 #Initial setup of keys (make sure that none of them is pressed down)
 #Add or remove keys that is needed to control the game you are trying to controll 
-xdotool keyup "Up"
-xdotool keyup "Down"
-xdotool keyup "Left"
-xdotool keyup "Right"
-xdotool keyup "1"
-xdotool keyup "2"
-xdotool keyup "3"
-xdotool keyup "4"
-xdotool keyup "space"
-xdotool keyup "R"
-
 #name of the window that is displaying the videogame
-ID=$(xdotool search --name "Default - Wine desktop")
+# use cmd xwininfo for widonw information 
+
+# USE cmd 'xev -event keyboard' to get xdotool keymap
+ID="Default - Wine desktop"
 
 #get the name of the current active window
 isWindowName=$(xdotool getactivewindow getwindowname)
+windowIDcmd=$(xdotool getactivewindow)
+
+KeysUP () {
+
+	xdotool keyup 	 --clearmodifiers --window "${ID}" "w" 
+	xdotool keyup 	 --clearmodifiers --window "${ID}" "s" 
+	xdotool keyup 	 --clearmodifiers --window "${ID}" "a" 
+	xdotool keyup 	 --clearmodifiers --window "${ID}" "d" 
+	xdotool keyup 	 --clearmodifiers --window "${ID}" "q" 
+	xdotool keyup    --window "${ID}" "Shift_L" 
+	xdotool keyup 	 --window "${ID}" "Control_L" 
+	xdotool keyup    --window "${ID}" "space" 
+	xdotool keyup    --window "${ID}" "Escape"
+
+}
+
+
 
 #"$<number>" indicates number passed from the python script and are a place holder for the keys being sent 
 
 # function to interact and press buttons on keyboard and move mouse cursor to a specific location 
 # you can modify this to reflect the need of your game 
-Move () { 
-	  
-	xdotool keydown --window $ID "$1"
-	xdotool keydown --window $ID "$2"
-	xdotool keydown --window $ID "$3"
-	xdotool keydown --window $ID "$4"
-	xdotool key --window $ID "$5"
-	xdotool key --window $ID "$6"
-	xdotool keydown --window $ID "$9"
-	xdotool mousemove --window $ID "$7" "$8" 	      
-}
 
 #click left button on mouse only once 
 ClickMouseL()
 {
-	xdotool mousedown --window $ID 1
-	sleep 0.001
-	xdotool mouseup --window $ID 1
+	xdotool click --window "${ID}" 1
 }
 
 #click right button on mouse only once 
 ClickMouseR()
 {
-	xdotool mousedown --window $ID 3 
-	sleep 0.001 
-	xdotool mouseup --window $ID 3
+	xdotool click --window "${ID}" 3 
+
 }
 
+stopController()
+{
+	xdotool key --clearmodifiers --window "${ID}" "Escape"
+}
+
+KeysUP 
+
 #make sure that there is a whitespace after "[" and before "]"
-if [[ "$isWindowName" == "Default - Wine desktop" ]]; then
+if [[ "${isWindowName}" == "${ID}" ]]; then
 
-	#send keyboard arguments
-	Move "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" 
+	if [[ "$1" == "start" ]]; then
+		
+		#send keyboard arguments
+		xdotool keydown   --clearmodifiers --window "${ID}" "$2" 
+		xdotool keydown   --clearmodifiers --window "${ID}" "$3" 
+		xdotool keydown   --clearmodifiers --window "${ID}" "$4" 
+		xdotool keydown   --clearmodifiers --window "${ID}" "$5" 
+		xdotool keydown   --window "${ID}" "$6" 
+		xdotool keydown   --window "${ID}" "$7" 
+		xdotool keydown   --window "${ID}" "$8" 
+		xdotool keydown   --clearmodifiers --window "${ID}" "$9" 
+		
 
-	#send mouse arguments
-	${10} 
-	${11}
-	      	      
+		#send mouse arguments
+		xdotool mousemove --clearmodifiers --window "${windowIDcmd}" "${10}" "${11}" 
+		${12} 
+		${13}
+
+	elif [[ "${1}" == "stop" ]]; then 
+		stopController 
+	fi
+
+ 	  
 fi
+
