@@ -1789,3 +1789,91 @@ make: Nothing to be done for `all'.
 12:15:43 **** Incremental Build of configuration Debug for project game_vision ****
 make all 
 make: Nothing to be done for `all'.
+12:22:53 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+Building file: ../src/BinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BinaryImage.d" -MT"src/BinaryImage.o" -o "src/BinaryImage.o" "../src/BinaryImage.cpp"
+Finished building: ../src/BinaryImage.cpp
+ 
+Building file: ../src/ConvertToBinaryImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ConvertToBinaryImage.d" -MT"src/ConvertToBinaryImage.o" -o "src/ConvertToBinaryImage.o" "../src/ConvertToBinaryImage.cpp"
+Finished building: ../src/ConvertToBinaryImage.cpp
+ 
+Building file: ../src/FeatureExtraction.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/FeatureExtraction.d" -MT"src/FeatureExtraction.o" -o "src/FeatureExtraction.o" "../src/FeatureExtraction.cpp"
+Finished building: ../src/FeatureExtraction.cpp
+ 
+Building file: ../src/ImageText.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ImageText.d" -MT"src/ImageText.o" -o "src/ImageText.o" "../src/ImageText.cpp"
+Finished building: ../src/ImageText.cpp
+ 
+Building file: ../src/OCR.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OCR.d" -MT"src/OCR.o" -o "src/OCR.o" "../src/OCR.cpp"
+Finished building: ../src/OCR.cpp
+ 
+Building file: ../src/RecordProcessedImage.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/RecordProcessedImage.d" -MT"src/RecordProcessedImage.o" -o "src/RecordProcessedImage.o" "../src/RecordProcessedImage.cpp"
+../src/RecordProcessedImage.cpp: In member function ‘void RecordProcessedImage::saveImage(const cv::Mat&, std::string, std::string)’:
+../src/RecordProcessedImage.cpp:19:31: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   system(cmdExecution.c_str());
+                               ^
+Finished building: ../src/RecordProcessedImage.cpp
+ 
+Building file: ../src/RegionOfInterest.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/RegionOfInterest.d" -MT"src/RegionOfInterest.o" -o "src/RegionOfInterest.o" "../src/RegionOfInterest.cpp"
+Finished building: ../src/RegionOfInterest.cpp
+ 
+Building file: ../src/SendDataToPython.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SendDataToPython.d" -MT"src/SendDataToPython.o" -o "src/SendDataToPython.o" "../src/SendDataToPython.cpp"
+Finished building: ../src/SendDataToPython.cpp
+ 
+Building file: ../src/SeperateObjects.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SeperateObjects.d" -MT"src/SeperateObjects.o" -o "src/SeperateObjects.o" "../src/SeperateObjects.cpp"
+../src/SeperateObjects.cpp: In member function ‘void SeperateObjects::BoundBox(std::shared_ptr<BinaryImage>, bool)’:
+../src/SeperateObjects.cpp:48:31: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   system(cmdExecution.c_str());
+                               ^
+Finished building: ../src/SeperateObjects.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -fopenmp -std=c++0x -I/usr/include/python2.7 -I/usr/include/boost/ -O2 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+In file included from ../src/main.cpp:20:0:
+../src/FeatureExtraction.h: In member function ‘void FeatureExtraction<T>::extractFeaturePoints(std::shared_ptr<BinaryImage>, bool) [with T = cv::xfeatures2d::SURF]’:
+../src/FeatureExtraction.h:62:3: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   system(cmd_execution.c_str());
+   ^
+Finished building: ../src/main.cpp
+ 
+Building target: game_vision
+Invoking: GCC C++ Linker
+g++ -fopenmp -L/usr/local/lib -lX11 -o "game_vision"  ./src/BinaryImage.o ./src/ConvertToBinaryImage.o ./src/FeatureExtraction.o ./src/ImageText.o ./src/OCR.o ./src/RecordProcessedImage.o ./src/RegionOfInterest.o ./src/SendDataToPython.o ./src/SeperateObjects.o ./src/main.o   -lboost_python -lopencv_world -lboost_system -lpython2.7
+Finished building target: game_vision
+ 
+12:23:32 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+12:23:35 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+12:24:58 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+12:25:03 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+12:26:33 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
+12:26:37 **** Incremental Build of configuration Debug for project game_vision ****
+make all 
+make: Nothing to be done for `all'.
