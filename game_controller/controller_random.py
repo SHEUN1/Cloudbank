@@ -39,7 +39,7 @@ game_window_title = "Default - Wine desktop"
 opencv.ProcessGameFrame()
 
 #focus on window hosting the video game
-subprocess.call(["wmctrl", "-a", "Default - Wine desktop"])
+subprocess.call(["wmctrl", "-a", game_window_title])
 name_of_window_currently_in_focus = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
 
 run_controller = subprocess.Popen(['bash', executableControlFile])
@@ -61,7 +61,7 @@ while run_program:
 
 
     #if window has lost focus then re-focus and pause the game
-    subprocess.call(["wmctrl", "-a", "Default - Wine desktop"])
+    subprocess.call(["wmctrl", "-a", game_window_title])
     name_of_window_currently_in_focus = (subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip())
     if name_of_window_currently_in_focus == game_window_title:
         run_controller = subprocess.call(['bash', executableControlFile, activate_controller[1]])
