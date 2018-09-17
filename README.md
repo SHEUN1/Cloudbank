@@ -39,7 +39,7 @@ For the identified text in the game the data is in the form of:
 A Python script sends commands to a bash script which in turn uses a tool call xdotool to simulate keyboard commands  (http://www.semicomplete.com/projects/xdotool/) and send them to the window containing the title of the video game. 
 
 Below is a gif of the image processing and object identification being done on the captured frame, the character is currently being moved randomly via simulated keyboard and mouse inputs being sent to the window from the controller
-[![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbankMirrorsEdge.png)](https://www.youtube.com/watch?v=NiK4M-DMZ9U "Youtube Video")
+[![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbankMirrorsEdge.png)](https://www.youtube.com/watch?v=NiK4M-DMZ9U "IMAGE ALT TEXT HERE")
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
 ### Instructions
