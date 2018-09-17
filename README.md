@@ -62,4 +62,4 @@ Below is a gif of the image processing and object identification being done on t
 
 2. To avoid problems with gstreamer please set your game screen resolution to no more than 1024x768
       
-
+3. The current setup for Cloudbank is set the run with the video game "Mirrors Edge" running on PlayOnLinux
