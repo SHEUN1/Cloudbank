@@ -1,5 +1,5 @@
 # Cloudbank
-Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment that can run on a linux PC. The Computer Vision component is handled using OpenCV (C++) while it is planned for the Machine Learning component to be handled using Python. Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) is used to capture the video game frame and a bash script will be used to send simulated keyboard and mouse inputs to the video the game.
+Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment that can run on a linux PC. The Computer Vision component is handled using OpenCV (C++) while it is planned for the Machine Learning component to be handled using Python. Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) is used to capture the video game frame and a bash script is used to send simulated keyboard and mouse inputs to the video the game.
 
 ### What you'll need.
 1. Linux OS (at least ubuntu 14.04)
@@ -43,13 +43,13 @@ Below is a gif of the image processing and object identification being done on t
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
 ### Instructions
-1. Download the repo unto your system and unzip it into your chosen directory
+1. Download and extract the repo 
 2. Navigate into the downloaded repo and  into follow the path ".../game_vision/gstream_command_to_capture_image" file and modyfy the variable "xname" and assign it to the title of the window currently hosting the video game “xname=<title of window hosting the video game>”  
 3. Modify the line "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system.
-4. Navigate ".../Cloudbank/game_controller/send_control_cmds_to_game" file and modyfy the variable "ID" and assign it to the title of the window currently hosting the video game “ID=<title of window 	hosting the video game>”. Within this file modify the xdotool key cmds to replicate that of your game. 
-5. Go to ".../Cloudbank/game_controller/controller_random.py" and and modyfy the variable "game_window_title" and assign it to the title of the window currently hosting the video game “game_window_title=<title of window hosting the video game>”. Within this file modify the xdotool key cmds to replicate that of your game. 
+4. Navigate into the".../Cloudbank/game_controller/send_control_cmds_to_game" file and modyfy the variable "ID" and assign it to the title of the window currently hosting the video game “ID=<title of window 	hosting the video game>”. Within this file modify the xdotool key commands to replicate the control inputs of your game. 
+5. Navigate into the ".../Cloudbank/game_controller/controller_random.py" and and modyfy the variable "game_window_title" and assign it to the title of the window currently hosting the video game “game_window_title=<title of window hosting the video game>”. Within this file modify the xdotool key commands to replicate the control inputs of your game. 
 6. Start your video game. 
-7. Run the python script which will build and run the platform. Once built this should activate gstremer and should start reciveing data and sending keyboard inputs into the game. 
+7. Run the python script which will build and run the program. Once built this should activate gstreamer and should start reciveing data and sending keyboard inputs into the game. 
 
 
 ### Source file location for image processing and sending keyboard strokes to the videogame
