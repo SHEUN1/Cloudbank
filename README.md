@@ -26,12 +26,12 @@ Data is sent from C++ to Python using a library called 'Boost.Python'(http://www
 
 ![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/Screenshot%20from%202017-08-20%2017:27:25.png)
 
-For the identified regions of interest the data is in the form of:
+#### For the identified regions of interest the data is in the form of:
 [[x coordinate, y coordinate],[BoundBox width, BoundBox height, BoundBox top left hand coorner x coordinate , BoundBox top left hand coorner y coordinate], [feature Points]]
 .
 .
 .
-For the identified text in the game the data is in the form of:
+#### For the identified text in the game the data is in the form of:
 [[<indentified text 1>,x coordinate, y coordinate],[<indentified text 2>,x coordinate, y coordinate],... ]
 
 
