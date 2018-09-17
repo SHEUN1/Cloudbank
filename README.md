@@ -46,9 +46,9 @@ Below is a gif of the image processing and object identification being done on t
 1. Download the repo unto your system and unzip it into your chosen directory
 2. Navigate into the downloaded repo and  into follow the path ".../game_vision/gstream_command_to_capture_image" file and modyfy the variable "xname" and assign it to the title of the window currently hosting the video game “xname=<title of window hosting the video game>”  
 3. Modify the line "location=/home/sheun/Cloudbank/game_vision/current_game_frame.jpg" absolute path to one that reflects your system.
-4. Navigate ".../Cloudbank/game_controller/send_control_cmds_to_game" file and modyfy the variable "ID" and assign it to the title of the window currently hosting the video game “ID=<title of window hosting the video game>” 
+4. Navigate ".../Cloudbank/game_controller/send_control_cmds_to_game" file and modyfy the variable "ID" and assign it to the title of the window currently hosting the video game “ID=<title of window 	hosting the video game>”. Within this file modify the xdotool key cmds to replicate that of your game. 
 5. Go to ".../Cloudbank/game_controller/controller_random.py" and and modyfy the variable "game_window_title" and assign it to the title of the window currently hosting the video game “game_window_title=<title of window hosting the video game>” 
-6. Start your video game. 
+6. Start your video game. Within this file modify the xdotool key cmds to replicate that of your game. 
 7. Run the python script which will build and run the platform. Once built this should activate gstremer and should start reciveing data and sending keyboard inputs into the game. 
 
 
