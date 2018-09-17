@@ -50,9 +50,9 @@ while run_program:
 
     while name_of_window_currently_in_focus == game_window_title:
                 result = opencv.ProcessGameFrame()
-                #for i in range(0, len(result)):
-                #    print result[i]
-                print result[1]
+                for i in range(0, len(result)):
+                    print result[i]
+
                 run_controller = subprocess.Popen(['bash', executableControlFile, activate_controller[0], random.choice(up), random.choice(down), random.choice(left), random.choice(right),
                      random.choice(downAction), random.choice(Press_space), random.choice(walk), random.choice(turn90degrees), str(random.randint(0, 1024)), str(random.randint(0, 768)),
                      random.choice(mouse_clickL), random.choice(mouse_clickR)])

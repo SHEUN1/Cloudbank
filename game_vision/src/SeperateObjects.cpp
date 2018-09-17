@@ -14,6 +14,7 @@ SeperateObjects::SeperateObjects(cv::Mat grayscaleImage, cv::Mat & image) : mGra
 
 	std::cout<<"identyfying objects in seperate objects class"<<std::endl;
 
+
 }
 
 void SeperateObjects::BoundBox(std::shared_ptr< BinaryImage>  Binary, bool saveImage)
@@ -43,11 +44,8 @@ void SeperateObjects::BoundBox(std::shared_ptr< BinaryImage>  Binary, bool saveI
 	//delete all images in a folder
 	if (saveImage)
 	{
-		if (m_record_processed_image.getCreatedDir().find("../game_vision/cloudbank_images/objects/objects_belonging_to_binary")!=m_record_processed_image.getCreatedDir().end()){
-			std::string cmdExecution = "exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_binary_"+ std::to_string(Binary->getID())+"/*";
-			 system(cmdExecution.c_str());
-		}
-
+		std::string cmdExecution = "exec rm -rf ../game_vision/cloudbank_images/objects/objects_belonging_to_binary_"+ std::to_string(Binary->getID())+"/*";
+		system(cmdExecution.c_str());
 	}
 
 

@@ -58,11 +58,8 @@ void FeatureExtraction<T>::extractFeaturePoints (std::shared_ptr<BinaryImage> bi
 	//delete contents within a file
 	if (save_image_result)
 	{
-		if (m_record_processed_image.getCreatedDir().find("../game_vision/cloudbank_images/objects/objects_with_feature_points/objects_belonging_to_binary_"+ std::to_string(binary->getID()))!=m_record_processed_image.getCreatedDir().end()){
-			std::string cmd_execution = "exec rm -rf ../game_vision/cloudbank_images/objects/objects_with_feature_points/objects_belonging_to_binary_"+ std::to_string(binary->getID())+"/*";
-			system(cmd_execution.c_str());
-
-		}
+		std::string cmd_execution = "exec rm -rf ../game_vision/cloudbank_images/objects/objects_with_feature_points/objects_belonging_to_binary_"+ std::to_string(binary->getID())+"/*";
+		system(cmd_execution.c_str());
 
 	}
 
