@@ -61,8 +61,5 @@ Below is a gif of the image processing and object identification being done on t
 1. For this to work no other window on your screen should contain the same name as the video game you are playing otherwise the mouse and keyboard inputs would jump between screens. 
 
 2. To avoid problems with gstreamer please set your game screen resolution to no more than 1024x768
-
-### Curious about development environment?
-1. The IDE’s used during development were 'Eclipes C++' and 'Pycharm' community edition. You can set the Eclipes workspace by simply setting it project folder.
       
 
