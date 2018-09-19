@@ -1,3 +1,7 @@
+[![](https://img.shields.io/badge/Language%20-C%2B%2B11-blue.svg?)]()
+[![](https://img.shields.io/badge/Language%20-Python%202.7-blue.svg?)]()
+[![](https://img.shields.io/badge/Operating%20System%20-Linux%3A%20ubuntu%2014.04-red.svg?)]()
+
 # Cloudbank
 Cloudbank is built to be a Computer Vision and AI training platform alternative to its inspiration "OpenAI Universe" where AI agents can be trained to complete task within a video game environment that can run on a linux PC. The Computer Vision component is handled using OpenCV (C++) while it is planned for the Machine Learning component to be handled using Python. Gstreamer (https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html) is used to capture the video game frame and a bash script is used to send simulated keyboard and mouse inputs to the video the game.
 
