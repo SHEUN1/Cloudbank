@@ -1,4 +1,0 @@
-#!/bin/bash
-
-gnome-terminal -x gst-launch-1.0 ximagesrc xname="Default - Wine desktop" use-damage=0 ! tee name=t ! queue ! videoconvert ! videorate ! "video/x-raw,framerate=30/1" ! autovideosink t. ! queue ! videoconvert ! jpegenc ! multifilesink location=/home/sheun/cloundbank_mirrors_edge/Cloudbank/game_vision/current_game_frame/current_game_frame.jpg
-
