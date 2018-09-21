@@ -31,7 +31,7 @@ Mouse_y = 0
 mouse_clickL = ["ClickMouseL", ""]
 mouse_clickR = ["ClickMouseR", ""]
 
-object_classification_type = ["enemy", "unclassified", "resource", "Object we can control" ]
+object_classification_type = ["enemy", "unclassified", "resource", "Object we can control"]
 
 # VideoGame title
 game_window_title = "Default - Wine desktop"
