@@ -27,8 +27,6 @@
 
 
 
-
-
 boost::python::dict processImageFrame()
 {
 
@@ -44,7 +42,8 @@ boost::python::dict processImageFrame()
 	auto start = std::chrono::high_resolution_clock::now();
 
 	//read current video_game frame
-	cv::Mat img = cv::imread("../game_vision/current_game_frame/current_game_frame.jpg");
+	//../game_vision/current_game_frame/current_game_frame.jpg
+	cv::Mat img = cv::imread("/home/sheun/Pictures/transistor_images/transistor2.jpg");
 
 	//get words in frame
 	OCR capture_words_in_image;
