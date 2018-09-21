@@ -46,6 +46,10 @@ Below is a gif of the image processing and object identification being done on t
 [![IMAGE ALT TEXT HERE](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/projectCloudbankMirrorsEdge.png)](https://www.youtube.com/watch?v=NiK4M-DMZ9U "IMAGE ALT TEXT HERE")
  ![Output sample](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/BoundedBox.gif)
 
+###Evaluate you alogorithm
+The current code in CloudBank gives you the option to save and visually evaluate the results of your image processing algorithm within the '.../Cloudbank/game_vision/cloudbank_images/' file path as well as measure how long it takes the program to processes the image. 
+![alt text](https://github.com/SHEUN1/Cloudbank/blob/master/README_IMAGES/combine_images.jpg)
+
 ### Instructions
 1. Download and extract the repo 
 2. Navigate into the downloaded repo and  into follow the path ".../game_vision/gstream_command_to_capture_image" file and modyfy the variable "xname" and assign it to the title of the window currently hosting the video game “xname=<title of window hosting the video game>”  
