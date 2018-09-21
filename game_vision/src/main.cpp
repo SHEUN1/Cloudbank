@@ -39,11 +39,10 @@ boost::python::dict processImageFrame()
 	static uint32_t starting_frame_number = 1;
 	uint32_t Number_of_frames_to_record = 1000;
 
-	auto start = std::chrono::high_resolution_clock::now();
+	auto image_processing_start_time = std::chrono::high_resolution_clock::now();
 
 	//read current video_game frame
-	//../game_vision/current_game_frame/current_game_frame.jpg
-	cv::Mat img = cv::imread("/home/sheun/Pictures/transistor_images/transistor2.jpg");
+	cv::Mat img = cv::imread("../game_vision/current_game_frame/current_game_frame.jpg");
 
 	//get words in frame
 	OCR capture_words_in_image;
@@ -111,8 +110,8 @@ boost::python::dict processImageFrame()
 
 	}
 	++starting_frame_number;
-	auto end = std::chrono::high_resolution_clock::now();
-	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start ).count();
+	auto image_processing_end_time = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(image_processing_end_time - image_processing_start_time ).count();
 	std::cout<< "this program took about " << duration<< " milliseconds to process the image" << std::endl;
 
 	words_and_coordinates.wait();
