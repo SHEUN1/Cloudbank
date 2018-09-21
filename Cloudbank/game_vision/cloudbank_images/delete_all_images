@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find . -name "*.jpg" -type f -delete
+
